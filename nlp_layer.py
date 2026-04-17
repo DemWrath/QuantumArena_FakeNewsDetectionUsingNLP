@@ -25,6 +25,12 @@ class EmotionScores(BaseModel):
     outrage: float = Field(description="Confidence score for outrage incitement from 0.0 to 1.0")
     sensationalism: float = Field(description="Confidence score for sensationalism from 0.0 to 1.0")
 
+class FactCheckResult(BaseModel):
+    verdict: str = Field(description="One of: VERIFIED, UNVERIFIED, MISLEADING, or FABRICATED")
+    confidence: float = Field(description="Confidence in the verdict from 0.0 to 1.0")
+    reasoning: str = Field(description="One or two sentence explanation of the verdict")
+    red_flags: list[str] = Field(description="List of specific claims or statements that are suspicious, verifiably false, or unverifiable")
+
 class DistilBertAnalyzer:
     """Uses a locally loaded DistilBERT model to classify text."""
     
@@ -62,12 +68,15 @@ class DistilBertAnalyzer:
             label = result.get("label", "UNKNOWN").upper()
             score = result.get("score", 0.0)
             
-            # Map standard model outputs to our schema
-            is_reliable = label == "REAL" or label == "TRUE" or label == "RELIABLE" or label == "LABEL_1"
+            # ISOT usually puts True=0, Fake=1
+            is_reliable = label in ["REAL", "TRUE", "RELIABLE", "LABEL_0"]
+            
+            final_label = "REAL" if is_reliable else "FAKE"
             
             return {
                 "model_used": self.model_identifier,
-                "label": label,
+                "label": final_label,
+                "raw_label_debug": label,
                 "confidence_score": round(score, 4),
                 "is_likely_reliable": is_reliable
             }
@@ -164,26 +173,195 @@ class GeminiInferenceServer:
         except Exception as e:
             return {"error": str(e)}
 
+    def fact_check(self, text: str) -> Dict[str, Any]:
+        """
+        Real search-grounded fact-checking.
+        
+        Step 1: Gemini + Google Search grounding — extract key claims and search the live web
+                for corroborating or disconfirming evidence. This is NOT parametric memory;
+                Gemini issues actual search queries and retrieves live results.
+        
+        Step 2: Structured verdict — pass the grounded evidence summary into a second
+                schema-constrained call to produce a machine-readable FactCheckResult.
+        
+        Note: google_search tool and response_schema are mutually exclusive in the SDK,
+              hence the two-step design.
+        """
+        if not self.client:
+            return {"error": "Gemini client not initialized (missing API key or SDK)."}
+
+        import json
+
+        # ── STEP 1: Search-grounded evidence gathering ──────────────────────────
+        # Extract the 1-3 most verifiable, concrete claims and search the web for them.
+        search_prompt = f"""
+        You are a fact-checking researcher. Your job is to:
+        1. Identify the 1-3 most specific, verifiable factual claims in the text below.
+        2. Use Google Search to look each claim up and determine whether it is corroborated,
+           contradicted, or absent from credible sources.
+        3. Write a concise evidence summary (3-5 sentences) describing what you found.
+           Clearly state which sources support or refute the claims.
+
+        IMPORTANT: Base your evidence ONLY on what you find in search results, not on
+        your training data. If you cannot find corroborating sources, say so explicitly.
+
+        Text:
+        "{text[:2000]}"
+        """
+
+        evidence_summary = ""
+        grounding_sources = []
+
+        try:
+            search_response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=search_prompt,
+                config=types.GenerateContentConfig(
+                    tools=[types.Tool(google_search=types.GoogleSearch())],
+                    temperature=0.1
+                )
+            )
+            evidence_summary = search_response.text.strip()
+
+            # Extract grounding source URLs from metadata
+            try:
+                for cand in search_response.candidates:
+                    meta = getattr(cand, "grounding_metadata", None)
+                    if meta:
+                        chunks = getattr(meta, "grounding_chunks", []) or []
+                        for chunk in chunks:
+                            web = getattr(chunk, "web", None)
+                            if web:
+                                grounding_sources.append({
+                                    "title": getattr(web, "title", ""),
+                                    "uri": getattr(web, "uri", "")
+                                })
+            except Exception:
+                pass  # grounding metadata extraction is best-effort
+
+            print(f"[FactCheck] Grounding search complete. Sources found: {len(grounding_sources)}")
+
+        except Exception as e:
+            # If search grounding fails (e.g., quota), fall back to parametric reasoning only
+            print(f"[FactCheck] Search grounding failed ({e}), falling back to parametric reasoning.")
+            evidence_summary = (
+                f"Note: Live web search was unavailable. The following analysis is based on "
+                f"the model's training knowledge only and may not reflect current events.\n\n"
+                f"Text: {text[:1000]}"
+            )
+
+        # ── STEP 2: Structured verdict from evidence ─────────────────────────────
+        verdict_prompt = f"""
+        You are a senior fact-checking editor. Based on the evidence research below,
+        produce a structured verdict on the original text.
+
+        Evidence Research (from live web search):
+        {evidence_summary}
+
+        Original Text:
+        "{text[:1000]}"
+
+        Your verdict MUST be exactly one of:
+        - VERIFIED: Key claims are corroborated by credible sources found in search.
+        - UNVERIFIED: Claims could not be confirmed or denied through available search results.
+        - MISLEADING: Claims mix real facts with distortions; partial truth used deceptively.
+        - FABRICATED: Claims describe events that are physically impossible, scientifically
+          impossible, or directly contradicted by search results/established facts.
+
+        Base your verdict on the EVIDENCE RESEARCH above, not on your training data alone.
+        """
+
+        try:
+            verdict_response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=verdict_prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=FactCheckResult,
+                    temperature=0.0
+                )
+            )
+            result = json.loads(verdict_response.text)
+            result["grounding_sources"] = grounding_sources
+            result["evidence_summary"] = evidence_summary
+            result["search_grounded"] = len(grounding_sources) > 0
+            return result
+
+        except Exception as e:
+            return {"error": str(e)}
+
+
 from explain_layer import ExplainLayer
 explainer_instance = ExplainLayer()
 
+def _build_composite_verdict(style_result: Dict, fact_result: Dict) -> Dict[str, Any]:
+    """Combines Transformer style signal with Gemini fact-check to produce a final verdict."""
+    # If Gemini fact-check errored, fall back purely to Transformer
+    if "error" in fact_result:
+        return {
+            "final_label": style_result.get("label", "UNKNOWN"),
+            "final_confidence": style_result.get("confidence_score", 0.0),
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style signal used."
+        }
+
+    gem_verdict = fact_result.get("verdict", "UNVERIFIED")
+    gem_conf = fact_result.get("confidence", 0.5)
+
+    # Gemini flag mapping -> binary FAKE/REAL override
+    # FABRICATED or MISLEADING are hard overrides to FAKE regardless of Transformer
+    if gem_verdict in ("FABRICATED", "MISLEADING"):
+        final_label = "FAKE"
+        final_conf = gem_conf
+        method = "gemini_override"
+    elif gem_verdict == "UNVERIFIED":
+        # Blend: treat Transformer style as a weak signal
+        style_label = style_result.get("label", "REAL")
+        style_conf = style_result.get("confidence_score", 0.5)
+        # Weight Gemini (70%) more heavily than style Transformer (30%)
+        blended_fake_score = (0.7 * 0.5) + (0.3 * (1.0 - style_conf if style_label == "REAL" else style_conf))
+        final_label = "FAKE" if blended_fake_score > 0.45 else "REAL"
+        final_conf = max(gem_conf, style_conf)
+        method = "blended"
+    else:  # VERIFIED
+        final_label = "REAL"
+        final_conf = gem_conf
+        method = "gemini_override"
+
+    return {
+        "final_label": final_label,
+        "final_confidence": round(final_conf, 4),
+        "gemini_verdict": gem_verdict,
+        "method": method,
+        "reasoning": fact_result.get("reasoning", ""),
+        "red_flags": fact_result.get("red_flags", [])
+    }
+
+
 def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
-    """Orchestrates both DistilBERT and Gemini analysis."""
+    """Orchestrates DistilBERT style signal, Gemini fact-check, and composite verdict."""
     output = {}
-    
-    # 1. DistilBERT Analysis
+
+    # 1. DistilBERT Style Analysis (detects writing pattern, not logic)
     bert = DistilBertAnalyzer()
     output["style_classification"] = bert.analyze(text)
     output["explainability"] = explainer_instance.generate_explanation(text, bert)
-    
-    # 2. Gemini Inference
+
+    # 2. Gemini Fact-Check (evaluates claim verifiability)
     llm = GeminiInferenceServer()
-    
+    print("[NLP] Running Gemini fact-check...")
+    fact_result = llm.fact_check(text)
+    output["fact_check"] = fact_result
+
+    # 3. Composite Verdict (Gemini overrides Transformer on logic failures)
+    output["composite_verdict"] = _build_composite_verdict(output["style_classification"], fact_result)
+
+    # 4. Other Gemini signals
     if headline:
         output["clickbait_check"] = llm.check_clickbait(headline, body_text=text)
     else:
-        output["clickbait_check"] = {"error": "No headline provided to evaluating clickbait."}
-        
+        output["clickbait_check"] = {"error": "No headline provided to evaluate clickbait."}
+
     output["emotional_tone"] = llm.score_emotion(text)
-    
+
     return output
