@@ -17,16 +17,16 @@ class ExplainLayer:
 
         def predictor(texts):
             results = []
-            # Batch process through loaded Huggingface pipeline mappings
             outputs = analyzer_instance.classifier(texts)
             for out in outputs:
                 label = out["label"].upper()
                 score = out["score"]
-                # Convert into probability lists [ REAL%, FAKE% ]
-                if label == "FAKE" or label == "LABEL_0":
-                    probs = [1.0 - score, score]
+                # ISOT convention: LABEL_0 = REAL, LABEL_1 = FAKE
+                # class_names=["REAL", "FAKE"] → index 0 = REAL prob, index 1 = FAKE prob
+                if label in ("FAKE", "LABEL_1"):
+                    probs = [1.0 - score, score]   # [REAL%, FAKE%]
                 else:
-                    probs = [score, 1.0 - score]
+                    probs = [score, 1.0 - score]   # [REAL%, FAKE%]
                 results.append(probs)
             return np.array(results)
             

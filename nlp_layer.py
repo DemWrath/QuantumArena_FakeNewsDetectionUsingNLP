@@ -1,13 +1,28 @@
+"""
+nlp_layer.py
+TruthLens NLP Analysis Layer
+
+Orchestrates three inference systems:
+  1. DistilBertAnalyzer   — GPU-resident style/pattern classifier (ISOT-trained)
+  2. ExplainLayer         — LIME word-level attribution heatmap
+  3. GeminiInferenceServer — Search-grounded fact-checking + emotion + clickbait
+
+All heavy objects (model, explainer, Gemini client) are module-level singletons
+loaded once at startup, not re-instantiated per request.
+"""
+
 import os
-from typing import Dict, Any
+import json
+from typing import Dict, Any, List
+
 from dotenv import load_dotenv
 
-# Load environment variables (like GEMINI_API_KEY)
 load_dotenv()
 
-# We only import transformers when needed or globally if required.
+# ── Optional dependency guards ─────────────────────────────────────────────────
+
 try:
-    from transformers import pipeline
+    from transformers import pipeline as hf_pipeline
     TRANSFORMERS_AVAILABLE = True
 except ImportError:
     TRANSFORMERS_AVAILABLE = False
@@ -20,180 +35,130 @@ try:
 except ImportError:
     GENAI_AVAILABLE = False
 
+from explain_layer import ExplainLayer
+
+
+# ── Pydantic schemas for structured Gemini outputs ────────────────────────────
+
 class EmotionScores(BaseModel):
     fear: float = Field(description="Confidence score for fear mongering from 0.0 to 1.0")
     outrage: float = Field(description="Confidence score for outrage incitement from 0.0 to 1.0")
     sensationalism: float = Field(description="Confidence score for sensationalism from 0.0 to 1.0")
 
+
 class FactCheckResult(BaseModel):
     verdict: str = Field(description="One of: VERIFIED, UNVERIFIED, MISLEADING, or FABRICATED")
     confidence: float = Field(description="Confidence in the verdict from 0.0 to 1.0")
     reasoning: str = Field(description="One or two sentence explanation of the verdict")
-    red_flags: list[str] = Field(description="List of specific claims or statements that are suspicious, verifiably false, or unverifiable")
+    red_flags: List[str] = Field(description="Specific claims that are suspicious, unverifiable, or physically impossible")
+
+
+# ── DistilBERT Style Classifier ───────────────────────────────────────────────
 
 class DistilBertAnalyzer:
-    """Uses a locally loaded DistilBERT model to classify text."""
+    """
+    GPU-resident BERT model for writing-style classification.
     
+    Trained on the ISOT dataset:
+      LABEL_0 = REAL (professional journalism style)
+      LABEL_1 = FAKE (partisan/sensational blog style)
+    
+    NOTE: This model detects *linguistic style*, not factual truth.
+    Factual verification is handled by GeminiInferenceServer.fact_check().
+    """
+
     def __init__(self, model_identifier: str = "mrm8488/bert-tiny-finetuned-fake-news-detection"):
         self.model_identifier = model_identifier
         self.classifier = None
-        
-        if TRANSFORMERS_AVAILABLE:
-            print(f"[DistilBertAnalyzer] Loading model '{self.model_identifier}' into memory. This may take a moment on first run...")
-            try:
-                import torch
-                # If CUDA is available (RTX 3050), use device 0, else default backward to -1 (CPU)
-                device_id = 0 if torch.cuda.is_available() else -1
-                
-                # Load the pipeline for text classification
-                # We use truncation=True since news articles can be long
-                self.classifier = pipeline("text-classification", model=self.model_identifier, truncation=True, max_length=512, device=device_id)
-                print(f"[DistilBertAnalyzer] Model loaded successfully on device: {'GPU (CUDA)' if device_id == 0 else 'CPU'}")
-            except Exception as e:
-                print(f"[DistilBertAnalyzer] Error loading model: {e}")
-        else:
-            print("[DistilBertAnalyzer] 'transformers' library not found. Classification disabled.")
+
+        if not TRANSFORMERS_AVAILABLE:
+            print("[DistilBertAnalyzer] 'transformers' not installed. Style classification disabled.")
+            return
+
+        print(f"[DistilBertAnalyzer] Loading '{self.model_identifier}'...")
+        try:
+            import torch
+            device_id = 0 if torch.cuda.is_available() else -1
+            self.classifier = hf_pipeline(
+                "text-classification",
+                model=self.model_identifier,
+                truncation=True,
+                max_length=512,
+                device=device_id
+            )
+            dev_name = "GPU (CUDA)" if device_id == 0 else "CPU"
+            print(f"[DistilBertAnalyzer] Model ready on {dev_name}.")
+        except Exception as e:
+            print(f"[DistilBertAnalyzer] Failed to load model: {e}")
 
     def analyze(self, text: str) -> Dict[str, Any]:
         if not self.classifier:
-            return {"error": "Classifier not initialized or transformers not installed."}
-        
+            return {"error": "Classifier not initialized."}
         if not text or not text.strip():
             return {"error": "Empty text provided."}
 
         try:
-            # The classifier returns a list like: [{'label': 'FAKE', 'score': 0.99}]
             result = self.classifier(text)[0]
-            # Normalize labels to be friendly
-            label = result.get("label", "UNKNOWN").upper()
+            raw_label = result.get("label", "UNKNOWN").upper()
             score = result.get("score", 0.0)
-            
-            # ISOT usually puts True=0, Fake=1
-            is_reliable = label in ["REAL", "TRUE", "RELIABLE", "LABEL_0"]
-            
+
+            # ISOT label convention: LABEL_0 = REAL, LABEL_1 = FAKE
+            is_reliable = raw_label in ("REAL", "TRUE", "RELIABLE", "LABEL_0")
             final_label = "REAL" if is_reliable else "FAKE"
-            
+
             return {
                 "model_used": self.model_identifier,
                 "label": final_label,
-                "raw_label_debug": label,
                 "confidence_score": round(score, 4),
-                "is_likely_reliable": is_reliable
+                "is_likely_reliable": is_reliable,
             }
         except Exception as e:
             return {"error": f"Prediction failed: {e}"}
 
+
+# ── Gemini Inference Server ───────────────────────────────────────────────────
+
 class GeminiInferenceServer:
-    """Uses the Google GenAI SDK to perform runtime logical checks."""
-    
+    """Google GenAI SDK client for fact-checking, emotion scoring, and clickbait detection."""
+
     def __init__(self, model_name: str = "gemini-2.5-flash"):
         self.model_name = model_name
         self.client = None
-        
-        if GENAI_AVAILABLE:
-            api_key = os.getenv("GEMINI_API_KEY")
-            if api_key:
-                try:
-                    self.client = genai.Client(api_key=api_key)
-                except Exception as e:
-                    print(f"[GeminiInferenceServer] Error initializing client: {e}")
-            else:
-                print("[GeminiInferenceServer] WARNING: GEMINI_API_KEY not found in environment. Gemini features will be disabled.")
-        else:
-            print("[GeminiInferenceServer] 'google-genai' library not found. LLM inference disabled.")
 
-    def check_clickbait(self, headline: str, body_text: str) -> Dict[str, Any]:
-        """Checks if the body text fulfills the semantic promise of the headline."""
-        if not self.client:
-            return {"error": "Gemini client not initialized (missing API key or SDK)."}
-            
-        if not headline or headline.strip() == "":
-            return {"error": "No headline provided to check."}
-            
-        prompt = f"""
-        You are an expert journalism analyzer. Please review the following headline and the corresponding article body.
-        Your task is to determine: "Does the body fulfill the semantic promise of the headline, or is it clickbait?"
-        
-        Headline: "{headline}"
-        
-        Body snippet:
-        "{body_text[:1500]}"
-        
-        Output 'True' if the body fulfills the headline's promise, and 'False' if it is deceptive/clickbait.
-        Provide only the boolean word (True/False).
-        """
-        
-        try:
-            response = self.client.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.0
-                )
-            )
-            result_text = response.text.strip().lower()
-            is_fulfilled = "true" in result_text
-            
-            return {
-                "headline_promise_fulfilled": is_fulfilled,
-                "is_clickbait": not is_fulfilled
-            }
-        except Exception as e:
-            return {"error": str(e)}
+        if not GENAI_AVAILABLE:
+            print("[GeminiInferenceServer] 'google-genai' not installed. LLM inference disabled.")
+            return
 
-    def score_emotion(self, text: str) -> Dict[str, Any]:
-        """Returns structured JSON confidence scores for emotion vectors."""
-        if not self.client:
-            return {"error": "Gemini client not initialized (missing API key or SDK)."}
-            
-        prompt = f"""
-        Analyze the following text for manipulative emotional tone.
-        Assign a confidence score between 0.0 and 1.0 for the presence of fear-mongering, outrage incitement, and sensationalism.
-        
-        Text:
-        "{text[:1500]}"
-        """
-        
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            print("[GeminiInferenceServer] WARNING: GEMINI_API_KEY not set. Gemini disabled.")
+            return
+
         try:
-            response = self.client.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=EmotionScores,
-                    temperature=0.0
-                )
-            )
-            
-            # The SDK automatically handles the JSON string payload if response schema is provided,
-            # but response.text is a JSON string. We parse it:
-            import json
-            scores = json.loads(response.text)
-            return scores
+            self.client = genai.Client(api_key=api_key)
         except Exception as e:
-            return {"error": str(e)}
+            print(f"[GeminiInferenceServer] Client init failed: {e}")
+
+    # ── Fact-check (2-step: Search grounding → Structured verdict) ────────────
 
     def fact_check(self, text: str) -> Dict[str, Any]:
         """
-        Real search-grounded fact-checking.
-        
-        Step 1: Gemini + Google Search grounding — extract key claims and search the live web
-                for corroborating or disconfirming evidence. This is NOT parametric memory;
-                Gemini issues actual search queries and retrieves live results.
-        
-        Step 2: Structured verdict — pass the grounded evidence summary into a second
-                schema-constrained call to produce a machine-readable FactCheckResult.
-        
-        Note: google_search tool and response_schema are mutually exclusive in the SDK,
-              hence the two-step design.
+        Search-grounded fact-checking pipeline.
+
+        Step 1: Gemini issues real Google Search queries for the key claims in the
+                text and returns a grounded evidence summary. This is live web
+                retrieval, NOT parametric memory from training data.
+
+        Step 2: The evidence summary is passed to a schema-constrained call that
+                produces a structured FactCheckResult verdict.
+
+        The two-step design is required because google_search tool and
+        response_schema are mutually exclusive in the Gemini SDK.
         """
         if not self.client:
-            return {"error": "Gemini client not initialized (missing API key or SDK)."}
+            return {"error": "Gemini client not initialized."}
 
-        import json
-
-        # ── STEP 1: Search-grounded evidence gathering ──────────────────────────
-        # Extract the 1-3 most verifiable, concrete claims and search the web for them.
+        # ── Step 1: Live web search ───────────────────────────────────────────
         search_prompt = f"""
         You are a fact-checking researcher. Your job is to:
         1. Identify the 1-3 most specific, verifiable factual claims in the text below.
@@ -223,34 +188,30 @@ class GeminiInferenceServer:
             )
             evidence_summary = search_response.text.strip()
 
-            # Extract grounding source URLs from metadata
-            try:
-                for cand in search_response.candidates:
-                    meta = getattr(cand, "grounding_metadata", None)
-                    if meta:
-                        chunks = getattr(meta, "grounding_chunks", []) or []
-                        for chunk in chunks:
-                            web = getattr(chunk, "web", None)
-                            if web:
-                                grounding_sources.append({
-                                    "title": getattr(web, "title", ""),
-                                    "uri": getattr(web, "uri", "")
-                                })
-            except Exception:
-                pass  # grounding metadata extraction is best-effort
+            # Extract grounding source URLs from response metadata (best-effort)
+            for cand in search_response.candidates:
+                meta = getattr(cand, "grounding_metadata", None)
+                if not meta:
+                    continue
+                for chunk in getattr(meta, "grounding_chunks", []) or []:
+                    web = getattr(chunk, "web", None)
+                    if web:
+                        grounding_sources.append({
+                            "title": getattr(web, "title", ""),
+                            "uri": getattr(web, "uri", "")
+                        })
 
-            print(f"[FactCheck] Grounding search complete. Sources found: {len(grounding_sources)}")
+            print(f"[FactCheck] Search complete. Sources: {len(grounding_sources)}")
 
         except Exception as e:
-            # If search grounding fails (e.g., quota), fall back to parametric reasoning only
-            print(f"[FactCheck] Search grounding failed ({e}), falling back to parametric reasoning.")
+            print(f"[FactCheck] Search grounding failed ({e}). Using parametric fallback.")
             evidence_summary = (
-                f"Note: Live web search was unavailable. The following analysis is based on "
-                f"the model's training knowledge only and may not reflect current events.\n\n"
+                "Note: Live web search was unavailable. Analysis below is based on "
+                "model training knowledge only; may not reflect current events.\n\n"
                 f"Text: {text[:1000]}"
             )
 
-        # ── STEP 2: Structured verdict from evidence ─────────────────────────────
+        # ── Step 2: Structured verdict from evidence ──────────────────────────
         verdict_prompt = f"""
         You are a senior fact-checking editor. Based on the evidence research below,
         produce a structured verdict on the original text.
@@ -290,39 +251,128 @@ class GeminiInferenceServer:
         except Exception as e:
             return {"error": str(e)}
 
+    # ── Clickbait detection ───────────────────────────────────────────────────
 
-from explain_layer import ExplainLayer
-explainer_instance = ExplainLayer()
+    def check_clickbait(self, headline: str, body_text: str) -> Dict[str, Any]:
+        """Determines if the article body fulfills the semantic promise of the headline."""
+        if not self.client:
+            return {"error": "Gemini client not initialized."}
+        if not headline or not headline.strip():
+            return {"error": "No headline provided."}
+
+        prompt = f"""
+        You are an expert journalism analyzer. Review the following headline and article body.
+        Determine: does the body fulfill the semantic promise of the headline, or is it clickbait?
+
+        Headline: "{headline}"
+        Body snippet: "{body_text[:1500]}"
+
+        Output 'True' if the body fulfills the headline's promise, 'False' if it is deceptive.
+        Provide only the boolean word (True/False).
+        """
+
+        try:
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(temperature=0.0)
+            )
+            is_fulfilled = "true" in response.text.strip().lower()
+            return {
+                "headline_promise_fulfilled": is_fulfilled,
+                "is_clickbait": not is_fulfilled
+            }
+        except Exception as e:
+            return {"error": str(e)}
+
+    # ── Emotional tone scoring ────────────────────────────────────────────────
+
+    def score_emotion(self, text: str) -> Dict[str, Any]:
+        """Returns structured confidence scores for fear, outrage, and sensationalism."""
+        if not self.client:
+            return {"error": "Gemini client not initialized."}
+
+        prompt = f"""
+        Analyze the following text for manipulative emotional tone.
+        Assign a confidence score between 0.0 and 1.0 for the presence of
+        fear-mongering, outrage incitement, and sensationalism.
+
+        Text: "{text[:1500]}"
+        """
+
+        try:
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=EmotionScores,
+                    temperature=0.0
+                )
+            )
+            return json.loads(response.text)
+        except Exception as e:
+            return {"error": str(e)}
+
+
+# ── Module-level singletons (loaded once at startup) ──────────────────────────
+
+print("[NLP Layer] Initializing module singletons...")
+_bert = DistilBertAnalyzer()
+_explainer = ExplainLayer()
+_llm = GeminiInferenceServer()
+print("[NLP Layer] Ready.")
+
+
+# ── Composite verdict engine ──────────────────────────────────────────────────
 
 def _build_composite_verdict(style_result: Dict, fact_result: Dict) -> Dict[str, Any]:
-    """Combines Transformer style signal with Gemini fact-check to produce a final verdict."""
-    # If Gemini fact-check errored, fall back purely to Transformer
+    """
+    Combines the Transformer style signal with the Gemini fact-check verdict.
+
+    Decision logic (4 states):
+      FABRICATED → hard "FAKE"       (physically impossible / invented events)
+      MISLEADING → "MISLEADING"      (real events, but framed deceptively or out-of-context)
+      UNVERIFIED → blended signal    (could not confirm; lean on transformer style)
+      VERIFIED   → hard "REAL"       (corroborated by live search sources)
+
+    MISLEADING is deliberately separated from FABRICATED because editorialized
+    political reporting ≠ invented facts. They warrant different UI states.
+    """
     if "error" in fact_result:
         return {
-            "final_label": style_result.get("label", "UNKNOWN"),
+            "final_label": "REAL",
             "final_confidence": style_result.get("confidence_score", 0.0),
             "method": "transformer_only",
-            "note": "Gemini fact-check unavailable. Style signal used."
+            "note": "Gemini fact-check unavailable. Style signal used as fallback."
         }
 
     gem_verdict = fact_result.get("verdict", "UNVERIFIED")
     gem_conf = fact_result.get("confidence", 0.5)
 
-    # Gemini flag mapping -> binary FAKE/REAL override
-    # FABRICATED or MISLEADING are hard overrides to FAKE regardless of Transformer
-    if gem_verdict in ("FABRICATED", "MISLEADING"):
+    if gem_verdict == "FABRICATED":
+        # Hard override: events that cannot physically exist
         final_label = "FAKE"
         final_conf = gem_conf
         method = "gemini_override"
+
+    elif gem_verdict == "MISLEADING":
+        # Distinct state: real events reported deceptively or out of context
+        # Not necessarily "FAKE" — may be biased framing
+        final_label = "MISLEADING"
+        final_conf = gem_conf
+        method = "gemini_override"
+
     elif gem_verdict == "UNVERIFIED":
-        # Blend: treat Transformer style as a weak signal
+        # Blend: Gemini couldn't confirm either way — let transformer style vote
         style_label = style_result.get("label", "REAL")
         style_conf = style_result.get("confidence_score", 0.5)
-        # Weight Gemini (70%) more heavily than style Transformer (30%)
+        # Raised threshold to 0.6 to reduce false positives on political news
         blended_fake_score = (0.7 * 0.5) + (0.3 * (1.0 - style_conf if style_label == "REAL" else style_conf))
-        final_label = "FAKE" if blended_fake_score > 0.45 else "REAL"
+        final_label = "FAKE" if blended_fake_score > 0.60 else "REAL"
         final_conf = max(gem_conf, style_conf)
         method = "blended"
+
     else:  # VERIFIED
         final_label = "REAL"
         final_conf = gem_conf
@@ -338,30 +388,43 @@ def _build_composite_verdict(style_result: Dict, fact_result: Dict) -> Dict[str,
     }
 
 
+# ── Public API ────────────────────────────────────────────────────────────────
+
 def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
-    """Orchestrates DistilBERT style signal, Gemini fact-check, and composite verdict."""
-    output = {}
+    """
+    Orchestrate the full NLP analysis stack.
+    
+    Returns a dict with keys:
+      style_classification — DistilBERT ISOT pattern result
+      explainability       — LIME word attribution triggers
+      fact_check           — Gemini search-grounded fact-check with sources
+      composite_verdict    — Final FAKE/REAL verdict combining both signals
+      clickbait_check      — Headline vs body promise check (if headline provided)
+      emotional_tone       — Fear / outrage / sensationalism scores
+    """
+    output: Dict[str, Any] = {}
 
-    # 1. DistilBERT Style Analysis (detects writing pattern, not logic)
-    bert = DistilBertAnalyzer()
-    output["style_classification"] = bert.analyze(text)
-    output["explainability"] = explainer_instance.generate_explanation(text, bert)
+    # 1. Style classification (GPU, already loaded)
+    output["style_classification"] = _bert.analyze(text)
 
-    # 2. Gemini Fact-Check (evaluates claim verifiability)
-    llm = GeminiInferenceServer()
-    print("[NLP] Running Gemini fact-check...")
-    fact_result = llm.fact_check(text)
+    # 2. LIME word-level attribution
+    output["explainability"] = _explainer.generate_explanation(text, _bert)
+
+    # 3. Search-grounded fact-check
+    print("[NLP] Running search-grounded fact-check...")
+    fact_result = _llm.fact_check(text)
     output["fact_check"] = fact_result
 
-    # 3. Composite Verdict (Gemini overrides Transformer on logic failures)
+    # 4. Composite verdict
     output["composite_verdict"] = _build_composite_verdict(output["style_classification"], fact_result)
 
-    # 4. Other Gemini signals
+    # 5. Clickbait check (requires headline)
     if headline:
-        output["clickbait_check"] = llm.check_clickbait(headline, body_text=text)
+        output["clickbait_check"] = _llm.check_clickbait(headline, body_text=text)
     else:
-        output["clickbait_check"] = {"error": "No headline provided to evaluate clickbait."}
+        output["clickbait_check"] = {"error": "No headline provided — clickbait check skipped."}
 
-    output["emotional_tone"] = llm.score_emotion(text)
+    # 6. Emotional tone
+    output["emotional_tone"] = _llm.score_emotion(text)
 
     return output
