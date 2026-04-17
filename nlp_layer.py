@@ -164,6 +164,9 @@ class GeminiInferenceServer:
         except Exception as e:
             return {"error": str(e)}
 
+from explain_layer import ExplainLayer
+explainer_instance = ExplainLayer()
+
 def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
     """Orchestrates both DistilBERT and Gemini analysis."""
     output = {}
@@ -171,6 +174,7 @@ def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
     # 1. DistilBERT Analysis
     bert = DistilBertAnalyzer()
     output["style_classification"] = bert.analyze(text)
+    output["explainability"] = explainer_instance.generate_explanation(text, bert)
     
     # 2. Gemini Inference
     llm = GeminiInferenceServer()

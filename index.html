@@ -108,6 +108,17 @@
                 </div>
             </section>
 
+            <!-- LIME EXPLAINABILITY TRACE -->
+            <section id="lime-section" class="lg:col-span-12 bg-surface-container-low rounded p-6 flex-col hidden border-t-2 border-primary-container/30 shadow-inner">
+                <div class="flex items-center gap-2 mb-4 shrink-0">
+                    <span class="material-symbols-outlined text-primary-container text-sm">visibility</span>
+                    <h3 class="font-headline text-sm font-semibold tracking-wider text-primary-container uppercase">Deep Logic Trace (LIME Model Feature Extraction)</h3>
+                </div>
+                <div id="lime-content" class="text-on-surface font-body text-sm leading-loose p-5 bg-surface-container-lowest rounded border border-surface-container-high break-words whitespace-pre-wrap">
+                    <!-- Explainability Spans dynamically injected here -->
+                </div>
+            </section>
+
             <!-- FORENSIC VERDICT (TRANSFORMER OUTPUT) -->
             <section class="lg:col-span-4 bg-surface-container-highest rounded p-6 flex flex-col relative overflow-hidden">
                 <div class="flex items-center justify-between mb-6 shrink-0">
@@ -358,6 +369,32 @@
             document.getElementById('gemini-fallback-conf').innerText = `CONF: ${scraper.llm_fallback_assessment.confidence.toUpperCase()}`;
             document.getElementById('gemini-fallback-conf').classList.replace('bg-surface', 'bg-primary-container/20');
             document.getElementById('gemini-fallback-conf').classList.replace('text-on-surface-variant', 'text-primary-container');
+        }
+
+        // --- INJECT LIME EXPLAINABILITY ---
+        if(payload.nlp_analysis.explainability && payload.nlp_analysis.explainability.triggers) {
+            document.getElementById('lime-section').classList.remove('hidden');
+            document.getElementById('lime-section').classList.add('flex');
+            const limeContent = document.getElementById('lime-content');
+            const triggers = payload.nlp_analysis.explainability.triggers;
+            
+            // Reconstruct the payload text with inline heatmap spans
+            let highlightedText = (textIntake || "No text available for trace mapping.").trim(); 
+            
+            // Sort by word length descending so smaller words don't overwrite substring fragments
+            triggers.sort((a,b) => b.word.length - a.word.length);
+
+            triggers.forEach(t => {
+                // Determine styling based on whether the neuron path triggered REAL or FAKE mappings
+                const colorClass = t.impact_type === "FAKE_TRIGGER" 
+                    ? "bg-error/30 text-error font-bold border-b border-error px-1 rounded-sm mx-0.5" 
+                    : "bg-primary/30 text-primary font-bold border-b border-primary px-1 rounded-sm mx-0.5";
+                
+                // Replace globally accounting for casing, wrapping with tooltip logic
+                const regex = new RegExp(`\\b${t.word}\\b`, 'gi');
+                highlightedText = highlightedText.replace(regex, `<span class="${colorClass}" title="${t.impact_type}: ${t.weight}">${t.word}</span>`);
+            });
+            limeContent.innerHTML = highlightedText;
         }
 
         // Reset Loading State
