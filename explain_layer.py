@@ -31,8 +31,8 @@ class ExplainLayer:
             return np.array(results)
             
         try:
-            # Process strictly the top 15 features to prevent endless permutation blocking
-            exp = self.explainer.explain_instance(text, predictor, num_features=15)
+            # We limit to top 15 features and 100 permutations to save processing time on CPU
+            exp = self.explainer.explain_instance(text, predictor, num_features=15, num_samples=100)
             
             triggers = []
             for word, weight in exp.as_list():
