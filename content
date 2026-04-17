@@ -1,0 +1,272 @@
+## 1. Domain
+
+* Building systems for **fake news detection and media bias analysis**
+* Combining:
+
+  * Traditional ML-based NLP pipelines
+  * LLM-based media evaluation frameworks
+  * Graph-based contextual bias modeling
+* Input modalities:
+
+  * Text (primary)
+  * Vision/audio/video (planned via HonestyMeter)
+
+---
+
+## 2. Key Decisions
+
+### 2.1 Framework Selection
+
+* Tool/Systems:
+
+  * HonestyMeter
+  * Fake_News_Detection
+  * sentence_level_media_bias_naacl_2024
+* Purpose:
+
+  * Detect misinformation, bias, and manipulation in media
+* Rationale:
+
+  * Covers **3 complementary layers**:
+
+    * Classification (fake vs real)
+    * Manipulation detection (100+ techniques)
+    * Sentence-level bias identification
+
+---
+
+### 2.2 Modeling Approach
+
+* Approach: Hybrid NLP + Graph-enhanced modeling
+
+* Framework/Tool:
+
+  * scikit-learn
+  * Event-aware language models
+  * Graph Attention Networks
+
+* Component:
+
+  * Text preprocessing (tokenization, stemming)
+  * Feature extraction:
+
+    * Bag-of-Words
+    * N-grams
+    * TF-IDF
+    * (planned: Word2Vec, POS tagging, topic modeling)
+  * Model training + evaluation
+  * Sentence-level graph reasoning
+
+**Design Choice:**
+
+* Multi-model experimentation:
+
+  * Naive Bayes
+  * Logistic Regression ✅ (final selected)
+  * Linear SVM
+  * SGD
+  * Random Forest
+
+* Model selection via:
+
+  * F1-score
+  * Confusion matrix
+  * Precision-recall curves
+  * Learning curves
+
+* Hyperparameter tuning:
+
+  * GridSearchCV
+
+* Advanced layer:
+
+  * **Event Relation Graph**
+
+    * Nodes: events
+    * Edges:
+
+      * Coreference
+      * Temporal
+      * Causal
+      * Subevent
+
+**Benefit:**
+
+* Strong baseline with classical ML
+* Interpretability via feature importance (top TF-IDF words)
+* Context-aware reasoning for subtle bias
+* Improved precision + recall for sentence-level detection
+
+---
+
+### 2.3 Data Simplification Strategy
+
+#### A. Multi-Class Reduction
+
+* Condition: Original LIAR dataset has 6 labels
+* Action: Convert to binary classification
+
+#### B. Label Mapping
+
+* Action:
+
+  * True / Mostly-true / Half-true → **True**
+  * Barely-true / False / Pants-fire → **False**
+
+#### C. Feature Reduction
+
+* Condition:
+
+  * Dataset has 13+ metadata columns
+* Action:
+
+  * Use only:
+
+    * Statement (text)
+    * Label
+
+#### D. Sentence-Level Bias Labeling
+
+* Condition:
+
+  * Bias occurs at **sentence granularity**
+* Action:
+
+  * Label sentences as:
+
+    * Bias
+    * Non-bias
+  * Use:
+
+    * Majority voting (BiasedSents)
+    * Combined lexical + informational bias (BASIL)
+
+---
+
+## 3. Data Characteristics
+
+* Sources:
+
+  * LIAR Dataset
+  * BASIL Dataset
+  * BiasedSents Dataset
+  * MAVEN-ERE Dataset
+
+* Format:
+
+  * TSV → processed into CSV
+
+* Files:
+
+  * train.csv, test.csv, valid.csv
+
+* Nature:
+
+  * Text classification + sequence modeling
+
+* Granularity:
+
+  * Document-level (fake/real)
+  * Sentence-level (bias detection)
+
+---
+
+## 4. Canonical References
+
+* Repository 1:
+
+  * [https://github.com/nishitpatel01/Fake_News_Detection](https://github.com/nishitpatel01/Fake_News_Detection)
+  * Contains:
+
+    * `DataPrep.py` → preprocessing + EDA
+    * `FeatureSelection.py` → feature engineering
+    * `classifier.py` → training + evaluation
+    * `prediction.py` → inference using saved model
+
+* Repository 2:
+
+  * [https://github.com/BetterForAll/HonestyMeter](https://github.com/BetterForAll/HonestyMeter)
+  * Contains:
+
+    * LLM-based analysis
+    * Detection of **100+ manipulation techniques**
+    * Objectivity scoring
+    * Feedback + improvement suggestions
+    * Web-based interface (Node.js frontend)
+
+* Repository 3:
+
+  * [https://github.com/yuanyuanlei-nlp/sentence_level_media_bias_naacl_2024/](https://github.com/yuanyuanlei-nlp/sentence_level_media_bias_naacl_2024/) 
+  * Contains:
+
+    * Sentence-level bias detection
+    * Event relation graph training + construction
+    * Graph-enhanced bias classification
+
+---
+
+## 5. System Design Summary
+
+* Environment:
+
+  * Python (ML pipeline) + Node.js (frontend for HonestyMeter)
+
+* Data Pipeline:
+
+  * Input text
+    → Preprocessing
+    → Feature extraction
+    → Model inference
+    → Bias + truth evaluation
+
+* Modeling Layers:
+
+  1. **Fake News Classification**
+
+     * Logistic Regression (final model)
+  2. **Bias Detection**
+
+     * Sentence-level classification
+  3. **Advanced Reasoning**
+
+     * Event relation graph
+  4. **LLM Layer**
+
+     * Manipulation detection + explanation
+
+* Outputs:
+
+  * Fake/True label
+  * Probability score
+  * Sentence-level bias flags
+  * Objectivity score
+  * Detected manipulation techniques
+  * Suggestions for improvement
+
+* Current Limitations:
+
+  * Accuracy ~70% (due to small dataset)
+  * Limited feature complexity
+  * HonestyMeter currently text-only
+
+* Goal:
+
+  * Build a **multi-layer intelligent media analysis system**:
+
+    * Fake news detection
+    * Bias detection (fine-grained)
+    * Explainable AI for media transparency
+
+
+
+# Plan of Development:
+* Layer 1 — Inputs (beyond paste text)
+The original project only takes raw text. You can add URL scraping (auto-fetch the article using newspaper3k), a claim+evidence mode for stance detection, and eventually image+caption analysis for multimodal misinformation.
+* Layer 2 — NLP Analysis (your core)
+You already have the TF-IDF + Logistic Regression model and HonestyMeter for bias/manipulation. The additions here are: a BERT/RoBERTa model for much better semantic understanding, sentiment + emotion analysis (high outrage/fear is a strong deception signal), named entity recognition to extract and fact-check specific people/orgs/dates, and a clickbait detector that checks whether the headline matches the body.
+* Layer 3 — Source Credibility (missing completely from nishitpatel01)
+This is a major gap in the original. You can pull from MediaBiasFactCheck or AllSides to score the publishing domain, check domain age/HTTPS/WHOIS signals (fake sites are often newly registered), look up author history if available, and cross-check whether other credible sources are reporting the same claim.
+* Layer 4 — Explainability (the problem statement specifically demands this)
+This is what separates a useful system from a black box. LIME/SHAP shows which words drove the prediction. Attention heatmaps (for BERT-based models) show exactly which spans the model focused on. A span highlighter marks misleading content inline in the original text. You should also retrieve similar known-fake articles so the user can see precedent.
+* Layer 5 — Output
+Beyond true/fake, you want a confidence score (e.g. 78% likely fake), a plain-English LLM-generated explanation of why, an exportable full report (JSON or PDF), and a user feedback loop so incorrect predictions can feed back to improve the model over time.

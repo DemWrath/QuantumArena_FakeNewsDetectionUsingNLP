@@ -1,0 +1,11 @@
+.planning/
+# But ignore internal AI folders
+.planning/brain/
+.planning/logs/
+.planning/graphs/
+.planning/intel/
+
+__pycache__/
+*.joblib
+*.sav
+*.pyc
