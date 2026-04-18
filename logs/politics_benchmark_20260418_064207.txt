@@ -1,0 +1,167 @@
+========================================================================
+  TruthLens — Politics News Benchmark Report
+  Run at : 2026-04-18 06:53:23
+  Samples: 15
+========================================================================
+
+------------------------------------------------------------------------
+  [[OK]] POL-REAL-01  |  Category: REAL  |  Elapsed: 13.22s
+  Headline : India passes Women's Reservation Bill; 33% seats reserved in Lok Sabha and state
+  Expected : REAL          Predicted: REAL          Confidence: 0.5981
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9968)
+
+------------------------------------------------------------------------
+  [[XX]] POL-REAL-02  |  Category: REAL  |  Elapsed: 3.31s
+  Headline : Supreme Court upholds abrogation of Article 370; Jammu & Kashmir reorganisation 
+  Expected : REAL          Predicted: FAKE          Confidence: 0.588
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.98)
+
+------------------------------------------------------------------------
+  [[OK]] POL-REAL-03  |  Category: REAL  |  Elapsed: 3.22s
+  Headline : UK general election 2024: Labour wins landslide majority; Keir Starmer becomes P
+  Expected : REAL          Predicted: REAL          Confidence: 0.5774
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9624)
+
+------------------------------------------------------------------------
+  [[OK]] POL-REAL-04  |  Category: REAL  |  Elapsed: 2.92s
+  Headline : France invokes Article 49.3 to pass pension reform without parliamentary vote
+  Expected : REAL          Predicted: REAL          Confidence: 0.5855
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9758)
+
+------------------------------------------------------------------------
+  [[XX]] POL-REAL-05  |  Category: REAL  |  Elapsed: 2.94s
+  Headline : US Senate confirms Ketanji Brown Jackson as first Black woman on Supreme Court
+  Expected : REAL          Predicted: FAKE          Confidence: 0.5994
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.999)
+
+------------------------------------------------------------------------
+  [[OK]] POL-FAKE-01  |  Category: FAKE  |  Elapsed: 2.84s
+  Headline : United Nations votes to dissolve India's membership; country expelled from all g
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.75
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9868)
+
+------------------------------------------------------------------------
+  [[OK]] POL-FAKE-02  |  Category: FAKE  |  Elapsed: 3.28s
+  Headline : Secret recording reveals US President planning to abolish the Constitution
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.75
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.9983)
+
+------------------------------------------------------------------------
+  [[OK]] POL-FAKE-03  |  Category: FAKE  |  Elapsed: 4.11s
+  Headline : Election Commission of India secretly adds 50 million fake voter IDs to electora
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.5473
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.9121)
+
+------------------------------------------------------------------------
+  [[OK]] POL-FAKE-04  |  Category: FAKE  |  Elapsed: 3.31s
+  Headline : China and Pakistan sign joint declaration merging into single nation by 2030
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.75
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9988)
+
+------------------------------------------------------------------------
+  [[XX]] POL-MSLEAD-01  |  Category: MISLEADING  |  Elapsed: 3.13s
+  Headline : India's democracy index CRASHES to all-time low — now ranked below North Korea
+  Expected : MISLEADING    Predicted: REAL          Confidence: 0.5022
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.837)
+
+------------------------------------------------------------------------
+  [[XX]] POL-MSLEAD-02  |  Category: MISLEADING  |  Elapsed: 3.45s
+  Headline : 100% of opposition MPs arrested in midnight crackdown — democracy officially dea
+  Expected : MISLEADING    Predicted: REAL          Confidence: 0.5984
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9973)
+
+------------------------------------------------------------------------
+  [[XX]] POL-MSLEAD-03  |  Category: MISLEADING  |  Elapsed: 3.15s
+  Headline : US completely abandons NATO — Europe left defenceless against Russia
+  Expected : MISLEADING    Predicted: FAKE          Confidence: 0.5985
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.9975)
+
+------------------------------------------------------------------------
+  [[OK]] POL-UNVER-01  |  Category: UNVERIFIED  |  Elapsed: 2.96s
+  Headline : Senior BJP leader in talks with opposition for defection, say party insiders
+  Expected : REAL          Predicted: REAL          Confidence: 0.5981
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9969)
+
+------------------------------------------------------------------------
+  [[OK]] POL-UNVER-02  |  Category: UNVERIFIED  |  Elapsed: 2.67s
+  Headline : Leaked diplomatic cable suggests India-China border deal imminent
+  Expected : REAL          Predicted: REAL          Confidence: 0.5989
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9982)
+
+------------------------------------------------------------------------
+  [[OK]] POL-EDGE-01  |  Category: FAKE  |  Elapsed: 3.1s
+  Headline : World leaders agree to dissolve all nations; single global government to rule by
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.75
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9648)
+
+========================================================================
+  SUMMARY
+========================================================================
+  Total samples : 15
+  Correct       : 10  (66.7%)
+  Incorrect     : 5
+  Errors        : 0
+  Skipped/None  : 0
+
+  Per-category accuracy:
+    FAKE         : 5/5  (100%)
+    MISLEADING   : 0/3  (0%)
+    REAL         : 3/5  (60%)
+    UNVERIFIED   : 2/2  (100%)
+
+  Avg elapsed  : 3.8s
+  Max elapsed  : 13.2s
+  Total elapsed: 57.6s
+
+  Incorrect predictions:
+    [POL-REAL-02]  expected=REAL  got=FAKE  gemini=None
+    [POL-REAL-05]  expected=REAL  got=FAKE  gemini=None
+    [POL-MSLEAD-01]  expected=MISLEADING  got=REAL  gemini=None
+    [POL-MSLEAD-02]  expected=MISLEADING  got=REAL  gemini=None
+    [POL-MSLEAD-03]  expected=MISLEADING  got=FAKE  gemini=None
+========================================================================

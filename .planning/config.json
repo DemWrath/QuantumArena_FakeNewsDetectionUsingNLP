@@ -1,0 +1,22 @@
+{
+  "mode": "yolo",
+  "granularity": "standard",
+  "parallelization": true,
+  "commit_docs": false,
+  "model_profile": "balanced",
+  "workflow": {
+    "research": true,
+    "plan_check": true,
+    "verifier": true,
+    "nyquist_validation": true,
+    "auto_advance": true,
+    "_auto_chain_active": true
+  },
+  "planning": {
+    "sub_repos": [
+      "Fake_News_Detection/Fake_News_Detection",
+      "HonestyMeter/HonestyMeter",
+      "sentence_level_media_bias_naacl_2024/sentence_level_media_bias_naacl_2024"
+    ]
+  }
+}

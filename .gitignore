@@ -1,4 +1,4 @@
-.planning/
+
 # But ignore internal AI folders
 .planning/brain/
 .planning/logs/

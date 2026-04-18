@@ -6,7 +6,7 @@ Single endpoint: POST /api/analyze
 Accepts { url?, text? } → runs the full pipeline → returns flat JSON.
 """
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from pipeline import execute_pipeline
 from input_handler import fetch_text
@@ -14,6 +14,10 @@ import traceback
 
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/')
+def serve_frontend():
+    return send_file('index.html')
 
 
 @app.route('/api/analyze', methods=['POST'])
