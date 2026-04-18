@@ -4,7 +4,7 @@
 
 - ✅ **v1.0 Unification & Foundation (Layer 1)** — Phases 1-2 (Shipped 2026-04-16)
 - ✅ **v2.0 Semantic Analysis & Source Context** — Phases 3-6 (Shipped 2026-04-17)
-- 🚧 **v3.0 Explainability & API Server (Layers 4 & 5)** — Phases 7-8 (Planned)
+- ✅ **v3.0 Explainability & API Server (Layers 4 & 5)** — Phases 7-10 (Shipped 2026-04-18) → [archive](milestones/v3.0-ROADMAP.md)
 
 ## Phases
 
@@ -26,17 +26,31 @@
 
 </details>
 
-### 🚧 v3.0 Explainability & API Server (In Progress)
-**Goal**: Surface the model's logic transparently to end users via a localized Web Server bridging the Python pipeline directly into the Threat-Map UI!
+<details>
+<summary>✅ v3.0 Explainability & API Server — SHIPPED 2026-04-18</summary>
 
-## Phase 7: Local API Fast Web Server Data Binding
-**Goal**: Launch a local web server to bind `pipeline.py` processing natively to `index.html`.
-- **API-01**: Implement the Flask server wrapping the pipeline execution inside a POST `/api/analyze` route.
-- **API-02**: Format and secure cross-origin requests bridging port execution spaces safely.
-- **API-03**: Finalize JavaScript updates within `index.html` stripping the hardcoded responses out permanently.
+- [x] Phase 7: Local API Fast Web Server Data Binding
+- [x] Phase 8: Deep Explainability Mapping (LIME/SHAP)
+- [x] Phase 9: Parametric Fallback Hardening
+- [x] Phase 10: Cross-Phase Integration Fix
 
-## Phase 8: Deep Explainability Mapping (LIME/SHAP)
-**Goal**: Trace logic sequences explicitly mapping why the Transformer layers evaluated strings organically. 
-- **EXPL-01**: Integrate LIME semantic keyword weighting identifying positive/negative triggers driving classification thresholds natively.
-- **EXPL-02**: Pass HTML-enabled gradient arrays directly into the `/api/analyze` JSON framework.
-- **EXPL-03**: Upgrade the Frontend UI Threat Interface to render LIME explanatory tags elegantly.
+</details>
+
+- 🚧 **v4.0 Detection Accuracy & Generalization** — Phases 11+ (In Progress)
+
+### 🚧 v4.0 Detection Accuracy & Generalization (In Progress)
+**Goal**: Generalize the pipeline's detection capabilities beyond Maharashtra-specific patterns, close accuracy gaps exposed by the politics benchmark (40% → target 70%+), and harden fallback behaviour under API exhaustion.
+
+## Phase 11: Politics Benchmark Accuracy Fixes
+**Goal**: Close the 9 incorrect predictions from the politics benchmark by expanding heuristic coverage, guarding MISLEADING fallback, correcting test data, and tuning the Gemini prompt for political news tolerance.
+- **Depends on**: Phase 10
+- **POL-01**: Expand `_heuristic_signals()` with political impossibility phrases — sovereign merger/dissolution claims, UN expulsion without Security Council, constitution abolition, global government formation. Catches POL-FAKE-01, POL-FAKE-04, POL-EDGE-01.
+- **POL-02**: Add MISLEADING fallback guard — when Gemini is unavailable, the fallback path should never produce a MISLEADING verdict (only REAL/FAKE). MISLEADING requires semantic reasoning about omission/exaggeration that BERT cannot provide.
+- **POL-03**: Tune Gemini grounded fact-check prompt to tolerate minor phrasing variations in political news (e.g. "Parliament's competence" vs "President's authority") without escalating to MISLEADING. Reduce false positives on REAL political articles.
+- **POL-04**: Fix test data error in POL-REAL-03 (Reform UK won 5 seats, not 4) and review all political test set samples for factual accuracy against primary sources.
+
+### Plans
+- [x] POL-01: Expand political heuristic phrases
+- [x] POL-02: MISLEADING fallback guard
+- [x] POL-03: Tune Gemini political tolerance prompt
+- [x] POL-04: Fix politics test set data errors

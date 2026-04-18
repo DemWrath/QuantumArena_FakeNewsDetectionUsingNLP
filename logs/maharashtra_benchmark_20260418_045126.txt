@@ -1,0 +1,63 @@
+========================================================================
+  TruthLens — Maharashtra News Benchmark Report
+  Run at : 2026-04-18 04:51:56
+  Samples: 4
+========================================================================
+
+------------------------------------------------------------------------
+  [[OK]] MH-FAKE-01  |  Category: FAKE  |  Elapsed: 23.15s
+  Headline : Shivaji Maharaj statue at Rajkot Fort rises from the sea by itself — miracle con
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.9961
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.9961)
+
+------------------------------------------------------------------------
+  [[XX]] MH-FAKE-02  |  Category: FAKE  |  Elapsed: 2.3s
+  Headline : Devendra Fadnavis signs secret treaty gifting Konkan coast to foreign company
+  Expected : FAKE          Predicted: REAL          Confidence: 0.9973
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9973)
+
+------------------------------------------------------------------------
+  [[XX]] MH-FAKE-03  |  Category: FAKE  |  Elapsed: 2.44s
+  Headline : New strain of COVID-19 found only in Maharashtra water supply; death toll 5000 i
+  Expected : FAKE          Predicted: REAL          Confidence: 0.9903
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9903)
+
+------------------------------------------------------------------------
+  [[XX]] MH-EDGE-01  |  Category: FAKE  |  Elapsed: 2.16s
+  Headline : Maharashtra declares itself independent nation; Uddhav Thackeray named President
+  Expected : FAKE          Predicted: REAL          Confidence: 0.9991
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9991)
+
+========================================================================
+  SUMMARY
+========================================================================
+  Total samples : 4
+  Correct       : 1  (25.0%)
+  Incorrect     : 3
+  Errors        : 0
+  Skipped/None  : 0
+
+  Per-category accuracy:
+    FAKE         : 1/4  (25%)
+
+  Avg elapsed  : 7.5s
+  Max elapsed  : 23.1s
+  Total elapsed: 30.1s
+
+  Incorrect predictions:
+    [MH-FAKE-02]  expected=FAKE  got=REAL  gemini=None
+    [MH-FAKE-03]  expected=FAKE  got=REAL  gemini=None
+    [MH-EDGE-01]  expected=FAKE  got=REAL  gemini=None
+========================================================================

@@ -1,0 +1,178 @@
+========================================================================
+  TruthLens — Maharashtra News Benchmark Report
+  Run at : 2026-04-18 05:12:55
+  Samples: 15
+========================================================================
+
+------------------------------------------------------------------------
+  [[XX]] MH-REAL-01  |  Category: REAL  |  Elapsed: 43.16s
+  Headline : Mumbai Metro Line 3 inaugurated by Prime Minister; Aarey to BKC corridor opens
+  Expected : REAL          Predicted: MISLEADING    Confidence: 0.9
+  Gemini Verdict: MISLEADING
+  FactCheck: verdict=MISLEADING  conf=0.9  search_grounded=True  sources=16
+  RedFlags : The inauguration date of October 7, 2023, is incorrect; the first phase was inaugurated in October 2024.; The text implies the full Mumbai Metro Line 3 was inaugurated connecting Aarey to Bandra-Kurla Complex, but this was only the first phase, with the full line extending to Cuffe Parade.
+  Emotion  : fear=0.0  outrage=0.0  sensat=0.0
+  Clickbait: False  |  Style: REAL (0.9985)
+
+------------------------------------------------------------------------
+  [[XX]] MH-REAL-02  |  Category: REAL  |  Elapsed: 19.19s
+  Headline : Maharashtra government announces 10% reservation for EWS in state government job
+  Expected : REAL          Predicted: MISLEADING    Confidence: 0.9
+  Gemini Verdict: MISLEADING
+  FactCheck: verdict=MISLEADING  conf=0.9  search_grounded=True  sources=5
+  RedFlags : The claim that Chief Minister Eknath Shinde announced the implementation of the 10% EWS reservation on a Monday is misleading, as the initial implementation occurred in 2019, before his tenure.; The claim that the state's Department of Social Justice confirmed a notification would be issued in the official Maharashtra Gazette within 30 days is unverified by the provided evidence.
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.7309)
+
+------------------------------------------------------------------------
+  [[XX]] MH-REAL-03  |  Category: REAL  |  Elapsed: 33.24s
+  Headline : Pune flooding: 7 dead, 2000 displaced as Mula-Mutha river breaches banks
+  Expected : REAL          Predicted: MISLEADING    Confidence: 0.9
+  Gemini Verdict: MISLEADING
+  FactCheck: verdict=MISLEADING  conf=0.9  search_grounded=True  sources=12
+  RedFlags : The claim that 'at least seven people died' is contradicted by reports of at least four fatalities.; The claim that the NDRF deployed '12 teams across low-lying areas including Paud Road, Hadapsar, and Sinhagad Road' is contradicted by evidence specifying five teams deployed in different locations.; The claim that the IMD issued an 'orange alert for Pune district and adjoining areas for the next 48 hours' is contradicted by multiple reports of a red alert for 24 hours on July 25.
+  Emotion  : fear=0.1  outrage=0.05  sensat=0.1
+  Clickbait: False  |  Style: REAL (0.9872)
+
+------------------------------------------------------------------------
+  [[XX]] MH-REAL-04  |  Category: REAL  |  Elapsed: 27.7s
+  Headline : Nagpur-Mumbai Expressway: Samruddhi Mahamarg registers 5 crore vehicle trips mil
+  Expected : REAL          Predicted: MISLEADING    Confidence: 0.9
+  Gemini Verdict: MISLEADING
+  FactCheck: verdict=MISLEADING  conf=0.9  search_grounded=True  sources=10
+  RedFlags : The claim of five crore vehicle trips by March 2024 is contradicted by evidence showing 3.44 crore cumulative trips by April 2026.; The expressway is described as eight-lane, but credible sources confirm it is six-lane.; The stated toll revenue of over ₹1,200 crore for fiscal year 2023-24 is incorrect; the actual figure was ₹528.10 crore.
+  Emotion  : fear=0.0  outrage=0.0  sensat=0.05
+  Clickbait: False  |  Style: REAL (0.9983)
+
+------------------------------------------------------------------------
+  [[OK]] MH-REAL-05  |  Category: REAL  |  Elapsed: 22.42s
+  Headline : Maratha quota protests: OBC groups stage counter-demonstration in Pune
+  Expected : REAL          Predicted: REAL          Confidence: 0.9
+  Gemini Verdict: VERIFIED
+  FactCheck: verdict=VERIFIED  conf=0.9  search_grounded=True  sources=15
+  Emotion  : fear=0.1  outrage=0.1  sensat=0.1
+  Clickbait: False  |  Style: FAKE (0.9939)
+
+------------------------------------------------------------------------
+  [[OK]] MH-FAKE-01  |  Category: FAKE  |  Elapsed: 16.91s
+  Headline : Shivaji Maharaj statue at Rajkot Fort rises from the sea by itself — miracle con
+  Expected : FAKE          Predicted: FAKE          Confidence: 0.95
+  Gemini Verdict: FABRICATED
+  FactCheck: verdict=FABRICATED  conf=0.95  search_grounded=True  sources=13
+  RedFlags : The 13-foot statue claim is incorrect; the actual statue was 35 feet.; The claim that the statue 'reportedly risen from the ocean on its own, floating back to shore intact' is entirely absent from all credible sources and directly contradicted.; Claims of eyewitnesses photographing the event, temple priests declaring it a miracle, and thousands gathering are unsubstantiated by any evidence.
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: True  |  Style: FAKE (0.9961)
+
+------------------------------------------------------------------------
+  [[XX]] MH-FAKE-02  |  Category: FAKE  |  Elapsed: 3.2s
+  Headline : Devendra Fadnavis signs secret treaty gifting Konkan coast to foreign company
+  Expected : FAKE          Predicted: REAL          Confidence: 0.9973
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9973)
+
+------------------------------------------------------------------------
+  [[XX]] MH-FAKE-03  |  Category: FAKE  |  Elapsed: 2.6s
+  Headline : New strain of COVID-19 found only in Maharashtra water supply; death toll 5000 i
+  Expected : FAKE          Predicted: REAL          Confidence: 0.9903
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9903)
+
+------------------------------------------------------------------------
+  [[XX]] MH-MSLEAD-01  |  Category: MISLEADING  |  Elapsed: 2.81s
+  Headline : Maharashtra's crime rate is the highest in India — citizens no longer safe
+  Expected : MISLEADING    Predicted: REAL          Confidence: 0.9846
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9846)
+
+------------------------------------------------------------------------
+  [[XX]] MH-MSLEAD-02  |  Category: MISLEADING  |  Elapsed: 2.88s
+  Headline : Farmer suicide epidemic: Maharashtra government spent ZERO on agriculture in 202
+  Expected : MISLEADING    Predicted: FAKE          Confidence: 0.9968
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.9968)
+
+------------------------------------------------------------------------
+  [[XX]] MH-MSLEAD-03  |  Category: MISLEADING  |  Elapsed: 2.94s
+  Headline : Tata Motors sacks all Pune workers — electric vehicle push kills 18,000 jobs ove
+  Expected : MISLEADING    Predicted: REAL          Confidence: 0.5799
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.5799)
+
+------------------------------------------------------------------------
+  [[OK]] MH-UNVER-01  |  Category: UNVERIFIED  |  Elapsed: 2.42s
+  Headline : Anonymous whistleblower claims Mumbai port trust officials demanded ₹50 crore br
+  Expected : REAL          Predicted: REAL          Confidence: 0.958
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.958)
+
+------------------------------------------------------------------------
+  [[OK]] MH-UNVER-02  |  Category: UNVERIFIED  |  Elapsed: 2.33s
+  Headline : Nashik grape farmers claim new fungal disease decimating Sula Vineyards crop
+  Expected : REAL          Predicted: REAL          Confidence: 0.9982
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9982)
+
+------------------------------------------------------------------------
+  [[XX]] MH-UNVER-03  |  Category: UNVERIFIED  |  Elapsed: 2.35s
+  Headline : Thane doctors develop low-cost dialysis device; patent pending globally
+  Expected : REAL          Predicted: FAKE          Confidence: 0.9939
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: FAKE (0.9939)
+
+------------------------------------------------------------------------
+  [[XX]] MH-EDGE-01  |  Category: FAKE  |  Elapsed: 2.37s
+  Headline : Maharashtra declares itself independent nation; Uddhav Thackeray named President
+  Expected : FAKE          Predicted: REAL          Confidence: 0.9991
+  Gemini Verdict: None
+  FactCheck: verdict=None  conf=None  search_grounded=False  sources=0
+  Emotion  : fear=None  outrage=None  sensat=None
+  Clickbait: None  |  Style: REAL (0.9991)
+
+========================================================================
+  SUMMARY
+========================================================================
+  Total samples : 15
+  Correct       : 4  (26.7%)
+  Incorrect     : 11
+  Errors        : 0
+  Skipped/None  : 0
+
+  Per-category accuracy:
+    FAKE         : 1/4  (25%)
+    MISLEADING   : 0/3  (0%)
+    REAL         : 1/5  (20%)
+    UNVERIFIED   : 2/3  (67%)
+
+  Avg elapsed  : 12.4s
+  Max elapsed  : 43.2s
+  Total elapsed: 186.5s
+
+  Incorrect predictions:
+    [MH-REAL-01]  expected=REAL  got=MISLEADING  gemini=MISLEADING
+    [MH-REAL-02]  expected=REAL  got=MISLEADING  gemini=MISLEADING
+    [MH-REAL-03]  expected=REAL  got=MISLEADING  gemini=MISLEADING
+    [MH-REAL-04]  expected=REAL  got=MISLEADING  gemini=MISLEADING
+    [MH-FAKE-02]  expected=FAKE  got=REAL  gemini=None
+    [MH-FAKE-03]  expected=FAKE  got=REAL  gemini=None
+    [MH-MSLEAD-01]  expected=MISLEADING  got=REAL  gemini=None
+    [MH-MSLEAD-02]  expected=MISLEADING  got=FAKE  gemini=None
+    [MH-MSLEAD-03]  expected=MISLEADING  got=REAL  gemini=None
+    [MH-UNVER-03]  expected=REAL  got=FAKE  gemini=None
+    [MH-EDGE-01]  expected=FAKE  got=REAL  gemini=None
+========================================================================

@@ -1,0 +1,1377 @@
+{
+  "dataset": "politics",
+  "run_at": "2026-04-18T06:29:02.882970",
+  "total_samples": 15,
+  "results": [
+    {
+      "id": "POL-REAL-01",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "India passes Women's Reservation Bill; 33% seats reserved in Lok Sabha and state assemblies",
+      "elapsed_s": 30.15,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9968,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "VERIFIED",
+            "confidence": 1.0,
+            "reasoning": "All key claims in the original text, including the passage date, reservation percentage, voting details, effective date, presidential assent, and historical context, are directly corroborated by the provided evidence research.",
+            "red_flags": [],
+            "grounding_sources": [
+              {
+                "title": "economictimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPjHrvMrd6LracMkp_FRH3Y_3WgfKrD2DbBIxc0JZ7a7rRVEM7Np7l1hTRgGRU1cMPADrGpW6U6bEJCuket8TLHfNW7zduGvwxRsCzTmijb4-ox_NBs90WI11RsZxz4tzy4gpFv70HFhve774ruIzreCiVOakOSSkC4lYn02TA-Ad6jFAd1vg89Md262vcIEwkMlerJ-mJXclVNZG-x0IYcBgURQBTYPQhVhfHez6C4WINvmquc7M7ouimKJsfTKu7KsOaecIDU7hooZwC2u8wdTOcwzK9rsxW9KdTOQwqxQNqvJiaktbcxFE="
+              },
+              {
+                "title": "livemint.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHtAOnS9e7ONkmh-VLr3cDBIG3hwMP5xHf5v9nJDfE6cUF76MRwuP5nUJ-vmBu3dsccbMGOmUeS1NH5EGHjkTdjBWtbZTxTW5ck4ICSLSbZthImlMLfeSzkkuAU16CrY8ihvTxtYuzYj4uq8biohs1CrGHIHVGe-6QkJ7VTaJ4jdVksQ7RSfidWh1eBrIxmHxE5I4XgT9buGK_Y6QWsw1KELPgmQ0UjQfIJg=="
+              },
+              {
+                "title": "economictimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAawY6qrEiKrFBZKQJ4wDRjKAcxlbRwIBXJuzCNyrG_yFPrEpv1_W6tectekIy3QA5iq4AKTy5rl37BD1-mkNvDfEL9RRj5S1OBu2V0xOCBVULWaua90ZpSY87RvUh1DA5EN-Ln3a_yv8ctehg6XHWSauiw71hhgo9ac2FsZRg8M48o_RMT1uIBZvEs-J4HqUxCOZ80ul_AFRzVLWX-X9LP6g8GQ=="
+              },
+              {
+                "title": "thenewsminute.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdPnTyhK53SaspRvgJ-qqoLk2yej1k8NavRGy3mGFHa4KJHPzc2PPJBfKZ6RtcuFOVKq2q4vbB817fAoRyVCBop_pGrpWG1DGpYDJnu2A1u5tONgcKznIfyCpBt9_-m_PjpY76tkNlnUF27BLVx8HyeeIWNlnd7YfbBj0vVORsUFc2u59nYEYRFS35y1Dx7JgmKILsMA=="
+              },
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDk7w-Mad6KVAibG7FukZulwgM56-f5yRHqEjNljos3wYy3gcLvPG3B-EKQJZAMTuo2SdjhSba_s6yIXTu-gCdITdLI8zRdjzbhq5YH8xtRyQmdJCYXVt6-iuKQ8PBgFZJjNPv0LfZEDspuv8a1Z7QR_z6pZR2o2876zMGenzs7IUswcp3jkTLo7EL0T1nkR5pBoVEUQ=="
+              },
+              {
+                "title": "unwomen.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXYv6l3EKv9kEUAVAxjj-zxFG6ker1ezxYyXNiIEMXE6AX7lqD7i0RY2pq5VJmk_kFS54Qj0XmYN8C5kYMe1liLD7D6gzLH4yVeTK4Ji-OX56ngi_QMe3FwYAVgdCRXryF5-KbSS1erjZdZDlUzhw77dnp6cxh2o6xZIK9bpddQeMSZbmzU42RCZrrnG_56NzKMgDRcGDvLDF9CfqqfuhbDtps6qg-ULEwg18XeLyNvg=="
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWJtvMv3Q3cl30L6llM8zpE5PTz0FC2ViYVFwXGma9Wz6SCYVN4q32zYQydpxD2-VpxLi8N99I2FGZb7xCOs5Dojcb7V_NSbeSLJqkCV37Sej67Egflc2ZUU8UJ8E2nIuLw6te1u-0rhiOZiHBsN96rhjf8crZGJRriXE4FCI9HUb0niGsCTIqwz08zYdh5CvOjapQ0vPXEQFINntQjTxopgq7pPHsyAbr4Qj4QH2bvVzfgsOHE4W2YOId9vLs3D8jnbCbQRLH_Ts_"
+              },
+              {
+                "title": "business-standard.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZKQWzU1d3EVhCpjHZmsF-FOaWv6WiH3ANr9TLTMOA6im7d_pEHcqhQpjTJq1RFvqQPs_l3eH4trbaQc5W9exrJZP0GuebXiLL2-3CploeSgLDrMC_eugg08GvDnNllLFylyi__dXXfS2MAMIclva5NDHvzM5CTAxDs6OO9t6NdDNB4Q26L44-sejvktMOk9Q5BtcdZ1KtbdUMEqkX-CbZ0bUGvQD4qO_H2sFG98b-yqyt_pq-O6u3mis="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5-9yqhKHDCNR_1VaKWaWzip8fDgp001aOsrjmiv804cTcFgHxjVN__On5k7T-boztKMfIyZ9GW35SsG4_udYk4alt6k7QtXd2p6Elef3k_GHgkidcZ9QBbTKpwFmJ6rkB2eB3CZxaIRXLJkvm4Pc4Xcq3HzsES_yIq0zjSRPI8Ipd5XWvSMUHBzNQqP7ePDZjoocOVvqIw8zIGAyajj1oDGtGu2QnGK-JRh0fVCrH859NDRyAq5IhEBlwvnn1"
+              },
+              {
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRq6USi8ZR24rLyVyf8UeDRsVujIvS2x7KD7QJ2CkkvTMAIIf-byYHWgOxDlROLZjclbpRrbny3IFIwumBSINp_l9tHtG92_E5IuhnCs1HhG-oHKarnENaMErKEmTYQWSHSO9VT-w="
+              },
+              {
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFraWgE6BGO-mDEEX3y69tLkqMSUEfSGs8vygP9ORYyNFsuKm8gPC-fh_JTHhHZ7Sy16YR85OnNxRGpBesLFTRnhpj0dph4bnuJqHgOUa_1--LjUWMn2Nal9k8OMLNADFZ_Cmmn0Vc="
+              },
+              {
+                "title": "ndtv.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwyZdKcZTTIwEWn9ncv7wbHV-nd0QmCCQVXU4dznLHXNlzFHdR8S35w9E1r8c9j9rQqg9GOFoFp3Muc2RFeL4fCitlMHbDvnVIQiHQ0GkLz37AV7ZBQeVVfm5x48g4lKF5OHzsc5TEieer9-eBR_DbvLRQD1WuqEg58oX9y-XWsxaF9raLgU2oh06srrn8zt4lsK1yzLcl15YE2hgOkLPfe-aghRzmr77Dsb627mJS0QTt37NvLw=="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCt1FmK3LXbojtYLetf2WrI_10-clHn7RDq9ooN57vOpo8P5fUsDHrzPGa8ZITlDPJa3-sAXZouOaLc3fME9ZIXun8_SYZv8Djp3Erz1UiOccMJGSKGvLNf2R6v5-sycJaJqDic4nKa_HcVIiwgCb6c5OlZKBKsD3drWaHR9vUa8WSx4Od90W2nrfm4Fm-WRDJ-IWe0bqubO5pvlvq_VM52g1Vbw=="
+              },
+              {
+                "title": "prsindia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwrm7MU5zVbIogAm_Ict4VeArVhWTWtYBhdQqtEhqQxIXJjQ3_iUrBmUWIORiUNVrKkXzMnaengZyRshM3hl-4Dn6OSBfAdpaoEeYCOWnId2n0uNHVx2LF6wWpBAgiXIBN-MFIvcKFlhs4VBQX5nLdfEewftlSvkSLuDjAUhGcW5BwNYFviuj6F3ueV6MwxRkDBNVbfCKYJQ=="
+              },
+              {
+                "title": "constitutionnet.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqBjoDT_Fs37TN5tAsxL-fXKHwf0fS0FzP18jNVhAdtVKnF_QQ_64_Q4v-B24lGDQmy5-D8zrEjCBwMzGT9ljjkTTs7CSaD_1dqxPTa1uCOUx-HxoL94Adg0q_43Jtm9rs9dz_cJq33sx9ijx0goyFjFJsTJLJziMixRQnT55F09F9MmuXQ5sgFU3ldFqpmp3LYWfjYD2fvQYvVEyIvjy63n3MYOBH95Ys3G4="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMZSO0Wiqgg26O7o3oKDEibswgvYeMOExABqhREsaWTSHxEQZxDRD8g9OIcCujkvmD_plkzNZ-On2y_m4OAzqG0_5kcyaQgfAf4_7TtQD6M3B_9P_hC596sEBcnqblG6kg_58J5SmM4wc2MJg1AwHuJH23Ja3-1UUHaa7B2uCjYsfMUnXwPeb-kQaDnPdz5Cm_4O9eGnO86qb4PruLK-o1o6EoWYgobUDnaQQjMxrHuMRVz5MArfI="
+              },
+              {
+                "title": "onmanorama.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGV6f0myDqjyh7dDPBUaa9i55_3Ipk-QETtOXu4qgBx_6twlviUjUIcm5Me8lg4Wk9_nvyn5BhLuSmq98B_5cMo-xfLriGaXn36wtR0aeoeetBMY-FvVpBLDRvsOepMH3FA-06e57iutjoRwZ6-lZCODKjloqrc-Qav9S2-pI94hQHU-s0PgvIfxrsoBtBUz1SGARf4G9uU"
+              },
+              {
+                "title": "drishtiias.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsEVBLS34oDAi708nEr-B-ZxR64GNmwlDKRY3Tq_k_YREwBbEa1OaDXyd0ZsQT7W-PpdVrlQ9QZj72INMPQp1YCYLnHxdmfgFAufDQ0ku7ntN7m7LFGOGIN7WBlJfLpfxU6vS4uDZo4-7GsLync9E5NXp0c2sp2xOO8_EXQG77_Nu1Rt33PwKk7NN_wflaZAUykkfXhYhZTKvepQeYvxzH5kkii9ToKf1vCgI="
+              },
+              {
+                "title": "patnahighcourt.gov.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsXJ_HgmZ40rNMDssL3w51ZH_eri4mWw7ioTG4M_V_5rJegmiJRRq5GGGzxBNjyf5t-0rb2jFnfET58vetTFehAVdXniabHHKobS3AL1XSM6laHTL54eV0v87mMYhST67yEFu4Y31JmvPgPfNqur3Cl5uk1C1FxMFYGyU_-WbSiYdq7Rb4nV5yq164FapF1kQ="
+              }
+            ],
+            "evidence_summary": "The Indian Parliament passed the Nari Shakti Vandan Adhiniyam (Women's Reservation Bill) on September 21, 2023, reserving 33% of seats in the Lok Sabha and state legislative assemblies for women. The Lok Sabha approved the bill on September 20, 2023, with 454 votes in favor and 2 against, while the Rajya Sabha passed it unanimously on September 21, 2023, with 214 votes in favor. President Droupadi Murmu gave her assent to the bill on September 28, 2023, officially making it law. The reservation is slated to come into effect after the next delimitation exercise and Census. The bill was originally introduced in 1996 and had been pending for 27 years before its passage in 2023.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 1.0,
+            "gemini_verdict": "VERIFIED",
+            "method": "gemini_override",
+            "reasoning": "All key claims in the original text, including the passage date, reservation percentage, voting details, effective date, presidential assent, and historical context, are directly corroborated by the provided evidence research.",
+            "red_flags": []
+          },
+          "clickbait_check": {
+            "headline_promise_fulfilled": true,
+            "is_clickbait": false
+          },
+          "emotional_tone": {
+            "fear": 0.0,
+            "outrage": 0.0,
+            "sensationalism": 0.0
+          }
+        },
+        "media_bias": {
+          "text": "The Indian Parliament passed the Nari Shakti Vandan Adhiniyam (Women's Reservation Bill) on September 21, 2023, reserving 33% of seats in the Lok Sabha and state legislative assemblies for women. The Rajya Sabha passed the bill unanimously, while the Lok Sabha approved it with 454 votes in favour and 2 against. The reservation will come into effect after the next delimitation exercise and Census. President Droupadi Murmu gave her assent on September 28, 2023. The bill was originally introduced in 1996 and had been pending for 27 years.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": "VERIFIED",
+        "confidence": 1.0
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "VERIFIED",
+          "confidence": 1.0,
+          "search_grounded": true,
+          "sources": 19,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": 0.0,
+          "outrage": 0.0,
+          "sensationalism": 0.0
+        },
+        "clickbait": {
+          "is_clickbait": false,
+          "promise_fulfilled": true
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9968
+        }
+      }
+    },
+    {
+      "id": "POL-REAL-02",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "Supreme Court upholds abrogation of Article 370; Jammu & Kashmir reorganisation constitutional",
+      "elapsed_s": 14.19,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9896,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "MISLEADING",
+            "confidence": 0.9,
+            "reasoning": "The original text accurately reports several aspects of the Supreme Court's ruling but misrepresents the specific authority for revoking Article 370 and softens the court's directive regarding the restoration of statehood.",
+            "red_flags": [
+              "The claim that 'Parliament had the competence to revoke it' is inaccurate; the court affirmed the President's authority to revoke Article 370.",
+              "The directive for statehood restoration is stated as 'at an appropriate time' in the original text, whereas the court mandated it 'as soon as possible,' indicating a stronger sense of urgency."
+            ],
+            "grounding_sources": [
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzhxHWVqz0pk8edoHgnSFYZjozX1KrFxFmT26kr3iROKIPNN9f946QBelr8eHrId-HN5fUD_WyGPqvMgxybE4CgyjaseheyFPWrSQUzkVLQe8b04HVkshNNLfpkCOAsSFo1gNbjNM6sITIS2NXgIHobBaO5uhZ_RE5AfPwfn0H9WgO267gb-2FUiRTdL8U"
+              },
+              {
+                "title": "scobserver.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaAH-wF0Z3TOLcTiZeHyFGhQtqXvSMt7KcOavRx-mHRvLhHzhibENMU1UdAXBvyIBTTCfABuFXAAu57xJuZQLdfI7Mvw7uPTHCV_C7SUNfkR0lVQ1fT77K7YnQ9i8wKmkEhr86qBjvAvnT_PeGiqiktYKPnISh2mwhFJIBUzX-cb673nOFXDY_7g=="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN5udrwQ1ieBhoD70OBJ7aIiAcNHzXscfIDAa9npfpAgTB1JOoZ6k89ukjlIQIFRAIyZB_omjqKAcDGuanJnNPRkV41uLp2w04G4-bCdtUr1IEiBGLSnrNLoSMAhJRAlscwouXFQ0AZy1NH2UWBgzieRun-w9KdL3soJFgnX9Bi9iX1lqrJ3o05kBxjzviKF6PqIFXnwubM_6WafI8J7xHtGSXvUUa1g1iF8hRyk1mTQ=="
+              },
+              {
+                "title": "toprankers.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlD0GA7__Q6hVZuSdmVVepkQP1N1diPTuBoyioryc7T4gUze72QBUIRBhcP6hkMM6LTH-MolhgrHcJSNv5M_sKZAeDHEyOvFlLVs7OXRKcMkm_tw2BjdRIPMpvrF6rPSsaxZgnbyaT6U_NT1Z5lMtnq_Eu"
+              },
+              {
+                "title": "thesouthfirst.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdK6usObw8fPpPw_REA1a142r_YsxPo2myawLE-8eskNuMf1L1qBDUjIk81C1_q2Eywg2o1Qf2cxSajdh7EWnrq-8ZVEWcA-a13fj5YQeQUrLE0lclRPRwxVvC6vB2_vx5AOu6BuU8EIGVHGlwwUFyOZHC4X916159hrsPW2Kiad1VP-lnzHUZW2aG1efmyShQHaCcu174kizlFmj1b5-s5LV7tK3YZuvtXrLnXApKZwxjNmJJDArvluBUEik="
+              },
+              {
+                "title": "legalbites.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtM4NCpLPRFcqODpJsT3zsFpmYyrYlnRoNztISC-6mH-xMeZpJBwbH0vNc-3TRnJZhaJEVFiXtMZHTsgAbyEQfOP5oLXNYSFq3CgAoQwuFOPMP4mGUoa_ZYZ0DMoo-KwFlkYpAmPzckt7vE8MMNL5yXvvsXxjE0kHRk_VLvqPjP-uJMPki6_LYtc3-1VHfDInICkF0lyrjfwsuSMvOESy0IBRaGWxlW2GVBM="
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRW_lqpXF86RbkaoZPUuANo-Buzgb4O8tsl6FOoXPNjdP9MdjeChdXJBxbWEIuUcXD-oDdD1sbvlWIRgM5ISeNDu569QPycw9UYcakJE9R_Vt-i-iITajAtzGncXCl2DRt9XL2awahM_-29BdYXP495O5p-I7s3MUK9Cc6TfPnOUFy1t8ijQj1BvGbaWWjVw65PmHOshJZL-JMV3jvmotofC2wQhRTe4AxtkgvOjhyW9RSHt1hXWtKtkPp7nj3p2syzi53Bwg3bxcPW5TnQu_n0O89qoQvOrYTLF-m17QTgnQ="
+              },
+              {
+                "title": "hindustantimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP_ElcTF5s-B-6H9mQHhSF96l4puQanJHK1kV529sGtgPyZMuUFZROoDrh2Wfms4Fz9WjkO4DUlBty81cvDBCv3_GMoaV6m4FqGOVzPwlSgINg8T_iBjdz9kYfsMIqaSEbFGcIxZRD2lRHc7LW4H4XVRodFjuqD1m1GC6CoL7w3q4mV7bIPqhSaJ-L1j9tsevEeEEGVmiAzSeBuDwq4y-0Ham6VwDaptjPtFNbToJ834FBbj1fb9SnzTPMlw=="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_oAX-eh2Q2Q7e9TZU_6kUeQwBlkitI4Q39MDvuP3HLf5hWO1mKKQQcYv_QvM4YoidSIdAsmQQ38mS9zI3Trg44wPZ4u8Pu_deGJjspUITgnzv7CuMxr8C4J3vlGHWc4Iu4T4fLf3nbISdcJQ99tFoDlSezfHBQdLJ49bDEthJwovUPtKMCIeHeWhqKhy_QYghW7SwbGZ2mVCJGJszaooa32rtZpnrHjnuVTH3j1YgiaPWsVuC-CTbWDQw-2619_9skPJqXcbKrXY2bSPCCzPLDBn4LW4yd_nC5tJZ"
+              },
+              {
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ3y9doyNZOffUb-3O6Dp2JrudvxCJxaN2gBdyWPzIdzVjr8g9pLyHYWuIyrPiZB6dQoD0g7frfVEpgitoTf0wXca8o-qsPGg8zfvaq9Hf0i1hZzUv9-4Ya5hF4pGznbtLDlBUGi4="
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2Pq1YZAyHJtQ_-tVzAbmMRb62Mu86TGiDQPURxEwX9-hgQhANxKl3j2W8y5ZYVAS51Halm_b0J2kb84QiaSRjSVSs2Sq73nyXQDdj02kBUKCYkyFBeEFfMbzr7Ig7nEifjXBOxa19308Tc-17v-4askdyBU32kKhTu0vDv8MUhqIldzKPyy0f08jUwdKgKZ3wlUO6uhCGqO4Oj-eVR3x1ykt2KPmP6b3yX-xG7cYb7HpPPco6zkOu4DZb_CB7k5QvJkMdryGSLFBKVj_reS7U_o4trXZT-TU8NpWRTmx0DtQ="
+              },
+              {
+                "title": "ddnews.gov.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2cWe8IdBgT6GpL0RlSLcIWsRE-cE_U7_9hgQycU5smVilS6UUvBwTs406cByS40H-XciqElmixD5qbpXXieNHkTLjY3Mf4sFZBEifN3LzzuIrSxL2UEBdDa4PuWJOGdDtWb-6RlqJu6sXSjIuSSX4JGOqwGgYOAxjSYpPxnYTU_frCLzHsv0bbbcKEai1VvpFbzRRBGnM9dMgY6e_61CsklUZpsQ="
+              },
+              {
+                "title": "ndtv.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEml4uEm2F7S_qyKpFAfNXTW9DJSX8EGB0bPucXtW4uXVVsNDll-S3ev4UdzQJcv2CdIZ83qZAerQC_ALl6BRLS_bpJX6kAx1oXQ0x2GA-fe181U0Jb--pXxQi0ue_qsqEtwd6PIyMLmJClkI-5OWL5P2KflD2y50EPAQqNJ-SCm2ixZHYK3KXnpox_gt7MOJDYzgVsvtL_m9cbM9BnXQHl0vizXAIsa86vEcO1bKr4L-5KYZCQCA=="
+              },
+              {
+                "title": "scobserver.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEy4PYHn-bkDshKefJPtZKMZAgtnITtdEcqoeztf5_WpyqP5yZAb9m24C9u3lhsFFoZAdIdXfuQA_e9Eq8zUkt7Sc7HmmVr3pV3yI4hm_j0KTi6Gr2giX5_lm8Y1ExXqvPDeS4NF4KnHmhH0tAxiCC6hxTHa4iLuJTDVIebFDSYV_do7xQHEb9E6SRyh8GhL9TQy5sRadKLqubXMCE="
+              },
+              {
+                "title": "economictimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXAaQ_CvS2daLY6ffCZv5mxqzidfeqracHmP9k4-eviDfaxM021wcJ6gtsNZfrNqeJPDqxzeQVBNixaNRCGhHfeM0wXnVhDV8eQXYSlhN6rHFUDidSFg5sGB-4RIfX1NbXDZgURyet2Xyt-l0wkZZVm9reEs2t8DfHE-VrIFV7_apEZ7mM2JEbCSxIo1ii3DTGXVRXd1fPYf_9_iGpqgp9bx2C5dYJpxn4JJIpvXQMqCkEEUxivVZvLYNKAmY3"
+              }
+            ],
+            "evidence_summary": "The Supreme Court of India's five-judge Constitution Bench, led by Chief Justice D.Y. Chandrachud, unanimously upheld the abrogation of Article 370 on December 11, 2023. The court affirmed that Article 370 was a temporary provision and that the President had the authority to revoke it. The bench directed that statehood be restored to Jammu & Kashmir as soon as possible and mandated that elections to the J&K Legislative Assembly be held by September 30, 2024. Furthermore, the Supreme Court upheld the validity of carving out the Union Territory of Ladakh from the erstwhile state of Jammu and Kashmir under the Jammu and Kashmir Reorganisation Act, 2019.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "MISLEADING",
+            "final_confidence": 0.9,
+            "gemini_verdict": "MISLEADING",
+            "method": "gemini_override",
+            "reasoning": "The original text accurately reports several aspects of the Supreme Court's ruling but misrepresents the specific authority for revoking Article 370 and softens the court's directive regarding the restoration of statehood.",
+            "red_flags": [
+              "The claim that 'Parliament had the competence to revoke it' is inaccurate; the court affirmed the President's authority to revoke Article 370.",
+              "The directive for statehood restoration is stated as 'at an appropriate time' in the original text, whereas the court mandated it 'as soon as possible,' indicating a stronger sense of urgency."
+            ]
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\\nPlease retry in 11.593226484s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '5'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\\nPlease retry in 11.08330443s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '5'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "A five-judge Constitution Bench of the Supreme Court of India, led by Chief Justice D.Y. Chandrachud, unanimously upheld the abrogation of Article 370 on December 11, 2023. The court held that Article 370 was a temporary provision and Parliament had the competence to revoke it. The bench directed that statehood must be restored to Jammu & Kashmir at an appropriate time and ordered elections to the J&K Legislative Assembly by September 30, 2024. The Union Territory of Ladakh was held to be validly carved out under the Jammu and Kashmir Reorganisation Act, 2019.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "MISLEADING",
+        "correct": false,
+        "gemini_verdict": "MISLEADING",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "MISLEADING",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 15,
+          "red_flags": [
+            "The claim that 'Parliament had the competence to revoke it' is inaccurate; the court affirmed the President's authority to revoke Article 370.",
+            "The directive for statehood restoration is stated as 'at an appropriate time' in the original text, whereas the court mandated it 'as soon as possible,' indicating a stronger sense of urgency."
+          ]
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9896
+        }
+      }
+    },
+    {
+      "id": "POL-REAL-03",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "UK general election 2024: Labour wins landslide majority; Keir Starmer becomes PM",
+      "elapsed_s": 21.39,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9616,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "MISLEADING",
+            "confidence": 0.9,
+            "reasoning": "The text accurately reports most election outcomes and details, but incorrectly states that Reform UK won 4 seats, whereas evidence confirms they secured 5 seats.",
+            "red_flags": [
+              "Reform UK won 4 seats"
+            ],
+            "grounding_sources": [
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGc2EtOlxiEM0eutI7Jr5YI_-BJKKNM6sZIk2iMY5PSia4Z37pIIsoWpyluQeuUzb35LUjkib3mV72cra-4wPJT9FRZwuapEzp8UTQNlzB0dRsM2ymU91AQpgC0w4S6-jcTamVkVL8-U2cFcpaYP_P9LAhL2JvHYRFTNxny1A=="
+              },
+              {
+                "title": "news.cn",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHOj2b6ieGObNJRnXFDg3k1PaTbqxuWzRDF7YOcglUBlMfI98g9mvh0vQn1zhO2yCkgAQOalbNFUF7bkXCkOsOingdJ3uqrAY3SSA4MdLPOa18KYXw8kCR8OwMh9dto5L-0YJBBm8KFeELyuITdHp2OvLJwkQWMSAXIOfu5OEuFbEgbg=="
+              },
+              {
+                "title": "economicsobservatory.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP4TDR8VHT7lL8efMFeKm3Bsl15Dpw97_5Ohbklk8cdWDk8CfTN85uwg-mWLiPB-EbvBW9Hl9jsDtNK0PAEN_KFQuGxnpRPHayjlh13q6baJZ9J33eOd2Jp2PfG_PrHtJQQM2xG5XEUzxca_a95TgnGRST5d67yzdl__cmDdUBADrgXYXDqOY_cNhLPiA="
+              },
+              {
+                "title": "parliament.uk",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBDDbkI-QMf2Va6h7P_MIpdfDp9AJ7Brtnd9FkUfPyAkLuV5_eB0r9o-frgxw6Ajkk_GHMnyJL-klo9TAC2VwS78eT7vtLKWx-MkqX5SF7bgOIeRWDYznTej9NIVpPAJrc5sK4DXTQHZIkkXWg2NM2yehPbg=="
+              },
+              {
+                "title": "ipu.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHorFVinvkesdthxzWfErG6rN0mGoI4weDx-XJFhNhSz_jAfceTaLjRE-aSSrvKw22eucWGBjfvssosiGFnjTkKNnzZo2_u9TnuCavgmaD5W27NU2Cs4dWWg9PSalZcv8tc596I0cgK-rZ0abo1qraBysMBk3GAQSLo1-idjaGfXqQ="
+              },
+              {
+                "title": "worldmapper.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbLywHhczbqQPAVXHJhldrg7VmXbfgkipmv8VtkkN1emuB_MVwJYibeADvMEZnMupqKjJABPSNr_pZD9fDwINv8USSkxtlKsrLcQvwXmp800ZIQOAc8nG9dQgrJNC2DexwEmMITfcRQUIisA0C7uQFRU2i78TGglESVXJHq7O-TgwI5B771RS8YZsMvQ=="
+              },
+              {
+                "title": "washingtonpost.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVB2oKrfLHlEK-8qZZnqcSysKnYgv01TKoUvoh5YCroH6exHYJsx8SmHuk25-7RTpySJgUWUeJnV4jgkyLc_cjOoeksH_jaOHNqnkKpXZubqozPKXTAxnT3fhFL_ChzWD8-VUy9wOQZBpPZ8wj_T6UIGo4lylhXp25Fp37WQqfSDrZgwZKkFFNMxTwp9iyZTJeuA=="
+              },
+              {
+                "title": "www.gov.uk",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPXW-2Z-buKucO326XjGgHnwyZ81_wUzpQnpvNL5Bsm-WYZxl_jJmczRFQFNH7WnP9jXf1_DdfgtvRvGk4SDmsJd6Z8jeo4sCxO_N3kE5Cc0compVG5f2nX8Jof5PpbCfTU_0n4ZYbLxsCIRfvZEhXbLfCE2m176lhASQ_5B3je1heerWr1xckZeDKuYhpVotugfwUZGMwUFxa"
+              },
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH351ksIrnYIjxzoSNHkGpWR8tevKHK_okVAGE2vUh7hT_Iirs-KX84XSBLqlf60DoOzD1eqDaeFCjvvIr9a5jH8FmH7pszutd-Q4PytLHnMrSx3tcf4wWO1nkuv96Q_aGEAt-xEA=="
+              },
+              {
+                "title": "aljazeera.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE36WvBk4ZHk2E1ja9eaY4Wu_kwgmqCf4ESBMjN24iJOpDy2-lnQzJCBcPB1jz7JkaUZSVn4i7-1rg8SqpFX9tfwM3SP6uTBuHObCkbbnVtgxNDO4cYU2GhXMCYGn-mPMSBvZk2GCBEnEnMvOEwMv0vQ8PLmc0QPGaFYML6vcBjvQ3Ro4C-TSO9UysF81g_JZLcuA_IgeWIBZXdGIk0TB1bIaAm-w=="
+              },
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs3bnqwsDGtajNLafz52iYBBf7JxCvSBpFZAfZUMIRMP8gtlgMc2RB1mLm8rwzOaFwnUgGjKvaWpN3PAxuu6zN78z7b31hk_3-pjQqbMJ87zOCNW6fSzyfCRMZwP3MovDVzgwj03dDBmbdXfteVyX8cL_BBN9fCcuJFQvqsqR72IcszMFyX68SRg=="
+              },
+              {
+                "title": "liberalhistory.org.uk",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa9fG0p8jG4HCdmjxKp0j8uwsi6wNRb8iqPy94UCmmSZkw5q6nvKZmKtw2ct0cl5uS8TLyGzdN3QK-GVodhTVxOQX8hXEjMvCQNsUHccDYPGDukgYTVzUCCNUoAylsNat4kszAM93AtPHPG0PaDuZJ_BSzyS_P7HenxVg_vXXlWwUW"
+              },
+              {
+                "title": "parallelparliament.co.uk",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHvAZE-8TZ6lQ-5fTcmtP93CgHlxCPljk47TGtBgZHKIcahCYRPV4U_LjcnuVaysfx0joXSFuYZC3mnwqOKXgEq-uU-yKXVdftKwCloohu8Dx7e8qND_yn-3nWsqW8IkwsGqRcxm3BCvAxtf4D5YaE2bVQ9V7Qgo6Pp_WONQV3Ae8="
+              },
+              {
+                "title": "spice-spotlight.scot",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3pq-Bxm1mMfhbaW4VVX1nArBB1R5Um0uCNbhUNo3kYAVpASD8NVo6T0FoUYujDVvgDVuQm91H93u4g3i5s_irFn4Pk4cw9sKv73lmhouN4-fq_3MAuYGs9Pp4mtEZgnCi-lU4_4RczUsAEQwOaR3DmcvmPAtZSCkGphrIeNolgfXIwu614dU="
+              },
+              {
+                "title": "worldmapper.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNfFUs56Ba08OzPMnk-Kd-i4nYiFqpIR-H94FbT55kOYdgGbmwZByxZNLvKCU8YqX-Yq96ksgwEeyAaeL4Ej7pXTxBfoyjM44nml3o-C9Ai8Ie5RpWLSdfuJMItNbF1yoXMNO0TG914efhvhpDUtv9CewV5kVfuQ9dSGv473DT23FtUSbxla-HCw=="
+              },
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqocEKrEtPcBR5u9KzVINVpPhBxyJPuIryR08yhlpkk-SlLQWMtW1b9OUnxZDeyZeyKCLL4rjkpBR4LBfwctzIEbiA9if1cc3-AwLLNkfa7Kjy5TqsXCYJgIMYj8gmhwLnsrslIMOLEiLw3pm0cKjv4n2kIzGd68oBZyt0vj_xLPwgmtcz7j_D"
+              },
+              {
+                "title": "theguardian.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHI14oinh9YHe9DKokpxbVdKKMbutLThfZcCfyHtdLN-ulaxDeaNLx5UpwK8ClOdG2BIvyDAApT8wlemtlviqyGnZiZsONJ24xCyMn7EeImFYY-vF_dd7rSLFTb3xZuKPlFwI-VE8xfpbUJhYH0pxrpDGkeYyx0MjBuWcilFc_CN78ax26s70ofCIEn7LQ8S_e7wNzb5xjqtSdi_81FC_1Wf_juyQgT_jGVqzgs8L8DwoY5mfmUs4MIqdwDI-jchYU="
+              },
+              {
+                "title": "electoralcommission.org.uk",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl3fSiEZWYmpMWKXoJmDNsrxAKY4R_Jmdfv-0LAjqgNwrFreOeWfaY3ybmgZhEY81Cn8uQX9Id1jRZbSR-dfIaTogQ9Xc4lD91XTelkIaMvG-_DqgShw3F5rpiUNLURKp_DQD6xBUZmuLjY6QYf1qgLstYF1v19b8U4FKykjEvHEqJtmqbwrQxUdN45le5LKvEhPlFs1U-95bPoaxirFSB6Fdi6IIfDvrCZunRxVcmwZN7CDfXU_II5cF1X2PPUm1AgahQhyi3UvW-27staYHTlYYHWXglLwljt5zUcO-5rUMfdurGX14zfEwjkvimTmTs4xCARA=="
+              },
+              {
+                "title": "youngfoundation.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSnX9XvLlY4EeNbwVSJm8s1eKetEYvisIoPjxBRDd-NBhsgQ0EcwqRJTCsORExGV3F3wAu-llQkWvFK3Q67W7Y7zBHsjMnzUm2l2IgQ-Qf51vh-V-0SKJXW3MSVj98s7m1h7P9NigddVSlGd4HHxDDEbM3R4UG00FcsqLPDinq-i16JgTWEIrnkT4="
+              }
+            ],
+            "evidence_summary": "The UK general election held on July 4, 2024, saw the Labour Party secure a significant victory, with sources reporting they won either 411 or 412 seats, achieving a 174-seat majority in the House of Commons. Keir Starmer officially became Prime Minister on July 5, 2024, succeeding Rishi Sunak. The Conservative Party won 121 seats, marking their worst electoral result since the party's founding in 1834.\n\nRegarding other parties, the Liberal Democrats secured 72 seats, while the Scottish National Party (SNP) was reduced to 9 seats from 48 in the 2019 election. However, the claim that Reform UK won 4 seats is contradicted by multiple sources, which state that Reform UK won 5 seats. Voter turnout for the election was approximately 59.7% to 60.0%, making it the lowest since the 2001 general election.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "MISLEADING",
+            "final_confidence": 0.9,
+            "gemini_verdict": "MISLEADING",
+            "method": "gemini_override",
+            "reasoning": "The text accurately reports most election outcomes and details, but incorrectly states that Reform UK won 4 seats, whereas evidence confirms they secured 5 seats.",
+            "red_flags": [
+              "Reform UK won 4 seats"
+            ]
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 16.144058304s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 15.677715839s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '15s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "The Labour Party won 412 seats in the UK general election held on July 4, 2024, securing a landslide majority in the House of Commons with a 174-seat majority. Keir Starmer became Prime Minister on July 5, 2024, succeeding Rishi Sunak. The Conservatives won 121 seats, their worst result since the party's founding in 1834. Reform UK won 4 seats, the Liberal Democrats won 72 seats, and the Scottish National Party was reduced to 9 seats from 48 in 2019. Voter turnout was approximately 59.9%, the lowest since 2001.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "MISLEADING",
+        "correct": false,
+        "gemini_verdict": "MISLEADING",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "MISLEADING",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 19,
+          "red_flags": [
+            "Reform UK won 4 seats"
+          ]
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9616
+        }
+      }
+    },
+    {
+      "id": "POL-REAL-04",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "France invokes Article 49.3 to pass pension reform without parliamentary vote",
+      "elapsed_s": 2.34,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9758,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 47.747790474s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5855,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9758 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 47.245429236s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 46.841138586s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "French President Emmanuel Macron's government invoked Article 49.3 of the French Constitution on March 16, 2023, to push through pension reform legislation without a vote in the National Assembly. Prime Minister Elisabeth Borne announced the decision after it became clear the government lacked a majority. The reform raises the retirement age from 62 to 64 years. The opposition filed two no-confidence motions; both failed, with the closest falling just 9 votes short of the 287 needed. Nationwide protests continued, with the CGT trade union reporting over 1 million marchers across France.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.5855
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9758
+        }
+      }
+    },
+    {
+      "id": "POL-REAL-05",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "US Senate confirms Ketanji Brown Jackson as first Black woman on Supreme Court",
+      "elapsed_s": 2.46,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.999,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 59.707567716s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.5994,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9990 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 59.203210577s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 58.684814618s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "The United States Senate confirmed Judge Ketanji Brown Jackson to the Supreme Court on April 7, 2022, by a vote of 53-47. Three Republican senators — Susan Collins, Lisa Murkowski, and Mitt Romney — joined all 50 Democrats in voting for confirmation. Vice President Kamala Harris presided over the vote. Jackson replaced retiring Justice Stephen Breyer and was sworn in on June 30, 2022, becoming the first Black woman and first former federal public defender to serve on the Supreme Court. She was nominated by President Joe Biden on February 25, 2022.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5994
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.999
+        }
+      }
+    },
+    {
+      "id": "POL-FAKE-01",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "United Nations votes to dissolve India's membership; country expelled from all global bodies",
+      "elapsed_s": 2.27,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9868,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 11.892537792s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5921,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9868 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 11.378774039s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 10.86597287s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "In an unprecedented emergency session, the United Nations General Assembly has voted to permanently dissolve India's membership in the United Nations and all affiliated bodies including the WHO, UNESCO, and IMF. The resolution, reportedly passed with 187 countries voting in favour, cites 'systematic human rights violations' as the basis. India's Ambassador to the UN has been given 48 hours to vacate the premises. The Indian Ministry of External Affairs has not responded. No mainstream international news agency has reported this event.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5921
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9868
+        }
+      }
+    },
+    {
+      "id": "POL-FAKE-02",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "Secret recording reveals US President planning to abolish the Constitution",
+      "elapsed_s": 2.38,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9983,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 23.826335097s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.75,
+            "method": "heuristic_fallback",
+            "red_flags": [
+              "stacked_anonymous_sourcing: 3 markers found"
+            ],
+            "note": "Gemini unavailable. Heuristic pattern detector fired — impossible/fabricated claim indicators: ['stacked_anonymous_sourcing: 3 markers found']"
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 23.350571657s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 22.733071975s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "A leaked audio recording, allegedly obtained by anonymous intelligence operatives, captures the US President telling his Chief of Staff that he plans to 'suspend the Constitution for 90 days' to push through executive orders without Congressional approval. The recording, distributed via a Telegram channel called 'PatriotLeaks2024,' has not been verified by any forensic audio lab. The White House has categorically denied the existence of such a conversation. No established news outlet has confirmed the recording's authenticity.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.75
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9983
+        }
+      }
+    },
+    {
+      "id": "POL-FAKE-03",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "Election Commission of India secretly adds 50 million fake voter IDs to electoral rolls",
+      "elapsed_s": 2.39,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9121,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 35.693275412s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.5473,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9121 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 35.120568432s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 34.702133688s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "According to sources who spoke on condition of anonymity, the Election Commission of India has secretly added 50 million fabricated voter IDs to electoral rolls across 14 states ahead of the 2024 general elections. The operation, allegedly codenamed 'Project Lotus Roll,' was orchestrated by unnamed 'senior officials' using AI-generated Aadhaar numbers linked to non-existent addresses. Multiple sources confirm this claim, though none agreed to be named. An RTI query filed by an activist returned 'No records found.' The Election Commission has denied any irregularities.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.5473
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9121
+        }
+      }
+    },
+    {
+      "id": "POL-FAKE-04",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "China and Pakistan sign joint declaration merging into single nation by 2030",
+      "elapsed_s": 2.61,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9988,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 47.586648349s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5993,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9988 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 46.980218031s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 46.476865244s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "In a joint press conference held at an undisclosed location, the Chinese Premier and Pakistan's Prime Minister reportedly signed a 'Declaration of Civilizational Unity' pledging to merge both nations into a single political entity called the 'Sino-Pak Republic' by 2030. The declaration includes shared military command, unified currency (the 'Asia Yuan'), and joint nuclear arsenal management. Sources say India's intelligence agencies intercepted the document. No official Chinese or Pakistani government channel has confirmed the event.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5993
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9988
+        }
+      }
+    },
+    {
+      "id": "POL-MSLEAD-01",
+      "category": "MISLEADING",
+      "expected": "MISLEADING",
+      "headline": "India's democracy index CRASHES to all-time low — now ranked below North Korea",
+      "elapsed_s": 2.42,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.837,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 59.384646856s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5022,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.8370 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 58.958066411s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 58.561913331s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "India's ranking in the Economist Intelligence Unit's Democracy Index dropped from 46th in 2014 to 53rd in 2023, categorised as a 'flawed democracy.' This is a measurable decline. However, the headline's claim that India ranks 'below North Korea' is entirely false — North Korea consistently ranks last (167th out of 167 countries) as an 'authoritarian regime.' India's score of 7.18 out of 10 places it firmly in the 'flawed democracy' tier, far above authoritarian regimes. The word 'CRASHES' also exaggerates a gradual 7-position decline over a decade.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5022
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.837
+        }
+      }
+    },
+    {
+      "id": "POL-MSLEAD-02",
+      "category": "MISLEADING",
+      "expected": "MISLEADING",
+      "headline": "100% of opposition MPs arrested in midnight crackdown — democracy officially dead",
+      "elapsed_s": 2.34,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9973,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 11.76569374s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5984,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9973 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 11.147321909s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 10.62641118s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Indian police detained 14 opposition MPs who were staging a sit-in protest near Parliament House on Monday night. The MPs were released after 6 hours following judicial intervention. The headline's claim that '100% of opposition MPs' were arrested is grossly misleading — India's opposition bloc in the Lok Sabha comprises over 230 MPs, and 14 detentions represent approximately 6% of the opposition. The characterisation of 'democracy officially dead' is editorial hyperbole; all detained MPs were produced before a magistrate and released on bail.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5984
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9973
+        }
+      }
+    },
+    {
+      "id": "POL-MSLEAD-03",
+      "category": "MISLEADING",
+      "expected": "MISLEADING",
+      "headline": "US completely abandons NATO — Europe left defenceless against Russia",
+      "elapsed_s": 2.54,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9975,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 23.63567341s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.5985,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9975 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 23.120618122s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 22.612309309s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Former US President Donald Trump stated at a campaign rally in February 2024 that he would 'encourage Russia to do whatever the hell they want' to NATO allies who do not meet the 2% GDP defence spending target. This statement is real and was widely reported. However, the headline's claim that the US has 'completely abandoned NATO' is false — the US remains a full treaty member, maintains bases across Europe, and Congress has bipartisan support for NATO. Trump's statement was campaign rhetoric, not executive action or policy change.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5985
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9975
+        }
+      }
+    },
+    {
+      "id": "POL-UNVER-01",
+      "category": "UNVERIFIED",
+      "expected": "REAL",
+      "headline": "Senior BJP leader in talks with opposition for defection, say party insiders",
+      "elapsed_s": 2.55,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9969,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 35.615134354s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5981,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9969 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 35.086687711s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 34.498353168s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Multiple party insiders speaking on condition of anonymity claim that a 'very senior' BJP leader from Uttar Pradesh has been in secret discussions with the Indian National Congress about switching parties ahead of the state assembly by-elections. The leader, described as a 'three-time MP with a Cabinet portfolio,' is reportedly unhappy with ticket distribution. BJP spokesperson Sambit Patra denied the reports, calling them 'Congress propaganda.' No names have been disclosed, and no formal resignation or defection notice has been filed.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.5981
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9969
+        }
+      }
+    },
+    {
+      "id": "POL-UNVER-02",
+      "category": "UNVERIFIED",
+      "expected": "REAL",
+      "headline": "Leaked diplomatic cable suggests India-China border deal imminent",
+      "elapsed_s": 3.2,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9982,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 47.643102681s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5989,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9982 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 47.068016009s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 46.122443296s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "A document purporting to be a classified diplomatic cable from India's Ministry of External Affairs suggests that India and China have reached a preliminary agreement on disengagement along the Line of Actual Control in eastern Ladakh. The document, circulated on social media, references a 'phased withdrawal from Depsang Plains and Demchok' with a 'buffer zone of 3 km on each side.' India's MEA spokesperson responded to queries with a standard 'we do not comment on alleged leaks' statement. China's foreign ministry has not commented.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.5989
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9982
+        }
+      }
+    },
+    {
+      "id": "POL-EDGE-01",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "World leaders agree to dissolve all nations; single global government to rule by 2025",
+      "elapsed_s": 3.61,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9648,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 59.120325448s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5789,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Style-pattern label used as fallback. Raw style confidence 0.9648 deflated ×0.6 — style-match probability is not equivalent to fake-news probability."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 58.364129859s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 57.619004248s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "At a secret summit held on a private island, leaders of all 193 UN member states have unanimously agreed to dissolve their respective nations and form a single planetary government called the 'United Earth Federation.' The new world currency, the 'Terracoin,' will replace all national currencies by January 2025. All military forces will be merged into a 'Planetary Defence Force.' The summit was reportedly organised by a shadowy group of billionaires. Multiple sources who claim to have attended the summit confirm the details but refuse to be identified.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5789
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9648
+        }
+      }
+    }
+  ]
+}

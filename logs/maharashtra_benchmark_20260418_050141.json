@@ -1,0 +1,1530 @@
+{
+  "run_at": "2026-04-18T05:12:55.592700",
+  "total_samples": 15,
+  "results": [
+    {
+      "id": "MH-REAL-01",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "Mumbai Metro Line 3 inaugurated by Prime Minister; Aarey to BKC corridor opens",
+      "elapsed_s": 43.16,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9985,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "MISLEADING",
+            "confidence": 0.9,
+            "reasoning": "The text incorrectly states the inauguration date as October 7, 2023, when the first phase was inaugurated in October 2024 and the full line in October 2025. While details like cost, length, and number of stations are largely correct, the description of the inaugurated segment as connecting Aarey to BKC was only for the first phase, not the entire line.",
+            "red_flags": [
+              "The inauguration date of October 7, 2023, is incorrect; the first phase was inaugurated in October 2024.",
+              "The text implies the full Mumbai Metro Line 3 was inaugurated connecting Aarey to Bandra-Kurla Complex, but this was only the first phase, with the full line extending to Cuffe Parade."
+            ],
+            "grounding_sources": [
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl5epTAnNIY3yOLVzxVSfgX3Fgku7UjjfcsUEYVKGY71fhySH_B9TkjjeBuaUHtPA66UFmUGA7ZJ96p0KR10MQbYJkmroluzUGAUQpaT3BbUAY8NHXLAArmIjnSc91skAM_lCZcvJfKlE33FKbg4KGfsSaZ_ZKOlCHEk0Df3t9daOuSyA8YdsxsmMYC3Vy-dktGyZzkdKdFyplbsYfPZBrRWQu5j93kEtt-SCHJ_kND1bwjEx_AHfBWfHDHoebF_Vxb7nUYwD0d8ejqpIY-8of-Fg="
+              },
+              {
+                "title": "metrorailnews.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT180F8nvGnxSscn5LLLDvka58niEEuLqvTaTDZjux4aXpgK_lnhheWVZzjUSlpOoNUmfdGHyUP-GFRknkIDmUKz4u7urDdjYJdh9GQirinxTzQuRsoujXfY0-rnCX_eLxNC5ROnK2ciekSJxDfGWl0R5mayOtQvvyybtU717nIWh4ZQnB"
+              },
+              {
+                "title": "magicbricks.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNCxv2rmnGviwQq0uXPhftAgXybZFQN68NWeTkxk78IVvuLGkZn4tD8JC8dcAn_1y2AOkexrqb0KjQyv6Yj2qO8OoVdA9HhHJeRGCqMYoWPcwP7swogxUpp8VvlWZSYJc0bLDktSwVkvHIOGR_sbhHHLp0GzAs1RYki1M="
+              },
+              {
+                "title": "themetrorailguy.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECRAnBUuzId-d5YvsOXHrmU32wzs3UU9Q7IZSE2Ixek6Re2NrxPcsD-Gpn_fqoz8LstVqzyCJ3vh0BN7yijEtSmt_YuetmGebRf77-5kwuFuxSBtQsQvEO_7x09w08-lhjk35SkvecTPVuApnFgyRi6xMzDV90QIcS_P3aMYaFK_02cy7rKcd4_-BG-MTIIufKwQ_dc8tHwT1xIDEhTRnbcS3Bcpj6vai2"
+              },
+              {
+                "title": "mumbaimetrotimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAm3EGugcVT7gFL78pjvFvvoFoDrJyxnHGVlfLrvZVF9Gn8r_0n5d5crrBg1JlnmXKK44ROQ1AlIhD1vCvdTlqm3CASEqwcgmuj0mK8XheLm-ZEI8s2rLGAmlird0kAXXsFDs4GM7O3lYirdY1m8URQb-vCKJIc3yJDQ=="
+              },
+              {
+                "title": "jica.go.jp",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvp8n3njiSQJPGL7J3iSiz4GtFGKHzBK8A4tYt3JEdPZ8MmDhCcFoVtovvfX08PLv5rwxKa6IH4B46nq0yn-rWUVhjf28EwOxHDEP1cTyT3rJ_ITbit0IkRoNB3G1WC4ZehwfY-vip2vJSO6SD9RCOFVLya5CHn8YmFT_3r90-WQORXrADPV83nQ_35BO0k6TGFQ=="
+              },
+              {
+                "title": "livemint.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxfdX5Mc_F8FXMEKlfdyhF0QfalLuVLel3NQyxIG8PSXkANzvgJBBQ2BTjzyvG0UJ7oxc-geJhmyvOgcsdcIwgbKDJeRfqHtIp_Mmcrtq0k3M_UX4Ku-yq1xqTQgBSxvo-UGGGHM5HP5qh12_cyrPCg_AzEUfIgOAxr7xIx_mmKafj7qADlsac07nBInv1uutYZ0_1oa-SouougTYq3X2bjj_R1mRdSurqh9Gd2fHS5Y5YJN2g--kIuroPA5iZEh4Amw=="
+              },
+              {
+                "title": "hindustantimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhaBzv5F6QuP0N1VmfdNe8vQeHHQJ2FvYk-ptKA7-CI5u2zDugO-s65hJi0FWHNymbnMut_qr8HqMsf40KDRN86viWHFttUhM6LlQaWcdhbBa55qW0uogZAkN-KwJS6Xvh-z7ic_8UBxoutt-57kxkjxyTFUPkrYSpGXDUnqtpDcNRjRLUNoiYz4ygkpbtsJDDUaqV9y5eNoImVDmovPtOseyM6noslXkHspnkmycMQ-U8e1K3DYggMP4nMsFVxbvjRbTk6cB_Q0EYBypIEHpJQGn2qjkrLo75fFuVpdnzWeI="
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA8sBCX0Hci7TLnkGvAyT7XCmhxRwSDdbTeOhnr4juP1o_mTQdQXL1772MNHhyZ0pEyK4_SWtfPi3kolkH9phDO-WeAjcnFWK1WobKCmndr-yJCbelt_UIvzOt0x9AIQv634qORqEyun1LPt9wYHhouPWHYU2LLj_CzAPQAQByWdD0M9Mt-B9cGrQukncChoDiW4Zl7NJ3ekiADnMqYhzduyY0MSYsgUCTWKopdrSZlPjLaocBvaVDWLN4ooGZhzFYXWuhvsTDX_PhK_97Ln1hEMJsfu4ctSlC9H7Yg5Q8o4Wd"
+              },
+              {
+                "title": "rediff.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeVkpjYHe4pLFJBGChulxHvRB1abaQbpKtV9ZJKluKMEaROFlkrXB8S3o2mwj6YLBZt3FAe5bW8xKvX8vUKSitgrceZ9TwR7Cn339r56UIobu4FxSqQDcROsqHkyQ5h-otzN9jPpxtaUH3ysFuh7JW_KZXLEQAC9Et-_1Sk39BPlljGvYvYL9Fg0-q2Rb0YDGkQDKhyyvRRN5-"
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_KyPCGDznDY-Zk0ouiCwFYy8hfBcEdNJAUIlz4PScFgYx8r67J48xS83AM-0TNfhkITkTGZ3p6P-d-Nmyf6Wi90pXT18ks30AzAwLlqmsz_KI0TFsjdm5q81XHecZN48OCTj32svRytSzPl0jOx-v6pFOB8zBTK9-WxVPZqYHQcbQzqacJYs-gBKz3U_EzTenrHxcaP6mS2_Tmh3wfJhcwGnagUVpk1AeZb0vwJocwEEJl8ALhYrzm9zloHTlG4Dh_GFGFFc0gC3p3kycko8="
+              },
+              {
+                "title": "economictimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9Se6s_fl1DPFXpWoGn4kPCPL8j7gLpSYrH9ZDjYaAQ4yHgLMKcu-n4qIbzZrYKIOMGppdESf-Ibm0vOTnIBI99Vx_SWKZkf8uuLqdZLISzpYTHhOALl0Ptv7PnRFV5LVH2AHwNHZw8WRekPRVsImLltHStwxZxLlFEz8HHR3ueNp4ODEB_hBdC7Wakf8EghdajiEYhoJRZVWW7PMYEaw6xzBepJbNOEE-HZh-DRPeOgdloyqWw0mCtbvaSXA0Qzevt2Hpi8UX2Me486wydMQ_O3CpmginJRhj2LG1lmL8L20_ejt6Wn4TziF0bd9S0ARj8Z-qVzzNWH_hEAn5"
+              },
+              {
+                "title": "nobroker.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEneytXwJLtRjSu1jl9sC0SPJwp7EA3w4eGq9Wo61UE1-XMKbXJrG0ydXFeTPFZNgOCcIhdUMaUFmvq7JSWe8AdN3MnxhpETAuKLN0DbQp9Ml8KQPv_Z8EZkyZRiBhCrfEheN-oCaC27mBipno="
+              },
+              {
+                "title": "meridianstays.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJYz7dAEVVwFtYZPWgLDxuTEqKKCuZuXKYBoVp1YhV82S5kMviBhOaPUsSNfy26KPeqYpkSl4Vg_dJ6kme5AHn4obZtAKAQDiN_-AXXNplJ1TRCYHDexV-HNc_C1jKy9h5AftgCXnjEbq1fCjlBW3cftiWPQ-1280Y43q-Xa5meyJWHQ=="
+              },
+              {
+                "title": "swarajyamag.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBGqlnjkDuOI7BB6o4SjNYM2rjYAMDYcM3XF1ho9ids5hiXQHuayn9A9H6j3aCNYh6Ku91a_8bNnnq0OyeAQkjj3uHgoH39azIiL9Avr2JfSe7_033gICaCjsyLW02NmjIxJqI2h5vdjqHjz6UsCNyTs2FvD08bOAnc57b7hy7BrOvTmuW75JBmiK_SN0_6eUn85ZvpNXNVmFDcAL6mrVZfPILLQOlrZ00fObv8delEYxBREMgEMYna3DKBn7NsFMG7bM2fAI2jdQ1gg=="
+              },
+              {
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ5tIMYvalZEJr3qVyGzFc-dTQ4L4ZjOdP07WEFqf1pZPaQcsMQnrNYnn79gQ2wzIs1rzuS8_7KcSW-vJBN9-2pLgC3xQrooUEB8Sff8meKRMGLZEZIQY8d-sZEVRBSv5BsPXnZlw="
+              }
+            ],
+            "evidence_summary": "The claim that Prime Minister Narendra Modi officially inaugurated the Mumbai Metro Line 3 (Aqua Line) on October 7, 2023, is contradicted by credible sources. The first phase of the Mumbai Metro Line 3, connecting Aarey to Bandra-Kurla Complex, was inaugurated by Prime Minister Narendra Modi on October 7, 2024. The entire 33.5 km Aqua Line, extending to Cuffe Parade (near Colaba), became fully operational with the inauguration of its final phase by the Prime Minister on October 8, 2025.\n\nThe claim that the underground metro corridor was built at a cost of approximately ₹37,276 crore, spans 33.5 km, and includes 27 stations is largely corroborated. Multiple sources confirm the total cost to be around ₹37,270 crore or ₹37,276 crore, the total length as 33.5 km, and the number of stations as 27 (26 underground and 1 at-grade). While the text states it connects Aarey to Bandra-Kurla Complex, this was only the first phase; the full line connects Aarey to Cuffe Parade.\n\nThe claim that \"Phase II extending to Colaba is expected to open by 2025\" is corroborated, as the entire line, including the extension to Cuffe Parade (which is in South Mumbai, near Colaba), became fully operational in October 2025. Specifically, Phase 2B, which completed the line to Cuffe Parade, was inaugurated on October 8, 2025.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "MISLEADING",
+            "final_confidence": 0.9,
+            "gemini_verdict": "MISLEADING",
+            "method": "gemini_override",
+            "reasoning": "The text incorrectly states the inauguration date as October 7, 2023, when the first phase was inaugurated in October 2024 and the full line in October 2025. While details like cost, length, and number of stations are largely correct, the description of the inaugurated segment as connecting Aarey to BKC was only for the first phase, not the entire line.",
+            "red_flags": [
+              "The inauguration date of October 7, 2023, is incorrect; the first phase was inaugurated in October 2024.",
+              "The text implies the full Mumbai Metro Line 3 was inaugurated connecting Aarey to Bandra-Kurla Complex, but this was only the first phase, with the full line extending to Cuffe Parade."
+            ]
+          },
+          "clickbait_check": {
+            "headline_promise_fulfilled": true,
+            "is_clickbait": false
+          },
+          "emotional_tone": {
+            "fear": 0.0,
+            "outrage": 0.0,
+            "sensationalism": 0.0
+          }
+        },
+        "media_bias": {
+          "text": "Prime Minister Narendra Modi officially inaugurated the Mumbai Metro Line 3 (Aqua Line) on October 7, 2023, connecting Aarey Colony in Goregaon to Bandra-Kurla Complex. The underground metro corridor, built at a cost of approximately ₹37,276 crore, spans 33.5 km and includes 27 stations. Commuters can now travel from Aarey to BKC in under 45 minutes. The Mumbai Metropolitan Region Development Authority (MMRDA) confirmed that hourly capacity on the corridor is 1.5 lakh passengers. Phase II extending to Colaba is expected to open by 2025.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "MISLEADING",
+        "correct": false,
+        "gemini_verdict": "MISLEADING",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "MISLEADING",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 16,
+          "red_flags": [
+            "The inauguration date of October 7, 2023, is incorrect; the first phase was inaugurated in October 2024.",
+            "The text implies the full Mumbai Metro Line 3 was inaugurated connecting Aarey to Bandra-Kurla Complex, but this was only the first phase, with the full line extending to Cuffe Parade."
+          ]
+        },
+        "emotion": {
+          "fear": 0.0,
+          "outrage": 0.0,
+          "sensationalism": 0.0
+        },
+        "clickbait": {
+          "is_clickbait": false,
+          "promise_fulfilled": true
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9985
+        }
+      }
+    },
+    {
+      "id": "MH-REAL-02",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "Maharashtra government announces 10% reservation for EWS in state government jobs",
+      "elapsed_s": 19.19,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.7309,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "MISLEADING",
+            "confidence": 0.9,
+            "reasoning": "The text accurately states the EWS reservation and its eligibility criteria, but falsely attributes a new implementation of the 10% EWS reservation to Chief Minister Eknath Shinde, when it was initially implemented in 2019. Additionally, the claim about the Department of Social Justice confirming a 30-day notification is unverified.",
+            "red_flags": [
+              "The claim that Chief Minister Eknath Shinde announced the implementation of the 10% EWS reservation on a Monday is misleading, as the initial implementation occurred in 2019, before his tenure.",
+              "The claim that the state's Department of Social Justice confirmed a notification would be issued in the official Maharashtra Gazette within 30 days is unverified by the provided evidence."
+            ],
+            "grounding_sources": [
+              {
+                "title": "hindustantimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbGtEaiVJooE9RudG2qT3DVKNojtZDiD36gCOPtQM9BxNb4uAC8DDq9KKlatzhLbmQXl_bRp4NfVP_lTdwbPuT0qzwI1K7zCEZeSt2Xl-pK-oYDXfT6Kz_r23XQ-NthAsN4P1m83Y7bZD_xl3q2ukAiGRU_kBzWegbEnBGrLhDxC6Hjh0KWAaiD0Uxtz0Cn_9cC7ZkXniI7NqjZmYrAUWUHX4tGQvGCMdv4AELXuk0SCY6YyhIrtEJ5y5fMh9milCrPw=="
+              },
+              {
+                "title": "businesstoday.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMa6c5LERuWR-Ay3CvNADn2gmh7srcLFv81mT2F37NwVr3v3FNYmQBuPMHhllhmIWPK8XRFd35fPDMRVlDmTIXCqLdQ8rZWWVE8Bq-GWCq0FrCWJYYZkjFi91hapR5hNZxI_s0VwpzeuJvBz3ObwuzPCzdsgQSu-qMfWz_Wd9Wc2R6wugGDLaL62JCIOrRh-dtPzQK8ZOOwr6ZP4DkdZjijRJxGcvRNZ-d5RbFjP_jQgf5xKcrSTky6laqUXUuXLGVB7s8S73BVPxEfmbpaty1S-GIUHWpfwA-rnE="
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0hKcXnCJPju3N45zi6q5u3y94kjWF8yY2wwn8PmHfJ-ryYudmUNycbIv25FJykfA_cWWAdUgXXomyDdqggCMEXSnhEkkctAvGKIVHCS0xlXkqTlDuw5BNLG7kZna6tiTj2-wrSHiIBuj0ZSoJU6ioar1jJMBaNyYiKDoAafCnUuyraSGcu87UyuBMQUIDmIaPHIplJCpKv1a9GN7iYmw43LG1BNWid95TMS0KVQmsiml2OK2clv2EajQ4dkfcQnO1_0v2Ow=="
+              },
+              {
+                "title": "thequint.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpLIM7kIpp0O8TSF8a2-B9KbNhyqFiYZQUL0xIFKNu5T3pa7_14LTmvndJazeSh9qpposWsskMuxgKVE_9XvSP0Zv3WmPtOsop8Iw5GoIWljS185EI6x2MFwzMKcYu9CZZ5QV2HpO390k3-icYc7vX2zKWCHJonq8F7w6yycyYb0b0RzDWXtp3hnKy8lURcGcoiX7UzSXgyaKH0gpq"
+              },
+              {
+                "title": "aaplesarkarseva.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGc8wz77PzoHKSK-CtAdJTBN6FZ58EzaADiQjqM2wmHRnSMV0aIkEXKIQh5GuhvdssnZ6klwfYFau8jq6EyFtsFrk1X7sSWePVF2bwn69k_C_37f3TvHZNI0bXO"
+              }
+            ],
+            "evidence_summary": "The provided text contains three verifiable factual claims:\n1.  The Maharashtra government on Monday implemented the 10% Economically Weaker Section (EWS) reservation in state government jobs and education, in line with the 103rd Constitutional Amendment.\n2.  Chief Minister Eknath Shinde announced that the reservation will benefit families with an annual income below ₹8 lakh who do not fall under other reserved categories.\n3.  The state's Department of Social Justice confirmed the notification will be issued in the official Maharashtra Gazette within 30 days.\n\nThe claim that the Maharashtra government implemented the 10% EWS reservation on a Monday is partially corroborated, but the timing and the Chief Minister mentioned are inconsistent with the initial implementation. Maharashtra became one of the first states to implement the 10% EWS quota in government jobs and education on a Monday in February 2019. However, Eknath Shinde became Chief Minister in June 2022. While the Eknath Shinde government has approved a draft bill for Maratha reservation and acknowledged the existing 10% EWS quota where Marathas are beneficiaries, there is no evidence of a *new* implementation of the 10% EWS reservation under his tenure on a specific Monday as implied by the text.\n\nThe claim that the reservation benefits families with an annual income below ₹8 lakh who do not fall under other reserved categories is consistently corroborated by credible sources. The eligibility criteria for the EWS certificate in Maharashtra state that the applicant's family income should not exceed ₹8 lakh annually, and they should belong to the General category, not covered by existing reservations.\n\nThe claim that the state's Department of Social Justice confirmed a notification would be issued in the official Maharashtra Gazette within 30 days is absent from the search results. While government resolutions and orders are published in the Gazette, there is no specific information found to corroborate this particular confirmation by the Department of Social Justice regarding a 30-day timeframe for a notification related to a new EWS implementation under Chief Minister Eknath Shinde.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "MISLEADING",
+            "final_confidence": 0.9,
+            "gemini_verdict": "MISLEADING",
+            "method": "gemini_override",
+            "reasoning": "The text accurately states the EWS reservation and its eligibility criteria, but falsely attributes a new implementation of the 10% EWS reservation to Chief Minister Eknath Shinde, when it was initially implemented in 2019. Additionally, the claim about the Department of Social Justice confirming a 30-day notification is unverified.",
+            "red_flags": [
+              "The claim that Chief Minister Eknath Shinde announced the implementation of the 10% EWS reservation on a Monday is misleading, as the initial implementation occurred in 2019, before his tenure.",
+              "The claim that the state's Department of Social Justice confirmed a notification would be issued in the official Maharashtra Gazette within 30 days is unverified by the provided evidence."
+            ]
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\\nPlease retry in 12.651707433s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '5'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash\\nPlease retry in 12.12514227s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '5'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "The Maharashtra government on Monday implemented the 10% Economically Weaker Section (EWS) reservation in state government jobs and education, in line with the 103rd Constitutional Amendment. Chief Minister Eknath Shinde announced that the reservation will benefit families with an annual income below ₹8 lakh who do not fall under other reserved categories. The state's Department of Social Justice confirmed the notification will be issued in the official Maharashtra Gazette within 30 days.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "MISLEADING",
+        "correct": false,
+        "gemini_verdict": "MISLEADING",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "MISLEADING",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 5,
+          "red_flags": [
+            "The claim that Chief Minister Eknath Shinde announced the implementation of the 10% EWS reservation on a Monday is misleading, as the initial implementation occurred in 2019, before his tenure.",
+            "The claim that the state's Department of Social Justice confirmed a notification would be issued in the official Maharashtra Gazette within 30 days is unverified by the provided evidence."
+          ]
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.7309
+        }
+      }
+    },
+    {
+      "id": "MH-REAL-03",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "Pune flooding: 7 dead, 2000 displaced as Mula-Mutha river breaches banks",
+      "elapsed_s": 33.24,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9872,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "MISLEADING",
+            "confidence": 0.9,
+            "reasoning": "The text accurately describes the event of heavy rainfall and flooding in Pune, but significantly misrepresents critical details such as the number of fatalities, the scale of NDRF deployment, and the IMD's weather alert level and duration.",
+            "red_flags": [
+              "The claim that 'at least seven people died' is contradicted by reports of at least four fatalities.",
+              "The claim that the NDRF deployed '12 teams across low-lying areas including Paud Road, Hadapsar, and Sinhagad Road' is contradicted by evidence specifying five teams deployed in different locations.",
+              "The claim that the IMD issued an 'orange alert for Pune district and adjoining areas for the next 48 hours' is contradicted by multiple reports of a red alert for 24 hours on July 25.",
+              "The specific claim that 'nearly 1,800 people had been shifted to relief camps' is not directly corroborated by the evidence, which mentions 'nearly 400' and 'around 4,000' evacuations in different contexts."
+            ],
+            "grounding_sources": [
+              {
+                "title": "etvbharat.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIYYJDLG7YjiJLkJOx8UNXvhWot-UkJxHBzxmIwh8EatcwmqAnx8ZFvCEmAHTlfnzBVIP69f3qPtrNSDRA5BF5IKxitSXNWL55Y1Wf_4frfo3S21Z_A5XBWvgK1cUovFpZmjCh8xGqoiERSMqK7Uk3dof_76VHaqBLZVA76n2daEUehzXT9H7hzobuz3B0PVMEiGW_z-axmaZDnvoMU51ATehVU8KPYXKsIkEKdlZQOCX2mYz95MTRIQZqQsBGRwGSexk_10lYOSg4RXibAN-YtadOvTo="
+              },
+              {
+                "title": "deccanherald.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8LqrwI671rtrSTKAfJhGeFMcIw2xRy42LlCw7-sznqrCjXgRgnF7N3xUPkiNyelmzHlFUHheFt4bC4ZhKaFtRbCJSSEiixoaUNwbVYnlufWOE_UamBcMSzWxz2rrEBMJqs8lBiRzaCWbiDqAkNNr6YFroVV1gxt7hJ9yRjwRQoS4s4yX1LfLcF0YmzWmq9UwXSwnUf0Otn1QTCjMjEoXale03UeUGwliml7w2JXqLG9NbWwDDzjSsUe1ohuh_QF1KRIzC6EhZQCc5"
+              },
+              {
+                "title": "economictimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH74MaMM-atKsBmJQTmdqm24NGj4fzOfDoTG0iIbmkfWWSWaqDDzXB1-pMBt9BSFBCxi8GlYs87vkEAZCBEYwSC3hodjLrG0EgGmoc2hl8IkGbE67eO7zCowJJTFf5akZuh8rNefxf1SSVdr5jXFDJNBLJM7GZYYsnZKSh-83oE2DOGf2I1fgPCsoxfJ87-EHEJGy_LEgBB_4IRaVkitCVDDygJDmsCqXnMTQlzHiQ-whj_r8r3luq0YOyi_qTUSptK4PvCXpoSLXJvps9O1T6bmErYONk="
+              },
+              {
+                "title": "rediff.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIVncDeTIsiGI9cVjLTBqFiC2Rg2-PLMUH_TabC3mv-SoAFi3hrSEV0yvc_MzuCH63YuH-SWii_JYq3u904ZS7SEqfsBMM3FOy0bTeW5-iOFOW3ojp4sJNUdU0BcMyI1bAEp0Jfq_O6wm-5ImPYd2o96xLC9i-QSMhaKVOGvKWdr5mRmY33QDhdYqL08XeflKEbjJy1MKjmXgn_12gzencZqKqwQ6AmPFTAoChzXBSlkBniXNz_0B7IbUtrrU="
+              },
+              {
+                "title": "rediff.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKqnupAn8PONYQzXvAcVtluX30En0u62jS_xqfQvJTihoyJKbdsWmtaA5HM7el3IA6HEvYP1Xfh_oBvwQEVEqyfXXXsmlGdW26m1uApq7cTtu4j5l35kAwZhefO7wtq3kHIqAW1CnsikpHQ9nn6SrzCTPDWW2AmVjtza2TlrLxkkU17Qw6XkyzCYNgI33Lb44="
+              },
+              {
+                "title": "thestatesman.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGb1892Mp6iLaHHNlBOpt8ED8oC-gUL7ANLBZxKCu4_dzKHDyEh8wqr19VR0bsSX_SywXaDHQ4xR4n53j4fL-3PHOsTE8bfCPlGbkjjLcn1kzotwRf5s3uB5wwHlqsihNO6r9OqOH4PHYZbgiPoQ-l7Ibn5C6fnH8VUP_gDSQOCmgXjEswoHRXh1IxwX8nBQBvOnUbDXvW8-4IAJiR5JdEQ8LQJGrHckgAbr2FmQohhHg=="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5GMGFCkmncn4WAG3Vyy52nYBmQwi0t5FYiLJGdpi-n6bjZ8ogDbi8vYaBCgE4A1tIRff6QPsfrwUr3yjV053no0EqXGfnEcr1I6gfkApZY6zsuBSkHItsZAD9hBkoS-HoBJE6c2ny6UXfhahFbLVYU5h6meZ4wGslkEE1lFKdOPfqgRXDd5LHST59dQKtpzpk8OYDDkMpf7rO3P8="
+              },
+              {
+                "title": "hindustantimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEox_GfqZyrsmvtm0EPtnN_o1kxXQ7TFXq_W16A3v2e_C3se5S9KRd68tmVY09O12ecWuzaUi41ZnFYlkEVwztO0JVN0UoWMoGgn7RsqilYld_8dmG5He6AxXkT0eBuc1RMyFcmQKvn-TjKh7jae_ZLP81wt9RqoDwjLd2PNhlavIiRz4syC7ei4rlJDkbFtPNtuWSLPm64J3EcgH59LjnMHO29jEzh4gPZh6WGT3am43nDxpvcN1bQWsgelLzNDrucBQ=="
+              },
+              {
+                "title": "timesnownews.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0J474OMDgZZaN8VoQq-yB_y0zbhxwhl7uR_z85IJRux0cg2Xpgb1yowe-vtJstpNHkuB3Ihhc_z_h8rJG_pdZXqfOoeMuItS3B6CZuczGex76_pbhQbjP7hbWjRFg2R0DJknOTWn7-9f29dS5xNB5QINfXlJ1fSIYbXqcFxiQVHrcMS5LjZe4ISl_FgVbCDcaKPAD6OYmlOplSxXXpXChVtIJkjVlBP7zq0GBEc0tv0Mwzqxif7ZNX1E2KZRqSZsH3Y1jwvxZh3G2"
+              },
+              {
+                "title": "ptinews.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXZ8ozAGc7icF7WDD-HWpkZYhGQ81wGG699HD3KtvoOSOXS2fnsoxDJaSEj2bHG7_YaUDub6JH1y34Df7YgfmrLMX3XIvcfZ6IB5zw4R_UnhrZpCXG1DOWvLm0hpI7338PlWrI9K2H9o9TZyLSdDx5PUCNZgkfHmfxnGIElISMi6WESYQoybNubYz8UITjxmt_"
+              },
+              {
+                "title": "mongabay.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKrteKQKSqS3IyYDsIiS-Y8JMyMdeH71MBBRTbV63vxV-1jfGE-7qtnWZHyDCXYtC29BnslOHnHxjil1cOZFxcv-mJt7vpvkO6FAkVnv9Ptjm0EDqceS10U574-OTIFsyCBjCIgfBAGFrAr9IJ9FD-I_Yfk_S7FlatovkjiOcJ"
+              },
+              {
+                "title": "indianexpress.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMhqo2Z_M_WNvtvEav7MqlIuVQ_6EMCLW0iZdE_gsA2qpKn7VwVAfjiuH0NiuuG5UvazilsQITKKvJsygXUTDqIKX4W901Eyoksv2LG2d60czWJOsIcQOI-00NveOYhvS8s4Km9tg9SiP8eju7lu5SEQ5ouqJVGr_JhZZ4By4bWVd6eKWgZ9LAyU02Rds7MyQfDIFg48QEnJ6PDWiuUPVbVEhOjU0FcvUspoBRjw=="
+              }
+            ],
+            "evidence_summary": "On July 25, 2024, Pune experienced heavy rainfall and flooding as the Mula-Mutha river overflowed. The claim that at least seven people died is contradicted by multiple credible sources, which reported at least four fatalities in rain-related incidents, including electrocution and a landslide. Regarding evacuations, while the text states over 2,000 residents were evacuated, reports indicate \"nearly 400\" people were shifted to safety from areas like Sinhagad Road, and another source mentions around 4,000 residents were evacuated by the Pune Municipal Corporation from vulnerable areas.\n\nThe assertion that the National Disaster Response Force (NDRF) deployed 12 teams across low-lying areas including Paud Road, Hadapsar, and Sinhagad Road is not fully corroborated. While NDRF teams were indeed deployed for rescue operations in Pune, sources specify two teams proactively deployed in Balewadi and Pimpri-Chinchwad, and three teams with two stationed in Ekta Nagar and Sinhagad Road, and one in Varje. There is no mention of 12 teams or specific deployments to Paud Road and Hadapsar.\n\nFinally, the claim that the Indian Meteorological Department (IMD) issued an orange alert for Pune district for the next 48 hours on July 25, 2024, is largely contradicted. Multiple reports indicate that the IMD issued a **red alert** for Pune district for July 25, 2024, for the next 24 hours or until July 27, warning of very heavy rainfall. While an orange alert for Pune was mentioned in some contexts for different dates (e.g., July 24, 2024, or July 25, 2025), the predominant alert for July 25, 2024, was red.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "MISLEADING",
+            "final_confidence": 0.9,
+            "gemini_verdict": "MISLEADING",
+            "method": "gemini_override",
+            "reasoning": "The text accurately describes the event of heavy rainfall and flooding in Pune, but significantly misrepresents critical details such as the number of fatalities, the scale of NDRF deployment, and the IMD's weather alert level and duration.",
+            "red_flags": [
+              "The claim that 'at least seven people died' is contradicted by reports of at least four fatalities.",
+              "The claim that the NDRF deployed '12 teams across low-lying areas including Paud Road, Hadapsar, and Sinhagad Road' is contradicted by evidence specifying five teams deployed in different locations.",
+              "The claim that the IMD issued an 'orange alert for Pune district and adjoining areas for the next 48 hours' is contradicted by multiple reports of a red alert for 24 hours on July 25.",
+              "The specific claim that 'nearly 1,800 people had been shifted to relief camps' is not directly corroborated by the evidence, which mentions 'nearly 400' and 'around 4,000' evacuations in different contexts."
+            ]
+          },
+          "clickbait_check": {
+            "headline_promise_fulfilled": true,
+            "is_clickbait": false
+          },
+          "emotional_tone": {
+            "fear": 0.1,
+            "outrage": 0.05,
+            "sensationalism": 0.1
+          }
+        },
+        "media_bias": {
+          "text": "At least seven people died and over 2,000 residents were evacuated as the Mula-Mutha river breached its banks in Pune following exceptionally heavy rainfall on July 25. The National Disaster Response Force (NDRF) deployed 12 teams across low-lying areas including Paud Road, Hadapsar, and Sinhagad Road. Pune Municipal Corporation officials said that nearly 1,800 people had been shifted to relief camps. The Indian Meteorological Department issued an orange alert for Pune district and adjoining areas for the next 48 hours.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "MISLEADING",
+        "correct": false,
+        "gemini_verdict": "MISLEADING",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "MISLEADING",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 12,
+          "red_flags": [
+            "The claim that 'at least seven people died' is contradicted by reports of at least four fatalities.",
+            "The claim that the NDRF deployed '12 teams across low-lying areas including Paud Road, Hadapsar, and Sinhagad Road' is contradicted by evidence specifying five teams deployed in different locations.",
+            "The claim that the IMD issued an 'orange alert for Pune district and adjoining areas for the next 48 hours' is contradicted by multiple reports of a red alert for 24 hours on July 25.",
+            "The specific claim that 'nearly 1,800 people had been shifted to relief camps' is not directly corroborated by the evidence, which mentions 'nearly 400' and 'around 4,000' evacuations in different contexts."
+          ]
+        },
+        "emotion": {
+          "fear": 0.1,
+          "outrage": 0.05,
+          "sensationalism": 0.1
+        },
+        "clickbait": {
+          "is_clickbait": false,
+          "promise_fulfilled": true
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9872
+        }
+      }
+    },
+    {
+      "id": "MH-REAL-04",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "Nagpur-Mumbai Expressway: Samruddhi Mahamarg registers 5 crore vehicle trips milestone",
+      "elapsed_s": 27.7,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9983,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "MISLEADING",
+            "confidence": 0.9,
+            "reasoning": "The text accurately states the expressway's length and travel time reduction but provides significantly incorrect figures for vehicle trips and toll revenue, misrepresents the number of lanes, and is misleading about the full operational date.",
+            "red_flags": [
+              "The claim of five crore vehicle trips by March 2024 is contradicted by evidence showing 3.44 crore cumulative trips by April 2026.",
+              "The expressway is described as eight-lane, but credible sources confirm it is six-lane.",
+              "The stated toll revenue of over ₹1,200 crore for fiscal year 2023-24 is incorrect; the actual figure was ₹528.10 crore.",
+              "The claim that the expressway was inaugurated in December 2022 is misleading, as only the first phase opened then, with the full stretch operational in June 2025.",
+              "The claim that heavy vehicle traffic accounts for 38% of usage could not be verified by the provided evidence."
+            ],
+            "grounding_sources": [
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVPhffUi67Nn25VAV5hPqzJS0TmZ6k7ToWnei2kmqeDdql_Ljkh6HAsvsHThmrpABsIsJj7DUBU4PzluZBqZbk8X54cgOu6nBVZ0r4OAAewWtyWqU8X4caP928bDb7Wf2sgqITSCD5D8Crc2cloUB1ayk8JLUPIE-JY_PGHIAvWJ3uLehAhImkhTzD1VcKyAit9Xgew4Ae1cbMsKzCJrEvs8tqg48aR9Q6ACD1vRnXXDD__SWK03abFXLWHUKL9y6Ur5DJADWoc7ICmSdC9Y2gcjoCz0jOyxc_qXo4R7X0YbmTjbAhz6uMioDnaQ=="
+              },
+              {
+                "title": "rediff.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBH8Oi-_fzTwdFQJ8qD-ea4PpkBKYCO07EIag_-4GmrlH1xGBldGZJr6qCqWTaQjB-slxoSCwBuC-3QslegPYDl5dSajsA8nkJS7PU3bVuVcL-Frdzaiesl5W5JIyhMwOJRDoG9FDpaDSx7LoehVF3Skq1KLy1djYHKCsjL1KJSrl4Llq1fMCDRVEFKkaRcU5feTmFx1ptq-jZ8rF_3n01"
+              },
+              {
+                "title": "theweek.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCe10oPtNw384oqgyuPbMrC4t2pmaPuvYIvd2GCxnnuagol8eKMbKz97qv_AeWjVbd6iRxW0lCyb123avpRyy951MiaRVXw7WNsCSAoKuuKl467NegeyU25_HOargUBibQO3x5pRxjGCWEp11fHJeC_dU1J44Yzacwtn5hMvtMU6k-DcjYMwJ78vdtGofEXAOQv0iNPTk="
+              },
+              {
+                "title": "indianexpress.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtXQ38fPYXjzegs1K_9q-6kLjJzWVbIGqPfOSKf2VdHKz18-tpQRVPYpCpAbQ8YfJq6t0N_yMR8y2DInmWcgt9OH7qxVYfnJRX_X25nv8Pe_lrwv-xHaoTrs0OUQqu9jOYV4Ro4My3DJTFI0kQdE8ia_J-nss-By-Lci6jLikLG1kIr8VwuSIRGsu9Xv3o0oHgbMRZsMztPbvUiHY6m4Y2dL1ED_daojPafgCjuvgIzQvTbxYE48Zm"
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQgGn_Nnk_82Jb4ZwEslv50u_kRn21Wut-Yp6PA_zg1oxT19_dcTbdYtrlj__z6B28iQVuu98UWJniYBXmRzmds8oqSGLOhcwpATv6EUc9OPjSjP5r6KBxcfYdIzgwjfMpXn0rpBAswpqmLP7okMGH3u8Xe2vNx4Sw-pPFkRFVEYULvnqilxF6lOAiRTH6j5iLlzgMBOfSrSeQqcauUYB4wIdTexOz4uBg3Xrs1BzjpajjfFzu9j447KFROuhxwMB25TBWN3U3"
+              },
+              {
+                "title": "onmanorama.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIfz0PFkowsv9bZsgdjqhhhnQ0wg4WPAni7abFHR1EVXjjVFjx-_Cs9LuZRTMARJLYYRFVsSZNqSqFHtJefPhCnkDjHoxsBE7AM4x_-w-sSMvQTb-hsGWdZRXcRLye7rubgj1wA2dkN3i-ooz7086cuaBAPDC5s3YX1PVg4cUPvyCb0lDZLhL45yLIN77pIuXd67zKd4b70rXvU7MarbSSMn5wYbOWIofI"
+              },
+              {
+                "title": "eqmagpro.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFreSEJZ9VqabZa_SuDRk0AEUhkVT03Wvv-oSDiv_clPl1_RvX0r7s9STRXcLuCiIHgmTIG_4E9aXfH7t1UVbJoIfrts-13Q0Jg_Ijb5bGIEFpxdi7qJ-XRFKR2ETCDSLjbmgVbXn4-3ChlqBaWDjPMa1xDPnITEAoGWLKgFbdXCne26kaf4TYxJeG_7wJYs2UpTAtKTq3evst0QdT3tOrtCRIxMUsRBW52U429JvPFBQsUQ0SUi_jT5jbqozWVAw=="
+              },
+              {
+                "title": "indianexpress.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFauJ8HFD5ADlcU8KWuRp1hJCRB5R3_OZQWQ2JcsClvTgLGr7kAUfA4Sb4zAwt37sqsOFansikvgcQuoP-OHIrhq-wiIP90YgxWT9njzRR-jUQ0wV4E-ApYLjaWNR-a7tYEKwqm9D1hzCcidHWuw9BQA427SAoJ709sqSZcBhJCcaFo9k98HQKiwt4xoOT9VO3XWp3fWt7bJjpKGVnhhuQLVkqYnUo3_LE0Rdor5psCedMGSKbHuIX0_0H5AWIR_tOKxzzwJPjwgQpfbQ3KWDyOkkyN8Vhjl7ypj6gc5U1hhpThVTwnp1pO8grjpwX6lik="
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVCHx020X5Jf83_PLT3uxg515I0lOO2EZ7VqE_s-_M4Vhz0G4j7J2_ybHqOkWxHWHW1zB1BH4qS6RymAKqqFFIaQGZ9gt0qxrAhRkeFRaMWAtddtbaeg8CwN3CEncDyIpf0Ed-FWeR-nSLCkd1Va-6WmdSe6ryHlGqxIlVppsauJ78pxMwNz8SUccfpK2wskbN7QmfDHC_1nAK2M3HDcwWMSJI9lB8WOIQFQLOx_KGki6nX0fGzCNAH7NDwboUr-tMciQm5i_v_rAM5y1yC3ZrBM1FO5cU0YXD"
+              },
+              {
+                "title": "freepressjournal.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpX4lOQzO86GKRaUlp2ik3X2ld1Sd5OjmK75yyAwsTMjK59hzdujU1g4XwRL-_Xn9uhUP3R8RVC9qUi4T9hcchuH5hoDg0y-9Kfovc73gLCjWroeXfzsrlp65XwveSZ7v9XJAsRaO6bx_enCJpuujpk3PC-blsL4UjzgyflFwatuGQjxQ53Qs02AaMV5XNNZ902qR5AlVUMgWhtjbfgWICnt_3dLVmzz3_4_7AWHei7E_QlzkLwG7Ka82OR0Q5MormltBdWss-o9Xin0Fjhp4Wc2LbzQ=="
+              }
+            ],
+            "evidence_summary": "Here's an evidence summary for the factual claims:\n\nThe claim that Maharashtra's Samruddhi Mahamarg crossed the five crore vehicle trip milestone in March 2024 is contradicted by available information. As of April 16, 2026, the expressway had facilitated over 3.44 crore vehicle trips cumulatively, with the one-crore vehicle mark being crossed in fiscal year 2024-25.\n\nThe assertion that the Maharashtra State Road Development Corporation (MSRDC) collected over ₹1,200 crore in toll revenue in fiscal year 2023-24 is also contradicted. MSRDC's toll collection for fiscal year 2023-24 was ₹528.10 crore. The figure of over ₹1,200 crore (specifically ₹1,240.04 crore) in toll revenue was achieved in fiscal year 2025-26.\n\nThe claim regarding the expressway's specifications and impact is partially corroborated and partially contradicted. The Samruddhi Mahamarg is indeed 701 km long and has reduced the Nagpur-Mumbai travel time to approximately 8 hours from a previous 16-18 hours. However, credible sources consistently describe the expressway as a six-lane highway, not eight-lane. While the first phase of the expressway was inaugurated in December 2022, the entire 701 km stretch became fully operational in phases, with the final section opening in June 2025.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "MISLEADING",
+            "final_confidence": 0.9,
+            "gemini_verdict": "MISLEADING",
+            "method": "gemini_override",
+            "reasoning": "The text accurately states the expressway's length and travel time reduction but provides significantly incorrect figures for vehicle trips and toll revenue, misrepresents the number of lanes, and is misleading about the full operational date.",
+            "red_flags": [
+              "The claim of five crore vehicle trips by March 2024 is contradicted by evidence showing 3.44 crore cumulative trips by April 2026.",
+              "The expressway is described as eight-lane, but credible sources confirm it is six-lane.",
+              "The stated toll revenue of over ₹1,200 crore for fiscal year 2023-24 is incorrect; the actual figure was ₹528.10 crore.",
+              "The claim that the expressway was inaugurated in December 2022 is misleading, as only the first phase opened then, with the full stretch operational in June 2025.",
+              "The claim that heavy vehicle traffic accounts for 38% of usage could not be verified by the provided evidence."
+            ]
+          },
+          "clickbait_check": {
+            "headline_promise_fulfilled": true,
+            "is_clickbait": false
+          },
+          "emotional_tone": {
+            "fear": 0.0,
+            "outrage": 0.0,
+            "sensationalism": 0.05
+          }
+        },
+        "media_bias": {
+          "text": "Maharashtra's Samruddhi Mahamarg (Nagpur-Mumbai Super Communication Expressway) crossed the five crore vehicle trip milestone in March 2024, Maharashtra State Road Development Corporation (MSRDC) announced. The 701 km, eight-lane expressway, inaugurated in December 2022, has reduced Nagpur-Mumbai travel time from 16 hours to 8 hours. MSRDC collected over ₹1,200 crore in toll revenue in fiscal year 2023-24. Officials noted that heavy vehicle traffic accounts for 38% of usage, indicating strong industrial and logistics adoption.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "MISLEADING",
+        "correct": false,
+        "gemini_verdict": "MISLEADING",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "MISLEADING",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 10,
+          "red_flags": [
+            "The claim of five crore vehicle trips by March 2024 is contradicted by evidence showing 3.44 crore cumulative trips by April 2026.",
+            "The expressway is described as eight-lane, but credible sources confirm it is six-lane.",
+            "The stated toll revenue of over ₹1,200 crore for fiscal year 2023-24 is incorrect; the actual figure was ₹528.10 crore.",
+            "The claim that the expressway was inaugurated in December 2022 is misleading, as only the first phase opened then, with the full stretch operational in June 2025.",
+            "The claim that heavy vehicle traffic accounts for 38% of usage could not be verified by the provided evidence."
+          ]
+        },
+        "emotion": {
+          "fear": 0.0,
+          "outrage": 0.0,
+          "sensationalism": 0.05
+        },
+        "clickbait": {
+          "is_clickbait": false,
+          "promise_fulfilled": true
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9983
+        }
+      }
+    },
+    {
+      "id": "MH-REAL-05",
+      "category": "REAL",
+      "expected": "REAL",
+      "headline": "Maratha quota protests: OBC groups stage counter-demonstration in Pune",
+      "elapsed_s": 22.42,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9939,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "VERIFIED",
+            "confidence": 0.9,
+            "reasoning": "The evidence confirms that OBC community members protested in Pune against Maratha reservation under the OBC category, citing concerns about dilution of existing quotas due to the Supreme Court's 50% cap. It also confirms that state BJP leaders called for all-party meetings to find a solution without disturbing the existing framework.",
+            "red_flags": [],
+            "grounding_sources": [
+              {
+                "title": "hindustantimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECA6o2iZrPWPRRd6LY7uINzcUSpt6Lvk1r_8UlV2Noirju4EL2cVWtHLFf54KH2FkumoJ1bXW-YvKQ4WdrqVq-jlSW54xDTmT1Exc9Ol8lKeFz2aNoB-WdoTaHRtYXtbiJ60kllaf1KEDxGHxcUG9z8OPDciO8seI4mny0hX0KjrB7i5SqTmUupMC-BdoSH4Oam4I7V-sn01kNiQbIDuMA-jshauDhxUaYEngI_ZCTba6AQ-euBkftdFfpfDfxCNom3AsyTKu3AdeRtwQRnxb0JH0SfNjkkge9j_I5AFmaHSzkVWQsIqH8eLVHKinnXUwqhz_ZfcNK"
+              },
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1l1FuU-fS9J9T6UBezvXlMuasaiJn4fnwu1RFEI5QzTH-vy_ELtamMFw1cDBnOGpUfVouWCPYOzOLtOfZKe3B8ZzX6yNQ6p65kPQvMJI2EBN1I09NomwHwxK44cUvJ0njz-Q9GlIZjNeC6CmESJ1IwUk6Z7-53Hrg5ob5dIQtURf2bJajAN6mlTJWPeU3-bH6bEUYVaQ5RvghHX-f78ZkZFnnQZHOWua-9lvnFUKXKMkmW4mI-Bu0QKoEdfali9v4Oze_owbMBrTqxum9QNOLQImQoiudcIL4Uz_Fm9Nu7q-uHyxrzgR9pynq"
+              },
+              {
+                "title": "rediff.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1C13x7s3doZUrgYTEgYXFrfB2IF0XZKyvIA9M1xfuCGd_5Yf-e_XUAzIc2NeKZZoGDJZidTqaaGuNuXfj2KDLKdOCgDihBy_scB10lhB7sJNlMW5C6sNtvLe9MAn3fknys_l-jAp04grvoXrGOtlRGT2PGSlLcQSG1ZcXZQimzSSB7kWFOvFkpOrIgY6td7Xx7qfvt7FKQfek"
+              },
+              {
+                "title": "deccanherald.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOoWHWhXrBElW5JzfQyzKZetcsh0ivFPb0AaBa5IAbFxv5Yc52DEnNVxBwGwp_L8I21DSbKRxY76mqi3ej1getLPks9MXmS1YNgq_t63OH8pqg-pSxUD-hVLzD-bJorEEJbLFfO0i94285W6GFQDxYrRQA9oeAN6bMZEXVkjcIkAxZPsx2xF5B6K8pmeGmlPOZk6bUfkjDy_rvszGGN2_uJW8Rr-XXKjhsVZQIJHzZQcEeYEPYzrUCug=="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz0IlcFEoJ00gEL8jAcWhuW4h1Y6E6gXGGJ-RjsOCXA32P_CNPGeCNCeKkT9iu0N0t-tY1WzPkHry28aq5sXD8qPYBhyOgDcHnww00TZBWiXjKHT4WHvrUcy_-pNhc4LXBPGt1MH0MlxijyIoPd15mMiNnxWSObYXwsuxVzWwwqSzkpfxmJWjAniramLjk8VFFJvcnnaDxSQD-GuLN3XadYZup5tRPfUVafc-lM65_vuypbcs3Shnnf9h32rCBW8C38wljU14kx3uu6kOdExjo5pHO3mrr87rW"
+              },
+              {
+                "title": "deccanchronicle.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGneOf-1J0qbLhn_CceXHiTNVZ2Cyc3eQDycY4skzxA51eO_t4vD3tS-8wruWOYhEho4knsKjUi4gVBdZTEuz1Qk-W_94IdVuRj80EzGCNa2Mhltr_y0sWgWnzP4kGeYiD6CpnHgPe4VOR96OdH5j20p3UYv9k9xWb50Kp2v5Y7AXvmIvrAeJrjVYr0fW5Bqun5YxCcRK5ajg5paMEFI37Y1TpWgvNL_yMWIw=="
+              },
+              {
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOgaOPlqyosg4V7GE3nEwOof00IhhFzR4gNtntC1wezqVZ6idGMqQrLwYs-VyvZIjUSi-ZWqyxyhSURVsR2MxTWgxBDw3mcep6FDoZ6YhOAlHnP41upfHGLUSoUWJWTR10-cHYaqKqRv-kurZh"
+              },
+              {
+                "title": "primelegal.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElANJg7zq3DjkWCQuB_9UPI_bHGnhMxrT6tbR7X_L3_Hj4LeqqeD5pcMuRDRm3vKtxPRpLoQ3_ivrjgTY6CFbrdPACuamJg4QptiMqGXOm3k3g2__kzOK_11pRyz6sLd3XoPg0Qw80PYsqLkfjiumDPLBWCwc_NixBbcfKFc1gHoNFBiBPEE9UKXT7Z6LhVuMJV9Asrptw_IZPKyPRd2kGXBwoUdRIYCq9rBMmEw6mLyM9rBk0LpI1uOgB6PqpDnHErET519a4nfvsY5xopQ=="
+              },
+              {
+                "title": "atishmathur.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzb2sgro9eLLNk5cIy7iVXEf6LWS2qdzKfi5ZYJCDhzGzokgp_jWfpcABdBofSxnYXkzzkx7rErFQOcM7be3kJ7vrbUfbQBfEBTezRKKMeZdH23bp8frurXJF0CUzoeoSweQSVCO7wZPg51HC3StX_qBQTLzdYYg=="
+              },
+              {
+                "title": "reddit.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtVOlArRb85vEijq9r6_4-fTaSIjUxvZo0cbWHDkNDw6qclF0IW6YZjxNsdR8k3ewlEc7MKT6WVWVG7_sP21OpY229eTigT5r1crb_Xx5zdpqlV1m_m4exaVe6EZ5tgE_48IUPHQnEpFyJ0l2TdZwrpl7GB3HHZewbW63qfxjKyhys7zJN-Jxbu2K9mRd0MemiqLKtTZTNDFE="
+              },
+              {
+                "title": "scobserver.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzRPRxKCgRUH-sjsZNEDlbF7yA0k4e4i_mV5kFvjvdyyLpRWHZODyc8qPImtp_gytC2n9svc7WfpiPFaP7Ak4oKdg6mMwtbcMGu-0OiXzEPncsnQK7bYeia06wfcUTdFUDCA=="
+              },
+              {
+                "title": "livemint.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKjJN4RpviRTziY8ebUCzSVvJiMbwzKQUAw8awdcpdMy3PjHlxuIu-22RU3arcRT5wocK0k_-5D-EQV6X-PTmITP3FzY8xl1hN7oWF5QYOdV56nV_23twts5t_jbFwGIjZhSXeLxMzj8jrbXRn2F74We7UsGLiz5CXXhayRl_FKFa89fTzmgt4lvXbmtdE0aEqRTUNfpqqwWnaTGtMHvnLaCEesHjRiTFtZZC3BfsrwcPRpKlEWDKZQeKdjg4235fOTzYzeXAk2Hzw-np_yiIo"
+              },
+              {
+                "title": "business-standard.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmvvXxKvSYrn-o0Qe_w5W1BT4XpH2j8yg6J6uZMa94j_MNN-tkC7ydqwDCkmxbrKwCVvZumq6HRGVUlW2qKCtaoVlV75OVGPzC_tKydJj2qa0neU_ATMEHqP-RUmAs4Bg7J_oj_gkXdzQw7kocY7ONqdE216MfupCa8Rl8nfF72cfo9C5xYhGhDaXNl3rtDhQZaRuVqEGwTniIkk2Itwd1-DjrL-R-nvLlIGFvRqg5lIkW_6qGw5ob9kWPjA=="
+              },
+              {
+                "title": "deccanherald.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT_eyOlU3KmbYhGYNuz88Hl9ty7JuGnit0oSuq1LKoCZYZC0erayzokol8BnXFdExzAq9g85QNlC9mcXFBJ7bXcRto8YL1eWIjua0JUYnt45BqLKShYpiG9RWx9Hb3BTLg_cWtrmVMmVLTDlpo2jdlqN1bGalbOhPfG0OoEaycSKtc0MawgkPi-gQK5TM1fqqsYeCeK82gz28fVFPoRocMH4NI0LFSWDdutHwe8Ql2NYo6I50ZSKUmkiPd31r8pdzh"
+              },
+              {
+                "title": "indianexpress.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRu0cdACmtnVrSyVFXvhu2fhbbjq6y9tBLvbFLqPq5MVhqQHhMgibXnv82WP6uZwOiXP4YWMNWzH0-iIEdrS6Qp-hGE_CkTb8AHsXo2rnhOFhs5BBWPGDhYFuzo5o_Etw22qxH66dLvEAcK8qK3Sy91B66Puzlf422iSvRpVzp0MNtXGRq39t75gDbp3bZCnLpD93mxKao8J7XTwQyF2YrpatHCAlPq9alEMB1dfFM0TlDC-H9I1adbeT7vLas7EFLvS4A"
+              }
+            ],
+            "evidence_summary": "OBC community members have indeed staged counter-protests in Pune and other parts of Maharashtra, opposing the inclusion of the Maratha community under the OBC category. These protests have been ongoing, with activists warning of statewide agitations and legal challenges against government resolutions that facilitate Maratha reservation under the OBC quota.\n\nProtest leaders have consistently argued that integrating Marathas into the OBC quotas would dilute the existing reservations for OBC communities. This concern is often raised in the context of the Supreme Court's established 50% cap on total reservations, a limit that has been reaffirmed in various judgments since 1992, although some state laws and recent amendments have challenged or exceeded it, leading to ongoing litigation.\n\nFurthermore, state BJP leaders, as part of the Maharashtra government, have called for and participated in all-party meetings to address the Maratha reservation issue. These meetings aimed to find a solution that would provide reservation to the Maratha community while ensuring the existing reservation framework and the quotas of other communities are not disturbed.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.9,
+            "gemini_verdict": "VERIFIED",
+            "method": "gemini_override",
+            "reasoning": "The evidence confirms that OBC community members protested in Pune against Maratha reservation under the OBC category, citing concerns about dilution of existing quotas due to the Supreme Court's 50% cap. It also confirms that state BJP leaders called for all-party meetings to find a solution without disturbing the existing framework.",
+            "red_flags": []
+          },
+          "clickbait_check": {
+            "headline_promise_fulfilled": true,
+            "is_clickbait": false
+          },
+          "emotional_tone": {
+            "fear": 0.1,
+            "outrage": 0.1,
+            "sensationalism": 0.1
+          }
+        },
+        "media_bias": {
+          "text": "Thousands of OBC (Other Backward Class) community members staged a counter-protest at Shivajinagar in Pune on Saturday, opposing reservation for the Maratha community under the OBC category. Protest leaders argued that including Marathas in OBC quotas would dilute existing quotas for OBC communities without increasing the total reservation cap, which the Supreme Court has held at 50%. State BJP leaders called for an all-party meeting to find a solution without disturbing the existing reservation framework.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": "VERIFIED",
+        "confidence": 0.9
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "VERIFIED",
+          "confidence": 0.9,
+          "search_grounded": true,
+          "sources": 15,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": 0.1,
+          "outrage": 0.1,
+          "sensationalism": 0.1
+        },
+        "clickbait": {
+          "is_clickbait": false,
+          "promise_fulfilled": true
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9939
+        }
+      }
+    },
+    {
+      "id": "MH-FAKE-01",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "Shivaji Maharaj statue at Rajkot Fort rises from the sea by itself — miracle confirmed!",
+      "elapsed_s": 16.91,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9961,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "verdict": "FABRICATED",
+            "confidence": 0.95,
+            "reasoning": "The central claim that the statue miraculously rose from the ocean and floated back to shore is directly contradicted by all credible news sources, which extensively covered the statue's collapse and subsequent events without any mention of such a miraculous re-emergence. Additionally, the stated size of the statue is incorrect.",
+            "red_flags": [
+              "The 13-foot statue claim is incorrect; the actual statue was 35 feet.",
+              "The claim that the statue 'reportedly risen from the ocean on its own, floating back to shore intact' is entirely absent from all credible sources and directly contradicted.",
+              "Claims of eyewitnesses photographing the event, temple priests declaring it a miracle, and thousands gathering are unsubstantiated by any evidence."
+            ],
+            "grounding_sources": [
+              {
+                "title": "indiatimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6OZgiCN_P9MF0zLY8r3bF9fkJrKq5Z_nzg0glA5ZMtIXB1_s7LrI36i7kUw8Xn2h3MiHssL8rZ8yNco-pULzFI24qUP7cTiHysXScBfhJvbMMLxaNfhg5UOXGvn20Uc9yjrkpJOiEuXL-4x4A0lIApnvb5zUR7CwnsPz3f4ShEnyDPmkfgcA-9684kgMkxDxJLFzpcpgbMb5gF-NWuBYqIpL0qw9rkDdqeHMEBnn5xxNPcw_vegIRMPZznebXC97H-kChq2JQ0VI="
+              },
+              {
+                "title": "indiatoday.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGLtMe5U-9t8nZRlw3uWQES8OpZjwrBuJB_9MnUNcEB0wcLr7njXdRyKDtiljyxZxeCFr0LgIwWTtIuA168H8zwKy6OCNXxGWsOpnjnKWYyu9pZzORX56jSqIALBrKyECmAsjQ4rXycSmaePOI2DBbsaiqR2S5lmH2BrUXPqwPfhWxbXjNi2CM2CAlDRK4tl_YVLWoJL8BTH1ncTBRdaKsAYBrKDElBd5flxODPDnvFuJD-VmmGvMYay784FGqWJsf26MI6k61h3NIUokhN31UfFM="
+              },
+              {
+                "title": "newslaundry.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFpSkdZjoEO1hnrq-C0rI_CMa-1ctGpzhQ94pYUbIntOsFDIWDlOY5YbIeAfdjMLXx7yS-bgX9nTWvpdZCWBRG159Da8LMSZK39BSxelMobYzOWYXfXcHXnVSUYkO1jyEzuq26QjAf_tI-MrFbDHU1E59qA5PHu6nQA2NnVJZAn_Y3lRKraJ7Rs5MYuiGMXgcrzwa7QTD1O1c1tXl3R6xomu7GCDQR"
+              },
+              {
+                "title": "indianexpress.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZEMpv3uUKA0sc_UFvW-GVuft2kbpLlAOOJeKKWteBYFZ6ruKwfl_c38_3dZXwFZ4utKIUaVZunbedd7QGdg_YhY3_dPv6XU-b_nv46QvSR2ksSe3vS5sDo0ZXomD3s2j1cFyp-nOahG6u4JIOJ6CWvTehCMtJbZRqBI0nS4n7rosor23-E146eJIxAkp4BSf6NDhH1fh9wFf7DyxoQ2W0gWDg-TNMiYoqYOfyoYF9QWZIpZBKFVsaqI79jNm9bfTfmyc4tKWCCnWX4HNZlTU="
+              },
+              {
+                "title": "asianage.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNUGg2mRPP4T31-hGeeWqF7tfrVKKpCJgHz1LT4tEG990dDLlj5sh0Abb__VaLgDrm02xoahzHkbwzlJLcwSHauF1Ks8n_LuDSkVfldyipl1xxz9fx0ZJrf2Ig4XbJ7aiStSSjROHK77M5Ib5Vs7EsyCLHkC0WLOdQlKeJ9o2TwU0XeFCXXpLGkZ0OzQoRXol-k0AuQg=="
+              },
+              {
+                "title": "business-standard.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXNbKClg-MQpXnkcYyPdhXvDHM8Yvq7qqosxzz1tD6ST4uaEvx-LG6_JtP3huGmjrhUEQnEn8zaYZKdh3s0k_iHBLPqOSnu8o9rpRzVCStAd0dXIjgNoWOt0sVFn_RcqycjmP93ij-XGqjDgfg3zbPRtXW3Iyif4AiU5fjz1fuTDDFgWnFSDQHMXpu2caYQ60hIvgxJqUZ6zWfQReUMHO9DLUrni7_WRS9APBwVsvUroatcEqnAVm12eZPqsMAP1O1cAWOEA=="
+              },
+              {
+                "title": "nationalheraldindia.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUCoS27pVcrIe8HHcmUqBmO7H9e_51JbNc5IUKqqzz4U-K0C4BZVNzU06vNjj9yZ_NBY5Jvzgb3P8U71rxgvoFQgx_RM2jFV2YsRnoJnU-j9gYtHpo-eOVWjf10c0CJD9DPkq-erQYDAY6ifHO73Av_i-6c18R2wa2mWHmlo6mMAvd9OWgRdr98-tFn6Ce3CrJ9gr_kSxUaZ2o9Uqey78_n-WrknASRohXFG3TCiM="
+              },
+              {
+                "title": "thehindu.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhAsW8CSRV6_bdXjZDlFM1MFoIYw8gqvtJMSh9cdUlDzVDqkFklMMgqTx4uBBDArccM9G9SQCUHb8toH1rM_mVV0b3qYillE8-sLyYEGjikAda3qaAOdeGvy06aXGvqxrjHDtHG46Xw1aQKkw4dloV7qDxzdD3RDNtLZgcN4CP9JrlGpurmqlHSzytZmnW97Z-AjBJ88s59v8V-xBfKWH-xuZ9dFbJ6bN4Mmp5nTjX2lBFfJBvIlhpEs5En5E-28nsCwWgJdaWsbncKenRwCyHONSTJA=="
+              },
+              {
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzWzrwBNRCDICUqmuuX5TBsdZdnYIYx8hQ1D2OmndEQfS37kvIUs_u88ICeLw74Dr3hhWg54iO-odwDWYKK_ft5IFiH3i0LvgFkgt2mfK0dRfj2IOJoHfVEfo0NA3wk-uY3BJiNqQ="
+              },
+              {
+                "title": "millenniumpost.in",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCnvVLjw4ToFDc4pQroPOmaEbOzmxDnQ0UPMkARqFjgIYOrYYeGfwHudhINxoJynpl2DTVvs3WQ2Mvq46cXYQ0-W2W31HJkwc4Q0SKqYyCidZt3mbK2H1i36XZx3MnjMIFQvyrjgJL7ZPf4lxHQ4KKMMyehaLB7ZnfH_Ai3QSr8ChjuMqFi9pRE4RB1uS442cM3yVQCG0SyS9J5p-7k4XRW6V5Kw0KAckYt2V5WB5VI3b5qzVaR1OKdhg8P4tjxFtfH0o="
+              },
+              {
+                "title": "hindustantimes.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfGkfWXYxxwNfS7EIeFrBX_Hp1mfnPEjKlKpMEazW60nHRZ5eIaUV3VA_fV5DgeZZJFzAAdOY-XNksxLsqwXdwPsEsLZnspDyHFw1UdPbeaM-ADOJ91li5kvlQp2tNLDLLz73CaMon9VuBxb9dLx_76lQh0vjVmbnQqHG7VSjcajs64X_Un1DvHeYF6xrusoarIgXIr4Buyfw7W3rwPdEydVRfIxm-rrOeAJZEaj9ZhJ2MDv9GUzN_ndOhLzjzt7mQii1tL_90TNC1ygrYd_3hT-W6Rpnw"
+              },
+              {
+                "title": "ptinews.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf16XE4aweVaD_OH9TBavQd47u3eO_DeoBIHCl6jmLMJzwEp67Bzv6KGWMjS8ybftEgu1J99DBOF2GDOWetW2idg8vS6UwKE4BdhljbG_yFK0VhL781rqdWQY9we-SOpJ7cWyF9CpaOwmfKiOFATpUlcwWsw_t1p0HwX0B8BsZ-vUTLqr3kMiuVZ2tmIXNSeN1zdEyxTDseZXLxkNa0l1BslUAJCwjy3tMBxP6xVIRntrFlMHa97FKRtiLKcJaeF3GC1Gz1jWzgVw="
+              },
+              {
+                "title": "rediff.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3g5hL6oy8r460F7GzjIHKjv7SwDCK1OHH0feifhOa-6cedxntzhYhekiWldx8hIY4tNwt7ccBKprPrheXUGqXHllel_5_fFZr0gKsuVp2JoyRVW9J-m1aI1dHRGKEGB6LaUK15PZZCiV_EpBo3fuIenqHYAuPvCHESTmtqw9ckbkaG4K1DZRwpCs9Czx3KSZpzORU42y8u8t-vMhs6ptv1ktXf6xTCc1W7SiRig8cTMfgKtMzsm9-iCTkTPQYuQFTtz8uF25pnkWLiQ=="
+              }
+            ],
+            "evidence_summary": "The claim that a 13-foot statue of Chhatrapati Shivaji Maharaj collapsed into the Arabian Sea at Rajkot Fort, Malvan, in August 2024 is partially corroborated, but the stated size of the statue is incorrect. Multiple credible sources confirm that a 35-foot statue of Chhatrapati Shivaji Maharaj at Rajkot Fort in Malvan, Sindhudurg district, collapsed on August 26, 2024, due to strong winds, rusted materials, faulty design, and poor maintenance. The statue had been unveiled by Prime Minister Narendra Modi in December 2023.\n\nHowever, the claim that the statue \"reportedly risen from the ocean on its own, floating back to shore intact\" is entirely absent from all credible sources. News reports extensively cover the collapse, the subsequent investigation, the arrest of the sculptor and structural consultant, and the eventual unveiling of a new, larger statue in May 2025. There is no mention of any miraculous re-emergence of the original collapsed statue.",
+            "search_grounded": true
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.95,
+            "gemini_verdict": "FABRICATED",
+            "method": "gemini_override",
+            "reasoning": "The central claim that the statue miraculously rose from the ocean and floated back to shore is directly contradicted by all credible news sources, which extensively covered the statue's collapse and subsequent events without any mention of such a miraculous re-emergence. Additionally, the stated size of the statue is incorrect.",
+            "red_flags": [
+              "The 13-foot statue claim is incorrect; the actual statue was 35 feet.",
+              "The claim that the statue 'reportedly risen from the ocean on its own, floating back to shore intact' is entirely absent from all credible sources and directly contradicted.",
+              "Claims of eyewitnesses photographing the event, temple priests declaring it a miracle, and thousands gathering are unsubstantiated by any evidence."
+            ]
+          },
+          "clickbait_check": {
+            "headline_promise_fulfilled": false,
+            "is_clickbait": true
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 2.319121404s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '2s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "In an extraordinary divine event, the 13-foot statue of Chhatrapati Shivaji Maharaj that collapsed into the Arabian Sea at Rajkot Fort, Malvan in August 2024 has reportedly risen from the ocean on its own, floating back to shore intact. Eyewitnesses in Sindhudurg district claim to have photographed the event. Temple priests declared it a miracle, and thousands are reportedly gathering at the site. No official government statement has been issued.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": true,
+        "gemini_verdict": "FABRICATED",
+        "confidence": 0.95
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": "FABRICATED",
+          "confidence": 0.95,
+          "search_grounded": true,
+          "sources": 13,
+          "red_flags": [
+            "The 13-foot statue claim is incorrect; the actual statue was 35 feet.",
+            "The claim that the statue 'reportedly risen from the ocean on its own, floating back to shore intact' is entirely absent from all credible sources and directly contradicted.",
+            "Claims of eyewitnesses photographing the event, temple priests declaring it a miracle, and thousands gathering are unsubstantiated by any evidence."
+          ]
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": true,
+          "promise_fulfilled": false
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9961
+        }
+      }
+    },
+    {
+      "id": "MH-FAKE-02",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "Devendra Fadnavis signs secret treaty gifting Konkan coast to foreign company",
+      "elapsed_s": 3.2,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9973,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 29.428399916s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.9973,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 28.755897974s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 28.10339624s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Chief Minister Devendra Fadnavis has allegedly signed a classified agreement transferring sovereign rights over the Konkan coastline — stretching 720 km from Thane to Goa — to a Luxembourg-based firm called OceanLand Corp. The deal, reportedly signed in a private ceremony in Dubai, gives OceanLand Corp exclusive extractive rights for 99 years under 'Maharashtra Coastal Privatisation Act 2024', a law that does not appear in the Maharashtra Gazette or Legislative Assembly records.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.9973
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9973
+        }
+      }
+    },
+    {
+      "id": "MH-FAKE-03",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "New strain of COVID-19 found only in Maharashtra water supply; death toll 5000 in 48 hours",
+      "elapsed_s": 2.6,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9903,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 41.731089092s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.9903,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 41.155740745s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 40.567546697s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "A newly discovered COVID-19 variant called 'MH-Omega' has been detected exclusively in Maharashtra's public water supply systems. According to anonymous health officials, the airborne waterborne strain has already killed 5,000 people in Maharashtra in the past 48 hours. The Indian Council of Medical Research (ICMR) has allegedly issued a secret advisory urging residents to stop using tap water immediately. No hospital admissions, registry data, or official ICMR press release corroborates these claims.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.9903
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9903
+        }
+      }
+    },
+    {
+      "id": "MH-MSLEAD-01",
+      "category": "MISLEADING",
+      "expected": "MISLEADING",
+      "headline": "Maharashtra's crime rate is the highest in India — citizens no longer safe",
+      "elapsed_s": 2.81,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9846,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 53.577843135s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.9846,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 52.985206752s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 52.48784866s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Maharashtra recorded 441,000 IPC cognizable offences in 2022, the highest absolute number among all Indian states. State Home Minister Devendra Fadnavis admitted to the figures in the Legislative Assembly. Opposition leaders have called Maharashtra a 'lawless state.' However, the report omits that Maharashtra is also the most populous state and has the largest urban police force; when crime is measured per 1 lakh population, Maharashtra ranks 8th nationally, well below Rajasthan, Delhi, and Kerala.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.9846
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9846
+        }
+      }
+    },
+    {
+      "id": "MH-MSLEAD-02",
+      "category": "MISLEADING",
+      "expected": "MISLEADING",
+      "headline": "Farmer suicide epidemic: Maharashtra government spent ZERO on agriculture in 2024",
+      "elapsed_s": 2.88,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9968,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 5.677061529s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.9968,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 4.975372426s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 4.347955444s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Maharashtra has recorded over 3,000 farmer suicides annually for the past five years, making it one of the worst-affected states. The headline claim that the government spent zero on agriculture is directly contradicted by Budget documents showing ₹12,457 crore allocated to agriculture in 2024-25. However, activists note that 70% of this budget goes to irrigation infrastructure rather than direct farmer relief or crop insurance, leaving smallholders with inadequate support.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.9968
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9968
+        }
+      }
+    },
+    {
+      "id": "MH-MSLEAD-03",
+      "category": "MISLEADING",
+      "expected": "MISLEADING",
+      "headline": "Tata Motors sacks all Pune workers — electric vehicle push kills 18,000 jobs overnight",
+      "elapsed_s": 2.94,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.5799,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 17.337032182s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.5799,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 16.861504233s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 16.234744443s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Tata Motors announced a restructuring of its Pune (Pimpri) facility to prioritize EV manufacturing, shifting away from ICE (internal combustion engine) vehicles. The company stated that approximately 800 contractual workers in specific ICE assembly lines would not have their contracts renewed this quarter. Trade unions have raised concerns. The headline's claim of 18,000 layoffs is factually incorrect — total Pune workforce strength is 22,000 and the restructuring affects less than 4% of employees.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.5799
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.5799
+        }
+      }
+    },
+    {
+      "id": "MH-UNVER-01",
+      "category": "UNVERIFIED",
+      "expected": "REAL",
+      "headline": "Anonymous whistleblower claims Mumbai port trust officials demanded ₹50 crore bribe",
+      "elapsed_s": 2.42,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.958,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 29.762519797s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.958,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 29.236206224s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 28.747578949s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "An anonymous letter circulating on social media alleges that senior officials at the Mumbai Port Authority demanded a ₹50 crore payment from a logistics company as a condition for approving container terminal expansion plans. The letter, signed by 'Port workers collective,' names two officials by designation but not by name. Mumbai Port Authority has denied the allegations. No FIR has been filed and no investigative reporting from mainstream outlets has independently corroborated the claims.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.958
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.958
+        }
+      }
+    },
+    {
+      "id": "MH-UNVER-02",
+      "category": "UNVERIFIED",
+      "expected": "REAL",
+      "headline": "Nashik grape farmers claim new fungal disease decimating Sula Vineyards crop",
+      "elapsed_s": 2.33,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9982,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 41.839194303s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.9982,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 41.319230227s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 40.811336522s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Farmers in Nashik's Dindori taluka report a new fungal infection, tentatively identified as 'Plasmopara ultra-resistens,' affecting Vinifiera grape varieties used by wine producers including Sula Vineyards. Farmers claim crop losses of 40-60% over two seasons. Sula Vineyards has not issued any public statement on crop quality impacts. The Maharashtra agriculture department said it is 'monitoring the situation' but no formal advisory has been published.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": true,
+        "gemini_verdict": null,
+        "confidence": 0.9982
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9982
+        }
+      }
+    },
+    {
+      "id": "MH-UNVER-03",
+      "category": "UNVERIFIED",
+      "expected": "REAL",
+      "headline": "Thane doctors develop low-cost dialysis device; patent pending globally",
+      "elapsed_s": 2.35,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "FAKE",
+            "confidence_score": 0.9939,
+            "is_likely_reliable": false
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 53.810448299s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "FAKE",
+            "final_confidence": 0.9939,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 53.305637504s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 52.779277869s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "A team of nephrologists at a private hospital in Thane claims to have developed a dialysis machine that operates at one-tenth the cost of conventional units using locally sourced materials. The team says it has filed a patent with the Indian Patent Office and is seeking international PCT filing. No peer-reviewed publication or clinical trial registration was shared with media. The hospital marketing office confirmed the claim but provided no documentation.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "FAKE",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.9939
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "FAKE",
+          "confidence": 0.9939
+        }
+      }
+    },
+    {
+      "id": "MH-EDGE-01",
+      "category": "FAKE",
+      "expected": "FAKE",
+      "headline": "Maharashtra declares itself independent nation; Uddhav Thackeray named President",
+      "elapsed_s": 2.37,
+      "pipeline_output": {
+        "source_intelligence": {
+          "domain": "unknown",
+          "status": "no_url_provided"
+        },
+        "nlp_analysis": {
+          "style_classification": {
+            "model_used": "mrm8488/bert-tiny-finetuned-fake-news-detection",
+            "label": "REAL",
+            "confidence_score": 0.9991,
+            "is_likely_reliable": true
+          },
+          "explainability": {
+            "skipped": "quick_mode"
+          },
+          "fact_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 5.780492879s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}"
+          },
+          "composite_verdict": {
+            "final_label": "REAL",
+            "final_confidence": 0.9991,
+            "method": "transformer_only",
+            "note": "Gemini fact-check unavailable. Transformer style label used as fallback."
+          },
+          "clickbait_check": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 5.180024607s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}"
+          },
+          "emotional_tone": {
+            "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 4.766508389s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+          }
+        },
+        "media_bias": {
+          "text": "Sources close to the Shiv Sena (UBT) claim that former Chief Minister Uddhav Thackeray has signed a Unilateral Declaration of Independence from the Indian Union, citing the Maharashtra government's alleged bias against Mumbai's financial interests. The newly declared 'Republic of Maharashtra' has applied for UN membership and is reportedly issuing its own currency, the 'Marathi Mudra.' Delhi has neither confirmed nor denied the claim.",
+          "bias_detected": false,
+          "bias_score": 0.0,
+          "sentences_flagged": []
+        }
+      },
+      "error": null,
+      "verdict": {
+        "predicted": "REAL",
+        "correct": false,
+        "gemini_verdict": null,
+        "confidence": 0.9991
+      },
+      "metrics": {
+        "fact_check": {
+          "verdict": null,
+          "confidence": null,
+          "search_grounded": false,
+          "sources": 0,
+          "red_flags": []
+        },
+        "emotion": {
+          "fear": null,
+          "outrage": null,
+          "sensationalism": null
+        },
+        "clickbait": {
+          "is_clickbait": null,
+          "promise_fulfilled": null
+        },
+        "style": {
+          "label": "REAL",
+          "confidence": 0.9991
+        }
+      }
+    }
+  ]
+}
