@@ -59,4 +59,4 @@ python run_maharashtra_benchmark.py
 These scripts bypass the UI and generate deep Markdown reports analyzing the True/False Positive Rates and System Latency of the classification engines.
 
 ---
-*Developed by Unit 742-Alpha | TruthLens Forensics*
+*Developed by LocalHost | TruthLens*
