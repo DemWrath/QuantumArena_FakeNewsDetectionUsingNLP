@@ -16,7 +16,16 @@
                         "primary-container": "#ff9933","on-secondary": "#3c2f00","secondary": "#e9c349","background": "#161311","surface-container-low": "#1f1b19","error-container": "#93000a","tertiary-container": "#f79b62","tertiary": "#ffbf9b","surface": "#161311","on-secondary-fixed-variant": "#574500","on-tertiary-fixed": "#321200","on-tertiary-fixed-variant": "#753401","surface-variant": "#393431","secondary-fixed": "#ffe088","tertiary-fixed-dim": "#ffb68c","on-primary-fixed": "#2e1500","inverse-on-surface": "#342f2d","primary-fixed": "#ffdcc2","outline": "#a38d7c","inverse-primary": "#8f4e00","secondary-container": "#af8d11","surface-bright": "#3d3836","tertiary-fixed": "#ffdbc9","on-primary-container": "#693800","surface-container-lowest": "#110d0c","on-surface": "#eae1dd","inverse-surface": "#eae1dd","on-tertiary": "#532200","surface-container-high": "#2e2927","on-secondary-fixed": "#241a00","primary": "#ffc08d","primary-fixed-dim": "#ffb77a","surface-container": "#231f1d","surface-dim": "#161311","on-surface-variant": "#dbc2b0","error": "#ffb4ab","on-tertiary-container": "#713200","on-primary": "#4c2700","secondary-fixed-dim": "#e9c349","surface-container-highest": "#393431","on-error-container": "#ffdad6","outline-variant": "#554336","on-error": "#690005","on-background": "#eae1dd","surface-tint": "#ffb77a","on-secondary-container": "#342800","on-primary-fixed-variant": "#6d3a00"
                     },
                     "borderRadius": {"DEFAULT": "0.125rem","lg": "0.25rem","xl": "0.5rem","full": "0.75rem"},
-                    "fontFamily": {"headline": ["Space Grotesk","sans-serif"],"body": ["Inter","sans-serif"],"label": ["Space Grotesk","sans-serif"]}
+                    "fontFamily": {"headline": ["Space Grotesk","sans-serif"],"body": ["Inter","sans-serif"],"label": ["Space Grotesk","sans-serif"]},
+                    "keyframes": {
+                        "marquee": {
+                            "0%": { "transform": "translateX(0%)" },
+                            "100%": { "transform": "translateX(-50%)" }
+                        }
+                    },
+                    "animation": {
+                        "marquee": "marquee 30s linear infinite"
+                    }
                 }
             }
         }
@@ -31,19 +40,24 @@
                 <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">local_police</span>
             </div>
             <div>
-                <h1 class="font-headline font-bold text-primary tracking-tight text-sm">TruthLens Forensic</h1>
-                <p class="font-headline text-[10px] text-on-surface-variant uppercase tracking-widest opacity-80">Unit 742-Alpha</p>
+                <h1 class="font-headline font-bold text-primary tracking-tight text-sm" data-i18n="tl_forensic">TruthLens Forensic</h1>
+                <p class="font-headline text-[10px] text-on-surface-variant uppercase tracking-widest opacity-80" data-i18n="unit_alpha">Unit 742-Alpha</p>
             </div>
         </div>
         <button class="w-full mt-6 bg-primary-container text-on-primary-container font-headline font-semibold py-2 px-4 rounded text-sm hover:bg-primary transition-colors flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-sm">radar</span>
-            System Live
+            <span data-i18n="sys_live">System Live</span>
         </button>
+        <!-- Language Toggle -->
+        <div class="mt-4 flex gap-2 w-full">
+            <button onclick="setLanguage('en')" id="lang-en" class="flex-1 bg-surface-container-high text-primary text-[10px] font-headline py-1.5 rounded border border-primary/50 transition-colors">EN</button>
+            <button onclick="setLanguage('mr')" id="lang-mr" class="flex-1 bg-surface text-on-surface-variant text-[10px] font-headline py-1.5 rounded border border-outline-variant/30 transition-colors hover:text-primary">मराठी</button>
+        </div>
     </div>
     <div class="flex-1 overflow-y-auto px-4 space-y-2">
         <a class="flex items-center gap-4 bg-[#2e2927] text-orange-400 border-l-4 border-orange-500 px-4 py-3 rounded-r" href="#">
             <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">map</span>
-            <span class="font-headline text-xs tracking-wider uppercase font-semibold">Threat Map</span>
+            <span class="font-headline text-xs tracking-wider uppercase font-semibold" data-i18n="threat_map">Threat Map</span>
         </a>
     </div>
 </nav>
@@ -56,16 +70,18 @@
                 <span id="system-ping" class="absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
             </span>
-            LIVE THREAT INTELLIGENCE
+            <span data-i18n="live_intel">LIVE THREAT INTELLIGENCE</span>
         </div>
-        <div class="animate-[marquee_30s_linear_infinite] flex items-center gap-8 text-[11px] font-headline tracking-wide opacity-80">
-            <span>[PIPELINE] DistilBERT module initialized.</span>
-            <span class="text-surface-variant">///</span>
-            <span>[SCRAPER] MediaBiasFactCheck Live Sync Active.</span>
-            <span class="text-surface-variant">///</span>
-            <span>[GEMINI] Cognitive Fallback Engine Online.</span>
-            <span class="text-surface-variant">///</span>
-            <span>[STATUS] Awaiting Input Parameters.</span>
+        <div class="flex-1 overflow-hidden whitespace-nowrap mask-image:linear-gradient(to_right,transparent,black_10px,black_calc(100%-10px),transparent)]">
+            <div class="animate-marquee flex items-center gap-8 text-[11px] font-headline tracking-wide opacity-80 min-w-max">
+                <span data-i18n="mq_distil">[PIPELINE] DistilBERT module initialized.</span>
+                <span class="text-surface-variant">///</span>
+                <span data-i18n="mq_scraper">[SCRAPER] MediaBiasFactCheck Live Sync Active.</span>
+                <span class="text-surface-variant">///</span>
+                <span data-i18n="mq_gemini">[GEMINI] Cognitive Fallback Engine Online.</span>
+                <span class="text-surface-variant">///</span>
+                <span data-i18n="mq_status">[STATUS] Awaiting Input Parameters.</span>
+            </div>
         </div>
     </div>
 
@@ -73,14 +89,14 @@
     <div class="p-6 md:p-8 flex-1 flex flex-col gap-8 max-w-[1600px] mx-auto w-full">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 shrink-0">
             <div>
-                <h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Threat Analysis Interface</h2>
-                <p class="font-body text-sm text-on-surface-variant mt-1">Forensic evaluation of unstructured data payloads via Python Pipeline 2.0</p>
+                <h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight" data-i18n="header_title">Threat Analysis Interface</h2>
+                <p class="font-body text-sm text-on-surface-variant mt-1" data-i18n="header_sub">Forensic evaluation of unstructured data payloads via Python Pipeline 2.0</p>
             </div>
             <div class="flex items-center gap-3">
-                <span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-headline text-[10px] tracking-widest uppercase rounded">Session: 49X-DELTA</span>
+                <span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-headline text-[10px] tracking-widest uppercase rounded" data-i18n="session">Session: 49X-DELTA</span>
                 <span class="px-3 py-1 bg-primary/10 text-primary font-headline text-[10px] tracking-widest uppercase rounded flex items-center gap-1">
                     <span class="material-symbols-outlined text-[12px]">public</span>
-                    Network Online
+                    <span data-i18n="net_online">Network Online</span>
                 </span>
             </div>
         </div>
@@ -92,16 +108,16 @@
                 <div class="bg-surface relative rounded-sm p-6 border-l-2 border-surface-container-high transition-colors hover:border-primary-container/30 h-full flex flex-col">
                     <div class="flex items-center gap-2 mb-4 shrink-0">
                         <span class="material-symbols-outlined text-primary-container text-sm">terminal</span>
-                        <h3 class="font-headline text-sm font-semibold tracking-wider text-primary-container uppercase">Intelligence Intake</h3>
+                        <h3 class="font-headline text-sm font-semibold tracking-wider text-primary-container uppercase" data-i18n="intake_title">Intelligence Intake</h3>
                     </div>
                     <div class="relative flex-1 flex flex-col gap-3">
-                        <input id="intake-url" type="text" class="w-full bg-surface-container-lowest text-on-surface font-body text-sm p-4 rounded border border-outline-variant/20 focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all placeholder:text-on-surface-variant/30" placeholder="Optional: Enter Source URL for Bias Scrapers (e.g. https://www.bloomberg.com/...)">
-                        <textarea id="intake-text" class="flex-1 w-full min-h-[6rem] bg-surface-container-lowest text-on-surface font-body text-sm p-4 rounded border border-outline-variant/20 focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all resize-none placeholder:text-on-surface-variant/30 leading-relaxed" placeholder="Paste article text or raw data dump here..."></textarea>
+                        <!-- URL Intake removed per feature request -->
+                        <textarea id="intake-text" data-i18n="intake_text_ph" class="flex-1 w-full min-h-[6rem] bg-surface-container-lowest text-on-surface font-body text-sm p-4 rounded border border-outline-variant/20 focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all resize-none placeholder:text-on-surface-variant/30 leading-relaxed" placeholder="Paste article text or raw data dump here..."></textarea>
                         
                         <div class="flex items-center justify-end">
                             <button id="analyze-btn" class="bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-xs uppercase tracking-widest px-6 py-2.5 rounded shadow-[0_0_15px_rgba(255,153,51,0.2)] hover:shadow-[0_0_20px_rgba(255,153,51,0.4)] transition-all flex items-center gap-2">
                                 <span id="analyze-icon" class="material-symbols-outlined text-[16px]">science</span>
-                                <span id="analyze-text">Analyze Evidence</span>
+                                <span id="analyze-text" data-i18n="btn_analyze">Analyze Evidence</span>
                             </button>
                         </div>
                     </div>
@@ -112,7 +128,7 @@
             <section id="lime-section" class="lg:col-span-12 bg-surface-container-low rounded p-6 flex-col hidden border-t-2 border-primary-container/30 shadow-inner">
                 <div class="flex items-center gap-2 mb-4 shrink-0">
                     <span class="material-symbols-outlined text-primary-container text-sm">visibility</span>
-                    <h3 class="font-headline text-sm font-semibold tracking-wider text-primary-container uppercase">Deep Logic Trace (LIME Model Feature Extraction)</h3>
+                    <h3 class="font-headline text-sm font-semibold tracking-wider text-primary-container uppercase" data-i18n="lime_title">Deep Logic Trace (LIME Model Feature Extraction)</h3>
                 </div>
                 <div id="lime-content" class="text-on-surface font-body text-sm leading-loose p-5 bg-surface-container-lowest rounded border border-surface-container-high break-words whitespace-pre-wrap">
                     <!-- Explainability Spans dynamically injected here -->
@@ -120,24 +136,24 @@
             </section>
 
             <!-- FORENSIC VERDICT (TRANSFORMER OUTPUT) -->
-            <section class="lg:col-span-4 bg-surface-container-highest rounded p-6 flex flex-col relative overflow-hidden">
+            <section class="lg:col-span-6 bg-surface-container-highest rounded p-6 flex flex-col relative overflow-hidden">
                 <div class="flex items-center justify-between mb-6 shrink-0">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-secondary text-sm">gavel</span>
-                        <h3 class="font-headline text-xs font-semibold tracking-widest text-on-surface-variant uppercase">Transformer Verdict</h3>
+                        <h3 class="font-headline text-xs font-semibold tracking-widest text-on-surface-variant uppercase" data-i18n="verdict_title">Transformer Verdict</h3>
                     </div>
                     <span class="material-symbols-outlined text-on-surface-variant/30 text-xl">fingerprint</span>
                 </div>
                 <div class="flex-1 flex flex-col items-center justify-center py-8">
                     <div class="relative group cursor-crosshair">
                         <div id="verdict-glow" class="absolute -inset-4 bg-surface-variant/20 rounded-full blur-xl transition-all duration-500"></div>
-                        <h4 id="verdict-label" class="font-headline text-6xl font-black text-on-surface-variant relative tracking-tighter drop-shadow-[0_0_8px_rgba(255,180,171,0.1)] transition-colors duration-500">STANDBY</h4>
+                        <h4 id="verdict-label" class="font-headline text-7xl font-black text-on-surface-variant relative tracking-tighter drop-shadow-[0_0_8px_rgba(255,180,171,0.1)] transition-colors duration-500" data-i18n="lbl_standby">STANDBY</h4>
                     </div>
-                    <p id="verdict-sub" class="font-headline text-sm text-on-surface-variant/80 mt-2 uppercase tracking-widest font-semibold transition-colors duration-500">Awaiting Input Protocol</p>
+                    <p id="verdict-sub" class="font-headline text-base text-on-surface-variant/80 mt-3 uppercase tracking-widest font-semibold transition-colors duration-500" data-i18n="sub_awaiting">Awaiting Input Protocol</p>
                 </div>
                 <div class="mt-auto shrink-0">
                     <div class="flex justify-between text-[10px] font-headline text-on-surface-variant uppercase tracking-widest mb-2">
-                        <span>Confidence Level</span>
+                        <span data-i18n="conf_level">Confidence Level</span>
                         <span id="verdict-score" class="text-on-surface-variant font-bold transition-colors duration-500">--%</span>
                     </div>
                     <div class="h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
@@ -149,32 +165,32 @@
                     <!-- Fact-check reasoning panel (populated by JS) -->
                     <div id="fact-reasoning-box" class="hidden mt-3 p-3 rounded-lg border border-surface-variant/30 bg-surface/50 text-xs">
                         <div class="flex items-center justify-between mb-1">
-                            <p class="font-headline text-on-surface-variant uppercase tracking-widest text-[9px]">Gemini Fact-Check Reasoning</p>
+                            <p class="font-headline text-on-surface-variant uppercase tracking-widest text-[9px]" data-i18n="gem_reasoning">Gemini Fact-Check Reasoning</p>
                             <span id="grounded-badge" class="hidden px-2 py-0.5 rounded text-[9px] font-headline uppercase tracking-wider"></span>
                         </div>
                         <p id="fact-reasoning-text" class="text-on-surface/80 leading-relaxed mb-2"></p>
-                        <p class="font-headline text-on-surface-variant uppercase tracking-widest text-[9px] mb-1">Red Flags</p>
+                        <p class="font-headline text-on-surface-variant uppercase tracking-widest text-[9px] mb-1" data-i18n="red_flags">Red Flags</p>
                         <ul id="fact-red-flags" class="space-y-1 pl-1 mb-2"></ul>
-                        <p class="font-headline text-on-surface-variant uppercase tracking-widest text-[9px] mb-1">Sources Searched</p>
+                        <p class="font-headline text-on-surface-variant uppercase tracking-widest text-[9px] mb-1" data-i18n="src_searched">Sources Searched</p>
                         <ul id="fact-sources" class="space-y-1 pl-1"></ul>
                     </div>
                 </div>
             </section>
 
             <!-- EMOTION LOGIC (GEMINI OUTPUT) -->
-            <section class="lg:col-span-5 bg-surface-container-low rounded p-6 flex flex-col">
+            <section class="lg:col-span-6 bg-surface-container-low rounded p-6 flex flex-col">
                 <div class="flex items-center justify-between gap-2 mb-6 shrink-0">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-secondary text-sm">psychology</span>
-                        <h3 class="font-headline text-xs font-semibold tracking-widest text-on-surface-variant uppercase">Affective & Logic Filter</h3>
+                        <h3 class="font-headline text-xs font-semibold tracking-widest text-on-surface-variant uppercase" data-i18n="affective_title">Affective & Logic Filter</h3>
                     </div>
                     <span id="clickbait-tag" class="px-2 py-1 bg-surface-container-highest text-on-surface-variant text-[9px] font-headline uppercase tracking-wider rounded border border-surface-variant hidden">CLICKBAIT: FALSE</span>
                 </div>
                 <!-- Emotion Radar Structure -->
                 <div class="bg-surface rounded p-5 flex-1 flex flex-col border border-outline-variant/10 font-body text-sm text-on-surface gap-6">
                     <div>
-                        <div class="flex justify-between text-[10px] font-headline text-on-surface-variant uppercase tracking-widest mb-2">
-                            <span>Fear & Anxiety Vector</span>
+                        <div class="flex justify-between text-sm font-headline text-on-surface-variant uppercase tracking-widest mb-2">
+                            <span data-i18n="fear_vec">Fear & Anxiety Vector</span>
                             <span id="emo-fear-text" class="text-error font-bold">--%</span>
                         </div>
                         <div class="h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
@@ -182,8 +198,8 @@
                         </div>
                     </div>
                     <div>
-                        <div class="flex justify-between text-[10px] font-headline text-on-surface-variant uppercase tracking-widest mb-2">
-                            <span>Outrage Generation</span>
+                        <div class="flex justify-between text-sm font-headline text-on-surface-variant uppercase tracking-widest mb-2">
+                            <span data-i18n="outrage_gen">Outrage Generation</span>
                             <span id="emo-outrage-text" class="text-tertiary-container font-bold">--%</span>
                         </div>
                         <div class="h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
@@ -191,8 +207,8 @@
                         </div>
                     </div>
                     <div>
-                        <div class="flex justify-between text-[10px] font-headline text-on-surface-variant uppercase tracking-widest mb-2">
-                            <span>Sensationalism Load</span>
+                        <div class="flex justify-between text-sm font-headline text-on-surface-variant uppercase tracking-widest mb-2">
+                            <span data-i18n="sens_load">Sensationalism Load</span>
                             <span id="emo-sensationalism-text" class="text-secondary font-bold">--%</span>
                         </div>
                         <div class="h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
@@ -201,90 +217,237 @@
                     </div>
                     
                     <div class="mt-auto pt-4 border-t border-surface-container-high flex items-center justify-between">
-                        <span class="text-[9px] font-headline text-on-surface-variant/50 uppercase tracking-widest">Powered by Gemini LLM</span>
+                        <span class="text-[9px] font-headline text-on-surface-variant/50 uppercase tracking-widest" data-i18n="pow_gemini">Powered by Gemini LLM</span>
                         <div class="flex items-center gap-1">
                             <div id="gemini-ping" class="w-1.5 h-1.5 rounded-full bg-surface-variant"></div>
-                            <span class="text-[9px] font-headline text-on-surface-variant uppercase">Runtime Assessor</span>
+                            <span class="text-[9px] font-headline text-on-surface-variant uppercase" data-i18n="run_assessor">Runtime Assessor</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SOURCE CREDIBILITY (SCRAPER OUTPUT) -->
-            <section class="lg:col-span-3 flex flex-col gap-4">
-                <div class="flex items-center gap-2 mb-2 shrink-0">
-                    <span class="material-symbols-outlined text-secondary text-sm">policy</span>
-                    <h3 class="font-headline text-xs font-semibold tracking-widest text-on-surface-variant uppercase">Domain Scraper Logic</h3>
-                </div>
-                
-                <div class="bg-surface-container-high rounded p-4 flex flex-col gap-2 relative">
-                    <div class="absolute right-3 top-3"><span id="mbfc-icon" class="material-symbols-outlined text-on-surface-variant/20 text-xl">fact_check</span></div>
-                    <span class="text-[10px] font-headline text-on-surface-variant uppercase tracking-widest border-b border-surface-variant/30 pb-1">Media Bias/Fact Check</span>
-                    <div id="mbfc-content" class="text-xs font-body text-on-surface-variant mt-1">Awaiting Domain Input...</div>
-                </div>
 
-                <div class="bg-surface-container-high rounded p-4 flex flex-col gap-2 relative">
-                    <div class="absolute right-3 top-3"><span id="allsides-icon" class="material-symbols-outlined text-on-surface-variant/20 text-xl">balance</span></div>
-                    <span class="text-[10px] font-headline text-on-surface-variant uppercase tracking-widest border-b border-surface-variant/30 pb-1">AllSides Rating</span>
-                    <div id="allsides-content" class="text-xs font-body text-on-surface-variant mt-1">Awaiting Domain Input...</div>
-                </div>
-
-                <div class="bg-surface-container-low border border-dashed border-outline-variant/30 rounded p-4 flex flex-col gap-2 relative mt-auto">
-                    <div class="flex justify-between items-center border-b border-surface-variant/30 pb-1">
-                        <span class="text-[10px] font-headline text-on-surface-variant uppercase tracking-widest">Gemini Fallback Protocol</span>
-                        <span id="gemini-fallback-conf" class="text-[8px] px-1 bg-surface rounded text-on-surface-variant">N/A</span>
-                    </div>
-                    <div id="gemini-fallback-content" class="text-[11px] font-body text-on-surface-variant/70 leading-relaxed italic line-clamp-4">
-                        Scraping online protocols standing by for anti-bot blocks...
-                    </div>
-                </div>
-            </section>
         </div>
     </div>
     
     <footer class="mt-auto bg-[#110d0c] border-t border-[#2e2927] flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-6 w-full gap-4 z-10 relative shrink-0">
-        <div class="text-orange-700 font-black font-headline text-sm tracking-widest uppercase">TruthLens Forensic</div>
-        <div class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-orange-600 text-center">© 2026 TRUTHLENS FORENSICS | SEARCH-GROUNDED FACT-CHECK</div>
+        <div class="text-orange-700 font-black font-headline text-sm tracking-widest uppercase" data-i18n="tl_forensic">TruthLens Forensic</div>
+        <div class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-orange-600 text-center" data-i18n="ft_copy">© 2026 TRUTHLENS FORENSICS | SEARCH-GROUNDED FACT-CHECK</div>
         <div class="flex gap-6 font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#dbc2b0]/50">
-            <span class="opacity-50">Local Pipeline Architecture</span>
+            <span class="opacity-50" data-i18n="ft_arch">Local Pipeline Architecture</span>
         </div>
     </footer>
 </main>
 
 <script>
+    const I18N = {
+        en: {
+            "tl_forensic": "TruthLens Forensic",
+            "unit_alpha": "Unit 742-Alpha",
+            "sys_live": "System Live",
+            "threat_map": "Threat Map",
+            "live_intel": "LIVE THREAT INTELLIGENCE",
+            "mq_distil": "[PIPELINE] DistilBERT module initialized.",
+            "mq_scraper": "[SCRAPER] MediaBiasFactCheck Live Sync Active.",
+            "mq_gemini": "[GEMINI] Cognitive Fallback Engine Online.",
+            "mq_status": "[STATUS] Awaiting Input Parameters.",
+            "header_title": "Threat Analysis Interface",
+            "header_sub": "Forensic evaluation of unstructured data payloads via Python Pipeline 2.0",
+            "session": "Session: 49X-DELTA",
+            "net_online": "Network Online",
+            "intake_title": "Intelligence Intake",
+            "intake_url_ph": "Optional: Enter Source URL for Bias Scrapers (e.g. https://www.bloomberg.com/...)",
+            "intake_text_ph": "Paste article text or raw data dump here...",
+            "btn_analyze": "Analyze Evidence",
+            "btn_processing": "Processing Layer 5...",
+            "btn_complete": "Diagnostics Complete",
+            "lime_title": "Deep Logic Trace (LIME Model Feature Extraction)",
+            "verdict_title": "Transformer Verdict",
+            "lbl_standby": "STANDBY",
+            "sub_awaiting": "Awaiting Input Protocol",
+            "conf_level": "Confidence Level",
+            "gem_reasoning": "Gemini Fact-Check Reasoning",
+            "red_flags": "Red Flags",
+            "src_searched": "Sources Searched",
+            "affective_title": "Affective & Logic Filter",
+            "fear_vec": "Fear & Anxiety Vector",
+            "outrage_gen": "Outrage Generation",
+            "sens_load": "Sensationalism Load",
+            "pow_gemini": "Powered by Gemini LLM",
+            "run_assessor": "Runtime Assessor",
+            "scraper_title": "Domain Scraper Logic",
+            "mbfc_rate": "Media Bias/Fact Check",
+            "allsides_rate": "AllSides Rating",
+            "await_dom": "Awaiting Domain Input...",
+            "gem_fallback": "Gemini Fallback Protocol",
+            "gem_st_by": "Scraping online protocols standing by for anti-bot blocks...",
+            "ft_copy": "© 2026 TRUTHLENS FORENSICS | SEARCH-GROUNDED FACT-CHECK",
+            "ft_arch": "Local Pipeline Architecture",
+            "err_no_payload": "No threat payload supplied. Awaiting Intelligence Input.",
+            "err_pipe": "Pipeline Error: ",
+            "err_net": "Network Error: Could not reach TruthLens Core Server on port 5000. Is app.py running?",
+            "fab_payload": "FABRICATED PAYLOAD",
+            "bias_payload": "BIASED / OUT-OF-CONTEXT",
+            "ver_organic": "VERIFIED ORGANIC",
+            "no_red": "✓ No red flags identified.",
+            "search_unavail": "Search unavailable — parametric fallback used",
+            "no_indexed": "No indexed sources returned for this query",
+            "live_search": "⚡ LIVE SEARCH",
+            "parametric_only": "⚠ PARAMETRIC ONLY",
+            "req_url": "Requires URL Input",
+            "scraper_dis": "Scraper logic disabled. Provide an article URL to activate domain intelligence.",
+            "no_llm_data": "No LLM Fallback Data Available.",
+            "dom_not_idx": "Domain Not Indexed.",
+            "lbl_bias": "Bias:",
+            "lbl_reliability": "Reliability:",
+            "click_false": "CLICKBAIT: FALSE",
+            "REAL": "REAL",
+            "FAKE": "FAKE",
+            "MISLEADING": "MISLEADING"
+        },
+        mr: {
+            "tl_forensic": "ट्रुथलेन्स फॉरेन्सिक",
+            "unit_alpha": "युनिट ७४२-अल्फा",
+            "sys_live": "सिस्टम लाईव्ह",
+            "threat_map": "धोका नकाशा",
+            "live_intel": "लाईव्ह थ्रेट इंटेलिजन्स",
+            "mq_distil": "[पाइपलाइन] DistilBERT मॉड्यूल सुरू झाले.",
+            "mq_scraper": "[स्क्रॅपर] MediaBiasFactCheck लाईव्ह सिंक सक्रिय.",
+            "mq_gemini": "[जेमिनी] कॉग्निटिव्ह फॉलबॅक इंजिन सक्रिय.",
+            "mq_status": "[स्थिती] इनपुट पॅरामीटर्सची प्रतीक्षा करत आहे.",
+            "header_title": "थ्रेट ॲनालिसिस इंटरफेस",
+            "header_sub": "पायथन पाइपलाइन 2.0 द्वारे अनस्ट्रक्चर्ड डेटा पेलोडचे फॉरेंसिक मूल्यांकन",
+            "session": "सत्र: 49X-DELTA",
+            "net_online": "नेटवर्क ऑनलाइन",
+            "intake_title": "इंटेलिजन्स इनटेक (माहिती संकलन)",
+            "intake_url_ph": "पर्यायी: पूर्वग्रह तपासण्यासाठी स्रोत URL टाका (उदा. https://www.bloomberg.com/...)",
+            "intake_text_ph": "लेखाचा मजकूर किंवा कच्चा डेटा येथे पेस्ट करा...",
+            "btn_analyze": "पुराव्याचे विश्लेषण करा",
+            "btn_processing": "लेयर ५ प्रक्रियेत आहे...",
+            "btn_complete": "निदान पूर्ण",
+            "lime_title": "डीप लॉजिक ट्रेस (लाईम मॉडेल वैशिष्ट्य एक्सट्रॅक्शन)",
+            "verdict_title": "ट्रान्सफॉर्मर निकाल",
+            "lbl_standby": "स्टँडबाय",
+            "sub_awaiting": "इनपुट प्रोटोकॉलची प्रतीक्षा आहे",
+            "conf_level": "आत्मविश्वास पातळी (Confidence Level)",
+            "gem_reasoning": "जिमिनी फॅक्ट-चेक युक्तिवाद",
+            "red_flags": "रेड फ्लॅग्स (धोक्याचे इशारे)",
+            "src_searched": "शोधलेले स्रोत",
+            "affective_title": "भावना आणि लॉजिक फिल्टर",
+            "fear_vec": "भीती आणि चिंता वेक्टर",
+            "outrage_gen": "आक्रोश निर्मिती प्रवृत्ती",
+            "sens_load": "खळबळजनकपणा (Sensationalism)",
+            "pow_gemini": "जिमिनी एलएलएम (LLM) द्वारा समर्थित",
+            "run_assessor": "रनटाइम मूल्यांकनकर्ता",
+            "scraper_title": "डोमेन स्क्रॅपर लॉजिक",
+            "mbfc_rate": "मीडिया बायस/फॅक्ट-चेक",
+            "allsides_rate": "ऑलसाइड्स (AllSides) रेटिंग",
+            "await_dom": "डोमेन इनपुटची प्रतीक्षा करत आहे...",
+            "gem_fallback": "जेमिनी फॉलबॅक प्रोटोकॉल",
+            "gem_st_by": "अँटी-बॉट ब्लॉक्सची प्रतीक्षा करत ऑनलाइन प्रोटोकॉल स्क्रॅप करत आहे...",
+            "ft_copy": "© 2026 ट्रुथलेन्स फॉरेन्सिक | सर्च-ग्राउंडेड फॅक्ट-चेक",
+            "ft_arch": "स्थानिक पाइपलाइन आर्किटेक्चर",
+            "err_no_payload": "कोणताही थ्रेट पेलोड दिला नाही. माहितीची प्रतीक्षा आहे.",
+            "err_pipe": "पाइपलाइन त्रुटी: ",
+            "err_net": "नेटवर्क त्रुटी: ट्रुथलेन्स कोअर सर्व्हरला पोर्ट 5000 वर पोहोचू शकलो नाही. app.py चालू आहे का?",
+            "fab_payload": "बनावट पेलोड",
+            "bias_payload": "पक्षपाती / संदर्भहीन",
+            "ver_organic": "प्रमाणित सेंद्रिय (Organic)",
+            "no_red": "✓ कोणतेही रेड फ्लॅग आढळले नाहीत.",
+            "search_unavail": "शोध उपलब्ध नाही — पॅरामेट्रिक फॉलबॅक वापरला",
+            "no_indexed": "या क्वेरीसाठी कोणतेही स्रोत सापडले नाहीत",
+            "live_search": "⚡ लाईव्ह शोध",
+            "parametric_only": "⚠ फक्त पॅरामेट्रिक",
+            "req_url": "URL आवश्यक आहे",
+            "scraper_dis": "स्क्रॅपर लॉजिक अक्षम केले आहे. डोमेन माहिती सक्रिय करण्यासाठी लेखाचा URL द्या.",
+            "no_llm_data": "जेमिनी फॉलबॅक डेटा अनुपलब्ध.",
+            "dom_not_idx": "डोमेन इंडेक्स केलेले नाही.",
+            "lbl_bias": "पूर्वग्रह (Bias):",
+            "lbl_reliability": "विश्वसनीयता:",
+            "click_true": "क्लिकबेट: खरे",
+            "click_false": "क्लिकबेट: खोटे",
+            "REAL": "खरे",
+            "FAKE": "खोटे",
+            "MISLEADING": "दिशाभूल करणारे"
+        }
+    };
+
+    let currentLang = 'en';
+
+    function getT(key) {
+        return I18N[currentLang][key] || I18N['en'][key];
+    }
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        const t = I18N[lang];
+        
+        if (lang === 'en') {
+            document.getElementById('lang-en').className = "flex-1 bg-surface-container-high text-primary text-[10px] font-headline py-1.5 rounded border border-primary/50 transition-colors";
+            document.getElementById('lang-mr').className = "flex-1 bg-surface text-on-surface-variant text-[10px] font-headline py-1.5 rounded border border-outline-variant/30 transition-colors hover:text-primary";
+        } else {
+            document.getElementById('lang-mr').className = "flex-1 bg-surface-container-high text-primary text-[10px] font-headline py-1.5 rounded border border-primary/50 transition-colors";
+            document.getElementById('lang-en').className = "flex-1 bg-surface text-on-surface-variant text-[10px] font-headline py-1.5 rounded border border-outline-variant/30 transition-colors hover:text-primary";
+        }
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (t[key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = t[key];
+                } else {
+                    el.innerText = t[key];
+                }
+            }
+        });
+        
+        const analText = document.getElementById('analyze-text');
+        if (analText.innerText === I18N['en']['btn_processing'] || analText.innerText === I18N['mr']['btn_processing']) {
+            analText.innerText = getT('btn_processing');
+        } else if (analText.innerText === I18N['en']['btn_complete'] || analText.innerText === I18N['mr']['btn_complete']) {
+            analText.innerText = getT('btn_complete');
+        } else {
+            analText.innerText = getT('btn_analyze');
+        }
+        
+        const lblV = document.getElementById('verdict-label').innerText;
+        if (lblV === I18N['en']['lbl_standby'] || lblV === I18N['mr']['lbl_standby']) {
+            document.getElementById('verdict-label').innerText = getT('lbl_standby');
+            document.getElementById('verdict-sub').innerText = getT('sub_awaiting');
+        }
+    }
+
     // Frontend JS Logic bounding Flask API connection and dynamic UI updating
     document.getElementById('analyze-btn').addEventListener('click', async function() {
         const textIntake = document.getElementById('intake-text').value;
-        const urlIntake = document.getElementById('intake-url').value;
         
         const btnText = document.getElementById('analyze-text');
         const btnIcon = document.getElementById('analyze-icon');
         const ping = document.getElementById('system-ping');
 
-        if (!textIntake && !urlIntake) {
-            alert("No threat payload supplied. Awaiting Intelligence Input.");
+        if (!textIntake) {
+            alert(getT("err_no_payload"));
             return;
         }
 
         // Set Loading State
-        btnText.innerText = "Processing Layer 5...";
+        btnText.innerText = getT("btn_processing");
         btnIcon.innerText = "cycle";
         btnIcon.classList.add("animate-spin");
         ping.classList.add("animate-ping");
 
         let payload;
         try {
-            // Live Fetch to Flask App
             const resp = await fetch('http://localhost:5000/api/analyze', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url: urlIntake, text: textIntake })
+                body: JSON.stringify({ text: textIntake, lang: currentLang })
             });
 
             const data = await resp.json();
             
             if (!resp.ok) {
-                alert("Pipeline Error: " + (data.error || "Unknown server error"));
+                alert(getT("err_pipe") + (data.error || "Unknown server error"));
                 resetBtn();
                 return;
             }
@@ -294,7 +457,7 @@
 
         } catch (err) {
             console.error(err);
-            alert("Network Error: Could not reach TruthLens Core Server on port 5000. Is app.py running?");
+            alert(getT("err_net"));
             resetBtn();
             return;
         }
@@ -302,15 +465,15 @@
         function resetBtn() {
             btnIcon.classList.remove("animate-spin");
             btnIcon.innerText = "science";
-            btnText.innerText = "Analyze Evidence";
+            btnText.innerText = getT("btn_analyze");
             ping.classList.remove("animate-ping");
         }
 
         function resetUI() {
             // Reset verdict card
-            document.getElementById('verdict-label').innerText = 'STANDBY';
-            document.getElementById('verdict-label').className = 'font-headline text-6xl font-black text-on-surface-variant relative tracking-tighter transition-colors duration-500';
-            document.getElementById('verdict-sub').innerText = 'Awaiting Input Protocol';
+            document.getElementById('verdict-label').innerText = getT('lbl_standby');
+            document.getElementById('verdict-label').className = 'font-headline text-7xl font-black text-on-surface-variant relative tracking-tighter transition-colors duration-500';
+            document.getElementById('verdict-sub').innerText = getT('sub_awaiting');
             document.getElementById('verdict-bar').style.width = '0%';
             document.getElementById('verdict-score').innerText = '--%';
             document.getElementById('verdict-tags').style.opacity = '0.5';
@@ -322,10 +485,7 @@
             // Reset LIME section
             document.getElementById('lime-section').classList.add('hidden');
             document.getElementById('lime-section').classList.remove('flex');
-            // Reset domain scrapers
-            document.getElementById('mbfc-content').innerText = 'Awaiting Domain Input...';
-            document.getElementById('allsides-content').innerText = 'Awaiting Domain Input...';
-            document.getElementById('gemini-fallback-content').innerText = 'Scraping online protocols standing by...';
+
             // Reset clickbait tag
             document.getElementById('clickbait-tag').classList.add('hidden');
         }
@@ -347,26 +507,23 @@
         const isMisleading = finalLabel === "MISLEADING";
         const isReal = finalLabel === "REAL";
 
-        vLabel.innerText = finalLabel;
+        vLabel.innerText = getT(finalLabel);
 
         // Three-state color system:
-        //   FAKE       → red   (text-error)
-        //   MISLEADING → amber (text-secondary = #e9c349)
-        //   REAL       → green (text-primary)
         const labelColor = isFake ? 'text-error' : isMisleading ? 'text-secondary' : 'text-primary';
         const subColor   = isFake ? 'text-error/80' : isMisleading ? 'text-secondary/80' : 'text-primary/80';
         const barColor   = isFake ? 'bg-error' : isMisleading ? 'bg-secondary' : 'bg-primary';
         const glowColor  = isFake ? 'bg-error/20' : isMisleading ? 'bg-secondary/20' : 'bg-primary/20';
 
-        vLabel.className = `font-headline text-6xl font-black relative tracking-tighter transition-colors duration-500 ${labelColor}`;
-        vSub.className = `font-headline text-sm mt-2 uppercase tracking-widest font-semibold transition-colors duration-500 ${subColor}`;
+        vLabel.className = `font-headline text-7xl font-black relative tracking-tighter transition-colors duration-500 ${labelColor}`;
+        vSub.className = `font-headline text-base mt-3 uppercase tracking-widest font-semibold transition-colors duration-500 ${subColor}`;
 
         // Subtitle copy per state
         const geminiVerdict = composite.gemini_verdict || null;
         const methodLabel = composite.method === 'gemini_override' ? `GEMINI: ${geminiVerdict}` : composite.method === 'blended' ? `BLENDED · ${geminiVerdict}` : 'STYLE ONLY';
-        if (isFake)        vSub.innerText = `FABRICATED PAYLOAD · ${methodLabel}`;
-        else if (isMisleading) vSub.innerText = `BIASED / OUT-OF-CONTEXT · ${methodLabel}`;
-        else               vSub.innerText = `VERIFIED ORGANIC · ${methodLabel}`;
+        if (isFake)        vSub.innerText = `${getT('fab_payload')} · ${methodLabel}`;
+        else if (isMisleading) vSub.innerText = `${getT('bias_payload')} · ${methodLabel}`;
+        else               vSub.innerText = `${getT('ver_organic')} · ${methodLabel}`;
 
         const confPercent = Math.round(composite.final_confidence * 100);
         vScore.innerText = `${confPercent}%`;
@@ -386,7 +543,7 @@
             if (factCheck.red_flags && factCheck.red_flags.length > 0) {
                 redFlagsEl.innerHTML = factCheck.red_flags.map(f => `<li class="text-error/80 text-xs leading-relaxed">⚑ ${f}</li>`).join('');
             } else {
-                redFlagsEl.innerHTML = '<li class="text-primary/80 text-xs">✓ No red flags identified.</li>';
+                redFlagsEl.innerHTML = `<li class="text-primary/80 text-xs">${getT("no_red")}</li>`;
             }
 
             // Show grounding sources (proves it searched the web, not just memory)
@@ -400,8 +557,8 @@
                 } else {
                     sourcesEl.innerHTML = `<li class="text-on-surface-variant/50 italic">${
                         factCheck.search_grounded === false
-                        ? 'Search unavailable — parametric fallback used'
-                        : 'No indexed sources returned for this query'
+                        ? getT('search_unavail')
+                        : getT('no_indexed')
                     }</li>`;
                 }
             }
@@ -410,10 +567,10 @@
             const groundedBadge = document.getElementById('grounded-badge');
             if (groundedBadge) {
                 if (factCheck.search_grounded) {
-                    groundedBadge.innerText = `⚡ LIVE SEARCH · ${sources.length} source${sources.length !== 1 ? 's' : ''}`;
+                    groundedBadge.innerText = `${getT('live_search')} · ${sources.length} source${sources.length !== 1 ? 's' : ''}`;
                     groundedBadge.className = 'px-2 py-0.5 rounded text-[9px] font-headline uppercase tracking-wider bg-primary/10 text-primary border border-primary/20';
                 } else {
-                    groundedBadge.innerText = '⚠ PARAMETRIC ONLY';
+                    groundedBadge.innerText = getT('parametric_only');
                     groundedBadge.className = 'px-2 py-0.5 rounded text-[9px] font-headline uppercase tracking-wider bg-error/10 text-error/70 border border-error/20';
                 }
                 groundedBadge.classList.remove('hidden');
@@ -438,55 +595,16 @@
         const cbTag = document.getElementById('clickbait-tag');
         cbTag.classList.remove('hidden');
         if(payload.nlp_analysis.clickbait_check && payload.nlp_analysis.clickbait_check.is_clickbait){
-            cbTag.innerText = "CLICKBAIT: TRUE";
+            cbTag.innerText = getT('click_true');
             cbTag.classList.replace('bg-surface-container-highest', 'bg-error/20');
             cbTag.classList.add('text-error', 'border-error/50');
         } else {
-            cbTag.innerText = "CLICKBAIT: FALSE";
+            cbTag.innerText = getT('click_false');
              cbTag.classList.add('text-primary');
         }
         document.getElementById('gemini-ping').classList.add('bg-primary', 'animate-pulse');
 
-        // --- INJECT SCRAPERS ---
-        const scraper = payload.source_intelligence;
-        
-        if (scraper.domain === "unknown") {
-            document.getElementById('mbfc-content').innerText = "Requires URL Input";
-            document.getElementById('allsides-content').innerText = "Requires URL Input";
-            document.getElementById('gemini-fallback-content').innerText = "Scraper logic disabled. Provide an article URL to activate domain intelligence.";
-            document.getElementById('gemini-fallback-content').classList.replace('opacity-70', 'opacity-100');
-        } else {
-            if (scraper.mbfc_rating) {
-                document.getElementById('mbfc-content').innerHTML = `
-                    <span class="text-on-surface">Bias:</span> <span class="font-bold text-primary">${scraper.mbfc_rating.bias}</span><br>
-                    <span class="text-on-surface">Reliability:</span> <span class="font-bold text-primary">${scraper.mbfc_rating.reliability}</span>
-                `;
-                document.getElementById('mbfc-icon').classList.replace('text-on-surface-variant/20', 'text-primary');
-            } else {
-                document.getElementById('mbfc-content').innerText = "Domain Not Indexed.";
-            }
-    
-            if (scraper.allsides_rating) {
-                document.getElementById('allsides-content').innerHTML = `
-                    <span class="text-on-surface">Bias:</span> <span class="font-bold text-secondary">${scraper.allsides_rating.bias}</span>
-                `;
-                document.getElementById('allsides-icon').classList.replace('text-on-surface-variant/20', 'text-secondary');
-            } else {
-                document.getElementById('allsides-content').innerText = "Domain Not Indexed.";
-            }
-    
-            if (scraper.llm_fallback_assessment) {
-                document.getElementById('gemini-fallback-content').innerText = scraper.llm_fallback_assessment.summary;
-                document.getElementById('gemini-fallback-content').classList.remove('italic', 'opacity-70');
-                document.getElementById('gemini-fallback-content').classList.add('text-on-surface', 'font-medium');
-                
-                document.getElementById('gemini-fallback-conf').innerText = `CONF: ${scraper.llm_fallback_assessment.confidence.toUpperCase()}`;
-                document.getElementById('gemini-fallback-conf').classList.replace('bg-surface', 'bg-primary-container/20');
-                document.getElementById('gemini-fallback-conf').classList.replace('text-on-surface-variant', 'text-primary-container');
-            } else {
-                document.getElementById('gemini-fallback-content').innerText = "No LLM Fallback Data Available.";
-            }
-        }
+
 
         // --- INJECT LIME EXPLAINABILITY ---
         if(payload.nlp_analysis.explainability && payload.nlp_analysis.explainability.triggers) {
@@ -495,19 +613,15 @@
             const limeContent = document.getElementById('lime-content');
             const triggers = payload.nlp_analysis.explainability.triggers;
             
-            // Reconstruct the payload text with inline heatmap spans
             let highlightedText = (textIntake || "No text available for trace mapping.").trim(); 
             
-            // Sort by word length descending so smaller words don't overwrite substring fragments
             triggers.sort((a,b) => b.word.length - a.word.length);
 
             triggers.forEach(t => {
-                // Determine styling based on whether the neuron path triggered REAL or FAKE mappings
                 const colorClass = t.impact_type === "FAKE_TRIGGER" 
                     ? "bg-error/30 text-error font-bold border-b border-error px-1 rounded-sm mx-0.5" 
                     : "bg-primary/30 text-primary font-bold border-b border-primary px-1 rounded-sm mx-0.5";
                 
-                // Replace globally accounting for casing, wrapping with tooltip logic
                 const regex = new RegExp(`\\b${t.word}\\b`, 'gi');
                 highlightedText = highlightedText.replace(regex, `<span class="${colorClass}" title="${t.impact_type}: ${t.weight}">${t.word}</span>`);
             });
@@ -517,7 +631,7 @@
         // Reset Loading State
         btnIcon.classList.remove("animate-spin");
         btnIcon.innerText = "check_circle";
-        btnText.innerText = "Diagnostics Complete";
+        btnText.innerText = getT("btn_complete");
     });
 </script>
 </body>

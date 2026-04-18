@@ -148,7 +148,7 @@ class GeminiInferenceServer:
 
     # ── Fact-check (2-step: Search grounding → Structured verdict) ────────────
 
-    def fact_check(self, text: str) -> Dict[str, Any]:
+    def fact_check(self, text: str, lang: str = 'en') -> Dict[str, Any]:
         """
         Search-grounded fact-checking pipeline.
 
@@ -180,6 +180,9 @@ class GeminiInferenceServer:
         Text:
         "{text[:2000]}"
         """
+
+        if lang == 'mr':
+            search_prompt += "\nCRITICAL PROTOCOL: You MUST prioritize searching regional Marathi-language news outlets (e.g., Lokmat, Saamana, Sakal, ABP Majha, TV9 Marathi) to verify these claims for localized context."
 
         evidence_summary = ""
         grounding_sources = []
@@ -563,7 +566,7 @@ def _build_composite_verdict(
 
 # ── Public API ────────────────────────────────────────────────────────────────
 
-def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
+def run_nlp_layers(text: str, headline: str = None, lang: str = 'en') -> Dict[str, Any]:
     """
     Orchestrate the full NLP analysis stack.
     
@@ -585,7 +588,7 @@ def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
 
     # 3. Search-grounded fact-check
     print("[NLP] Running search-grounded fact-check...")
-    fact_result = _llm.fact_check(text)
+    fact_result = _llm.fact_check(text, lang=lang)
     output["fact_check"] = fact_result
 
     # 4. Composite verdict

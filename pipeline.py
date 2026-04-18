@@ -11,11 +11,11 @@ from scraper_layer import SourceIntelligenceTracker
 source_tracker = SourceIntelligenceTracker()
 
 
-def execute_pipeline(text: str, headline: str = None, url: str = None) -> dict:
+def execute_pipeline(text: str, headline: str = None, url: str = None, lang: str = 'en') -> dict:
     """Run all analysis layers on resolved text."""
     # 1. Run Transformer NLP Layer (DistilBERT + Gemini)
     print("Running NLP & Style Analysis Layer...")
-    nlp_result = run_nlp_layers(text, headline)
+    nlp_result = run_nlp_layers(text, headline, lang=lang)
 
     # 2. Run Event Relation Bias Graph (NAACL 2024)
     print("Running Media Bias Event Relation Graph Analysis...")

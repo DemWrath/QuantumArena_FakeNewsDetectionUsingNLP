@@ -26,6 +26,7 @@ def analyze():
         data = request.get_json(force=True, silent=True) or {}
         url = data.get('url', '').strip()
         text = data.get('text', '').strip()
+        lang = data.get('lang', 'en')
 
         if not url and not text:
             return jsonify({"error": "No input supplied. Provide 'url' or 'text'."}), 400
@@ -47,7 +48,8 @@ def analyze():
         layers = execute_pipeline(
             resolved_text,
             headline=resolved_headline,
-            url=input_data.get("url", None)
+            url=input_data.get("url", None),
+            lang=lang
         )
 
         # Flat response — frontend reads keys directly from `data`
