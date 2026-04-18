@@ -4,7 +4,7 @@ from nlp_layer import DistilBertAnalyzer, GeminiInferenceServer
 
 @pytest.fixture
 def mock_transformers_pipeline():
-    with patch("nlp_layer.pipeline") as mock_pipe:
+    with patch("nlp_layer.hf_pipeline") as mock_pipe:
         # Mock the pipeline return structure: list of dicts
         mock_instance = MagicMock()
         mock_instance.return_value = [{"label": "LABEL_1", "score": 0.99}]
@@ -25,13 +25,13 @@ def test_distilbert_success(mock_transformers_pipeline):
     
     # NLP-01 Verification
     assert result["model_used"] == "dummy/model"
-    assert result["label"] == "LABEL_1"
+    assert result["label"] == "FAKE"
     assert result["confidence_score"] == 0.99
-    assert result["is_likely_reliable"] == True
+    assert result["is_likely_reliable"] == False
 
 def test_distilbert_empty_text():
     """Test analyzer handles empty text safely."""
-    with patch("nlp_layer.TRANSFORMERS_AVAILABLE", True), patch("nlp_layer.pipeline"):
+    with patch("nlp_layer.TRANSFORMERS_AVAILABLE", True), patch("nlp_layer.hf_pipeline"):
         bert = DistilBertAnalyzer()
         result = bert.analyze("")
         assert "error" in result
