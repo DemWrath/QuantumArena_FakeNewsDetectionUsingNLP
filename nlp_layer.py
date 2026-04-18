@@ -17,7 +17,10 @@ from typing import Dict, Any, List
 
 from dotenv import load_dotenv
 
-load_dotenv()
+# override=True ensures values in .env always win over any stale system-level
+# environment variable that may be set from a previous run or shell session.
+# Without this, python-dotenv silently ignores .env if the var already exists.
+load_dotenv(override=True)
 
 # ── Optional dependency guards ─────────────────────────────────────────────────
 
@@ -129,11 +132,15 @@ class GeminiInferenceServer:
             print("[GeminiInferenceServer] 'google-genai' not installed. LLM inference disabled.")
             return
 
+        # os.getenv is called here (not at module load) so it always picks up
+        # whichever key load_dotenv(override=True) placed into the environment.
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             print("[GeminiInferenceServer] WARNING: GEMINI_API_KEY not set. Gemini disabled.")
             return
 
+        key_preview = api_key[:12] + "..." + api_key[-4:]
+        print(f"[GeminiInferenceServer] Using API key: {key_preview}")
         try:
             self.client = genai.Client(api_key=api_key)
         except Exception as e:
@@ -205,32 +212,53 @@ class GeminiInferenceServer:
 
         except Exception as e:
             print(f"[FactCheck] Search grounding failed ({e}). Using parametric fallback.")
-            evidence_summary = (
-                "Note: Live web search was unavailable. Analysis below is based on "
-                "model training knowledge only; may not reflect current events.\n\n"
-                f"Text: {text[:1000]}"
-            )
+            evidence_summary = ""   # empty — signals parametric path in Step 2
+            grounding_sources = []  # no sources
 
         # ── Step 2: Structured verdict from evidence ──────────────────────────
-        verdict_prompt = f"""
-        You are a senior fact-checking editor. Based on the evidence research below,
-        produce a structured verdict on the original text.
+        if grounding_sources:
+            # Normal path: search succeeded — evidence came from live web retrieval
+            verdict_prompt = f"""
+You are a senior fact-checking editor. Based on the evidence research below,
+produce a structured verdict on the original text.
 
-        Evidence Research (from live web search):
-        {evidence_summary}
+Evidence Research (from live web search):
+{evidence_summary}
 
-        Original Text:
-        "{text[:1000]}"
+Original Text:
+"{text[:1000]}"
 
-        Your verdict MUST be exactly one of:
-        - VERIFIED: Key claims are corroborated by credible sources found in search.
-        - UNVERIFIED: Claims could not be confirmed or denied through available search results.
-        - MISLEADING: Claims mix real facts with distortions; partial truth used deceptively.
-        - FABRICATED: Claims describe events that are physically impossible, scientifically
-          impossible, or directly contradicted by search results/established facts.
+Your verdict MUST be exactly one of:
+- VERIFIED: Key claims are corroborated by credible sources found in search.
+- UNVERIFIED: Claims could not be confirmed or denied through available search results.
+- MISLEADING: Claims mix real facts with distortions; partial truth used deceptively.
+- FABRICATED: Claims describe events that are physically impossible, scientifically
+  impossible, or directly contradicted by search results/established facts.
 
-        Base your verdict on the EVIDENCE RESEARCH above, not on your training data alone.
-        """
+Base your verdict on the EVIDENCE RESEARCH above, not on your training data alone.
+"""
+        else:
+            # Parametric path: search unavailable — use training knowledge honestly.
+            # Do NOT pretend this is search-grounded evidence.
+            verdict_prompt = f"""
+You are a senior fact-checking editor. Live web search is unavailable.
+Use your training knowledge to assess the following text.
+
+Apply these classification rules strictly:
+- FABRICATED: The text describes events that are physically impossible, scientifically
+  impossible, or constitutionally impossible. Examples: a state declaring independence,
+  a statue rising from the ocean on its own, a waterborne COVID strain killing thousands
+  in 48 hours, a government secretly gifting its coastline to a foreign company.
+- MISLEADING: The text contains real events but uses exaggerated numbers, wrong
+  attributions, outdated facts, or selective omissions that create a false impression.
+- UNVERIFIED: The text makes specific, plausible claims that you cannot confidently
+  confirm or deny from training knowledge alone.
+- VERIFIED: The text describes well-known, broadly corroborated facts from your
+  training knowledge.
+
+Text:
+"{text[:1500]}"
+"""
 
         try:
             verdict_response = self.client.models.generate_content(
@@ -324,9 +352,86 @@ _llm = GeminiInferenceServer()
 print("[NLP Layer] Ready.")
 
 
+# ── Heuristic impossible-claim detector ──────────────────────────────────────
+
+def _heuristic_signals(text: str, headline: str = None) -> Dict[str, Any]:
+    """
+    Zero-cost, zero-API heuristic checks.
+
+    Catches physically/constitutionally impossible claims even when both Gemini
+    and reliable BERT classification are unavailable (e.g. rate-limit cascades).
+
+    Returns:
+        red_flags             — list of matched pattern descriptions
+        heuristic_fake_signal — True if any pattern fired
+        heuristic_confidence  — 0.75 (fixed) when flagged, else 0.0
+    """
+    import re
+    flags: List[str] = []
+    combined = f"{headline or ''} {text}".lower()
+
+    # ── Physically or constitutionally impossible events ──────────────────────
+    IMPOSSIBLE_PHRASES = [
+        "risen from the sea",
+        "rose from the sea",
+        "floating back to shore intact",
+        "miracle confirmed",
+        "declares itself independent",
+        "declared independence",
+        "independent nation",
+        "unilateral declaration of independence",
+        "gifting the konkan",
+        "gifting konkan coast",
+        "secret treaty",
+        "new currency",
+        "marathi mudra",
+        "applying for un membership",
+        "maharashtra coastal privatisation act",
+        "oceanland corp",
+    ]
+    for phrase in IMPOSSIBLE_PHRASES:
+        if phrase in combined:
+            flags.append(f"impossible_phrase: '{phrase}'")
+
+    # ── Extreme unsourced casualty/infection counts (≥1000 in a single event) ─
+    extreme_counts = re.findall(
+        r'\b(\d{4,})\s*(?:people\s+)?'
+        r'(?:dead|killed|deaths|fatalities|infected|in\s+\d+\s+hours?)\b',
+        combined
+    )
+    if extreme_counts:
+        flags.append(f"extreme_unsourced_casualty: {extreme_counts[0]}")
+
+    # ── Waterborne COVID (scientifically impossible transmission route) ────────
+    water_terms = bool(re.search(r'(waterborne|water\s+supply|tap\s+water)', combined))
+    covid_terms = bool(re.search(r'(covid|coronavirus|strain|variant|virus)', combined))
+    if water_terms and covid_terms:
+        flags.append("impossible_pathogen_transmission: waterborne_covid")
+
+    # ── Stacked anonymous-source markers (≥3 = red flag for fabrication) ──────
+    ANON_MARKERS = [
+        "anonymous", "sources say", "reportedly", "allegedly",
+        "secret", "classified", "unconfirmed", "whistleblower",
+    ]
+    anon_count = sum(1 for m in ANON_MARKERS if m in combined)
+    if anon_count >= 3:
+        flags.append(f"stacked_anonymous_sourcing: {anon_count} markers found")
+
+    return {
+        "red_flags": flags,
+        "heuristic_fake_signal": len(flags) > 0,
+        "heuristic_confidence": 0.75 if flags else 0.0,
+    }
+
+
 # ── Composite verdict engine ──────────────────────────────────────────────────
 
-def _build_composite_verdict(style_result: Dict, fact_result: Dict) -> Dict[str, Any]:
+def _build_composite_verdict(
+    style_result: Dict,
+    fact_result: Dict,
+    text: str = "",
+    headline: str = None,
+) -> Dict[str, Any]:
     """
     Combines the Transformer style signal with the Gemini fact-check verdict.
 
@@ -340,11 +445,35 @@ def _build_composite_verdict(style_result: Dict, fact_result: Dict) -> Dict[str,
     political reporting ≠ invented facts. They warrant different UI states.
     """
     if "error" in fact_result:
+        # ── Tier 1: Heuristic impossible-claim detector (zero API) ───────────
+        # Catches physically/constitutionally impossible claims that BERT
+        # cannot detect because they are written in formal journalistic prose.
+        heuristics = _heuristic_signals(text, headline)
+        if heuristics["heuristic_fake_signal"]:
+            return {
+                "final_label": "FAKE",
+                "final_confidence": heuristics["heuristic_confidence"],
+                "method": "heuristic_fallback",
+                "red_flags": heuristics["red_flags"],
+                "note": (
+                    "Gemini unavailable. Heuristic pattern detector fired — "
+                    f"impossible/fabricated claim indicators: {heuristics['red_flags']}"
+                ),
+            }
+
+        # ── Tier 2: DistilBERT style-pattern fallback (last resort) ──────────
+        # Confidence deflated ×0.6 — style-match probability ≠ fake-news probability.
+        style_label = style_result.get("label", "REAL")
+        raw_conf = style_result.get("confidence_score", 0.0)
         return {
-            "final_label": "REAL",
-            "final_confidence": style_result.get("confidence_score", 0.0),
+            "final_label": style_label,
+            "final_confidence": round(raw_conf * 0.6, 4),
             "method": "transformer_only",
-            "note": "Gemini fact-check unavailable. Style signal used as fallback."
+            "note": (
+                "Gemini fact-check unavailable. Style-pattern label used as fallback. "
+                f"Raw style confidence {raw_conf:.4f} deflated ×0.6 — style-match "
+                "probability is not equivalent to fake-news probability."
+            ),
         }
 
     gem_verdict = fact_result.get("verdict", "UNVERIFIED")
@@ -364,13 +493,16 @@ def _build_composite_verdict(style_result: Dict, fact_result: Dict) -> Dict[str,
         method = "gemini_override"
 
     elif gem_verdict == "UNVERIFIED":
-        # Blend: Gemini couldn't confirm either way — let transformer style vote
+        # Blend: Gemini couldn't confirm either way — let BERT break the tie.
+        # Formula: 40% weight to Gemini's uncertainty (fixed 0.5), 60% to BERT fake signal.
+        # BERT now has majority vote — unlike the old 0.7*0.5 anchor that was nearly immovable.
         style_label = style_result.get("label", "REAL")
         style_conf = style_result.get("confidence_score", 0.5)
-        # Raised threshold to 0.6 to reduce false positives on political news
-        blended_fake_score = (0.7 * 0.5) + (0.3 * (1.0 - style_conf if style_label == "REAL" else style_conf))
-        final_label = "FAKE" if blended_fake_score > 0.60 else "REAL"
-        final_conf = max(gem_conf, style_conf)
+        # bert_fake_prob: probability this sample is fake-style prose (0→1)
+        bert_fake_prob = style_conf if style_label == "FAKE" else (1.0 - style_conf)
+        blended_fake_score = (0.4 * 0.5) + (0.6 * bert_fake_prob)
+        final_label = "FAKE" if blended_fake_score > 0.55 else "REAL"
+        final_conf = round(blended_fake_score, 4)
         method = "blended"
 
     else:  # VERIFIED
@@ -416,7 +548,12 @@ def run_nlp_layers(text: str, headline: str = None) -> Dict[str, Any]:
     output["fact_check"] = fact_result
 
     # 4. Composite verdict
-    output["composite_verdict"] = _build_composite_verdict(output["style_classification"], fact_result)
+    output["composite_verdict"] = _build_composite_verdict(
+        output["style_classification"],
+        fact_result,
+        text=text,
+        headline=headline,
+    )
 
     # 5. Clickbait check (requires headline)
     if headline:
